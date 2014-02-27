@@ -6,6 +6,8 @@
 # target names are relative with respect to this python script
 # target directories should have a trailing '/'
 links = {
+    # zsh
+    '~/.zshrc_local_before': 'zshrc_local_before'
 }
 
 # shell commands (array of (msg, cmd))

@@ -1,0 +1,35 @@
+# Aliases
+# SSH
+# Home
+alias server='ssh -t server@192.168.0.105'
+alias serverx='ssh -X server@192.168.0.105'
+alias servervnc='ssh -L 5901:localhost:5901 server@192.168.0.105'
+alias emc='ssh -t emc@emc-PC.local'
+alias ts100='ssh -t founder@ts100.local'
+alias ts100x='ssh -X founder@ts100.local'
+alias router='ssh root@192.168.0.29'
+# Dorm
+alias shire='ssh -t anish@shire.anishathalye.com'
+alias mordor='ssh -t anish@mordor.anishathalye.com'
+alias gondor='ssh -t anish@gondor.anishathalye.com'
+alias maseeh='ssh -t anish@maseeh-server'
+# MIT
+alias athena='ssh -t aathalye@athena.dialup.mit.edu'
+alias csail='ssh -t aathalye@login.csail.mit.edu'
+# PDOS
+alias mitben='ssh anish@ben.csail.mit.edu'
+alias mittom='ssh anish@tom.csail.mit.edu'
+alias mitjosmp='ssh anish@josmp.csail.mit.edu'
+
+# Document Sync
+alias docsync='unison -auto /Users/anish/Documents/Anish ssh://server@192.168.0.105//media/raid/unison/Anish'
+
+# Homebrew and Related Tools
+export PATH=~/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+alias python3='PYTHONPATH="" python3'
+
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
