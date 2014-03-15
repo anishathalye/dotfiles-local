@@ -33,3 +33,5 @@ alias python3='PYTHONPATH="" python3'
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
