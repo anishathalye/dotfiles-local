@@ -2,23 +2,9 @@
 
 # Script to automatically set up the environment
 
-# link names are absolute (with '~' allowed, which will be expanded)
-# target names are relative with respect to this python script
-# target directories should have a trailing '/'
-links = {
-}
+import sys, os, subprocess, json
 
-# shell commands (array of (msg, cmd))
-
-# shell commands to run before linking
-precmds = {}
-
-# shell commands to run after linking
-postcmds = {}
-
-####################
-
-import sys, os, subprocess
+INSTALL_DATA_FILE = 'install.json'
 
 # colors
 class colors:
@@ -83,7 +69,7 @@ def link(source, link_name):
         INFO('[ ] link exists %s -> %s' % (link_name, source))
     return unsuccessful
 
-def process_links():
+def process_links(links):
     unsuccessful = False
     for dest, source in links.items():
         if link(source, dest):
@@ -99,13 +85,13 @@ def process_shell(cmds):
     if not cmds:
         return False
     unsuccessful = False
-    for cmd, msg in cmds.items():
+    for cmd, msg in cmds:
         INFO('%s [' % msg, end = '')
         DETAIL('%s' % cmd, end = '')
         INFO(']... ', end = '')
         sys.stdout.flush() # force printing of above line
         ret = subprocess.call(cmd, shell = True, stdout = subprocess.PIPE,
-            stderr = subprocess.PIPE)
+            stderr = subprocess.PIPE, cwd = self_path())
         OK('SUCCESS') if ret == 0 else FAIL('FAILURE')
         if ret != 0:
             unsuccessful = True
@@ -116,10 +102,16 @@ def process_shell(cmds):
         SUCC('SUCCESS: all tasks executed')
 
 def main():
+    data_file_path = os.path.join(self_path(), INSTALL_DATA_FILE)
+    with open(data_file_path) as data_file:
+        data = json.load(data_file)
+        links = data['links']
+        precmds = data['precmds']
+        postcmds = data['postcmds']
     pre_fail = process_shell(precmds)
     if precmds:
         NEWLINE()
-    link_fail = process_links()
+    link_fail = process_links(links)
     if postcmds:
         NEWLINE()
     post_fail = process_shell(postcmds)
