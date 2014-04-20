@@ -15,6 +15,7 @@ alias gondor='ssh -t anish@gondor.anishathalye.com'
 alias maseeh='ssh -t anish@maseeh-server'
 # MIT
 alias athena='ssh -t aathalye@athena.dialup.mit.edu'
+alias athenax='ssh -X aathalye@athena.dialup.mit.edu'
 alias csail='ssh -t aathalye@login.csail.mit.edu'
 # PDOS
 alias mitben='ssh anish@ben.csail.mit.edu'
