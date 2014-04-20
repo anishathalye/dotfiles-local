@@ -1,7 +1,8 @@
 [
     {
         "link": {
-            "~/.bashrc.mine": "bashrc.mine"
+            "~/.bashrc.mine": "bashrc.mine",
+            "~/.bash_environment": "bash_environment"
         }
     },
     {
