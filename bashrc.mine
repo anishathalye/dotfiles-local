@@ -1,0 +1,9 @@
+# color prompt
+export PS1='[\033[1;32m\]\u\033[0m\]@\033[1;33m\]\h\033[0m\] \033[1;31m\]\w\033[0m\]]\n\033[1;34m\]\$\033[0m\] '
+
+# shell aliases
+alias ls='ls --color=auto'
+export GREP_OPTIONS='--color'
+
+# settings
+export EDITOR=vim

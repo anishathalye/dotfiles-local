@@ -1,6 +1,8 @@
 [
     {
-        "link": {}
+        "link": {
+            "~/.bashrc.mine": "bashrc.mine"
+        }
     },
     {
         "shell": []
