@@ -1,7 +1,0 @@
-{
-    "links": {
-        "~/.zshrc_local_before": "zshrc_local_before"
-    },
-    "precmds": [],
-    "postcmds": []
-}
