@@ -7,3 +7,9 @@ export GREP_OPTIONS='--color'
 
 # settings
 export EDITOR=vim
+
+dfu() {
+    (
+        cd ~/.dotfiles && git pullff && ./install -q
+    )
+}
