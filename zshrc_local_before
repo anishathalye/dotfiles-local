@@ -28,7 +28,9 @@ alias mitjosmp='ssh anish@josmp.csail.mit.edu'
 alias docsync='unison -auto /Users/anish/Documents/Anish ssh://server@192.168.0.105//media/raid/unison/Anish'
 
 # Make a 4GB (2048 * 4096M) RAM Disk
-alias ramdisk="diskutil erasevolume HFS+ 'RAM Disk' $(hdiutil attach -nomount ram://8388608)"
+function ramdisk() {
+    diskutil erasevolume HFS+ 'RAM Disk' $(hdiutil attach -nomount ram://8388608)
+}
 
 # Homebrew and Related Tools
 export PATH=~/bin:/usr/local/bin:$PATH
