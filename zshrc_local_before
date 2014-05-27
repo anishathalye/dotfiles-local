@@ -10,7 +10,7 @@ alias ts100x='ssh -X founder@ts100.local'
 alias router='ssh root@192.168.0.29'
 # Dorm
 alias shire='ssh -t anish@shire.anishathalye.com'
-alias mordor='ssh -t anish@mordor.anishathalye.com'
+alias mordor='ssh -t founder@192.168.0.174'
 alias gondor='ssh -t anish@gondor.anishathalye.com'
 alias gondorx='ssh -X anish@gondor.anishathalye.com'
 alias isengard='ssh -t anish@isengard.anishathalye.com'
