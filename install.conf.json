@@ -1,6 +1,8 @@
 [
     {
-        "link": {}
+        "link": {
+            "~/.zshrc_local_after": "zshrc_local_after"
+        }
     },
     {
         "shell": []
