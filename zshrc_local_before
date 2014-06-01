@@ -35,6 +35,11 @@ function ramdisk() {
     diskutil erasevolume HFS+ 'RAM Disk' $(hdiutil attach -nomount ram://8388608)
 }
 
+# Push and jump
+function pj() {
+    pushd "$(autojump $@)"
+}
+
 # Homebrew and Related Tools
 export PATH=~/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
