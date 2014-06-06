@@ -1,3 +1,5 @@
 [[ -s /usr/local/google/home/aathalye/.autojump/etc/profile.d/autojump.sh ]] && source /usr/local/google/home/aathalye/.autojump/etc/profile.d/autojump.sh
 
 autoload -U compinit && compinit -u
+
+export PATH=${PATH/\/usr\/local\/buildtools\/java\/jdk\/bin:/}
