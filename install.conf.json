@@ -1,6 +1,7 @@
 [
     {
         "link": {
+            "~/.config": "config/",
             "~/.zshrc_local_before": "zshrc_local_before"
         }
     },
