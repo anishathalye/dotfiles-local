@@ -2,7 +2,8 @@
     {
         "link": {
             "~/.config": "config/",
-            "~/.zshrc_local_before": "zshrc_local_before"
+            "~/.zshrc_local_before": "zshrc_local_before",
+            "~/.zshrc_local_after": "zshrc_local_after"
         }
     },
     {
