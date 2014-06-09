@@ -5,6 +5,8 @@
         }
     },
     {
-        "shell": []
+        "shell": [
+            ["git update-submodules", "Installing/updating submodules"]
+        ]
     }
 ]
