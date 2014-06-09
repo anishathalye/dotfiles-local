@@ -1,3 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "misc/solarized-sublimetext2"]
+	path = misc/solarized-sublimetext2
+	url = https://github.com/mybuddymichael/solarized-sublimetext2.git
