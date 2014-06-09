@@ -8,7 +8,6 @@
     foreground_color = "#808080"
     show_titlebar = False
     background_color = "#1c1c1c"
-    cursor_blink = False
 [layouts]
   [[default]]
     [[[child1]]]
