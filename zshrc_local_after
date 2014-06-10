@@ -1,5 +1,10 @@
+# autojump config
 [[ -s /usr/local/google/home/aathalye/.autojump/etc/profile.d/autojump.sh ]] && source /usr/local/google/home/aathalye/.autojump/etc/profile.d/autojump.sh
-
 autoload -U compinit && compinit -u
 
+# android build tools
 export PATH=${PATH/\/usr\/local\/buildtools\/java\/jdk\/bin:/}
+
+# aliases
+alias rs='repo sync -c -j256'
+alias rsa='repo sync -j256'
