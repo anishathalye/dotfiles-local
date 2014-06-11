@@ -13,3 +13,7 @@ alias rsa='repo sync -j256'
 function pj() {
     pushd "$(autojump $@)"
 }
+
+# prompt settings
+RPR_SHOW_USER=false
+RPR_SHOW_HOST=false
