@@ -7,7 +7,6 @@ export PATH=${PATH/\/usr\/local\/buildtools\/java\/jdk\/bin:/}
 
 # aliases
 alias rs='repo sync -c -j256'
-alias rsa='repo sync -j256'
 
 # push and jump
 function pj() {
