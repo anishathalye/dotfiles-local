@@ -4,3 +4,5 @@ adbss() {
     adb sync &&
     adb shell start
 }
+
+alias lc='adb logcat'
