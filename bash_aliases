@@ -6,3 +6,5 @@ adbss() {
 }
 
 alias lc='adb logcat'
+
+# vim: set ft=sh :
