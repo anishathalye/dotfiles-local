@@ -14,6 +14,11 @@ function pj() {
     pushd "$(autojump $@)"
 }
 
+# open development environment
+function initdebug() {
+    bash --rcfile <(echo ". ${HOME}/.bashrc && cd ${HOME}/src/android/master && . ./build/envsetup.sh && lunch ${1}")
+}
+
 # prompt settings
 RPR_SHOW_USER=false
 RPR_SHOW_HOST=false
