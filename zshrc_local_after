@@ -7,6 +7,7 @@ export PATH=${PATH/\/usr\/local\/buildtools\/java\/jdk\/bin:/}
 
 # aliases
 alias rs='repo sync -c -j256'
+alias prodaccess='prodaccess -g'
 
 # push and jump
 function pj() {
