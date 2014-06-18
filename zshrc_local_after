@@ -15,7 +15,7 @@ function pj() {
 }
 
 # open development environment
-function initdebug() {
+function initdev() {
     bash --rcfile <(echo ". ${HOME}/.bashrc && cd ${HOME}/src/android/master && . ./build/envsetup.sh && lunch ${1}")
 }
 
