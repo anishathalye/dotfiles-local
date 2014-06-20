@@ -6,8 +6,11 @@ adbss() {
 }
 
 remakefb() {
-    mmm -j12 frameworks/base frameworks/base/core/jni &&
+    (
+    croot &&
+        mmm -j12 frameworks/base frameworks/base/core/jni &&
         adbss
+    )
 }
 
 alias lc='adb logcat'
