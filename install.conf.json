@@ -1,14 +1,16 @@
 [
     {
+        "shell": [
+            ["mkdir -p ~/.config", "Creating config folder"]
+        ]
+    },
+    {
         "link": {
-            "~/.config": "config/",
+            "~/.config/terminator": "config/terminator/",
             "~/.zshrc_local_before": "zshrc_local_before",
             "~/.zshrc_local_after": "zshrc_local_after",
             "~/.bash_aliases": "bash_aliases",
             "~/.gitconfig_local": "gitconfig_local"
         }
-    },
-    {
-        "shell": []
     }
 ]
