@@ -12,5 +12,10 @@
             "~/.bash_aliases": "bash_aliases",
             "~/.gitconfig_local": "gitconfig_local"
         }
+    },
+    {
+        "shell": [
+            ["git update-submodules", "Installing/updating submodules"]
+        ]
     }
 ]
