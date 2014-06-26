@@ -14,7 +14,7 @@ remakefb() {
 }
 
 alias lc='adb logcat'
-alias lcc='adb logcat -c' # clear logcat buffer
+alias lcc='adb logcat -c && adb logcat' # clear logcat buffer
 
 # for use after editing device/.../BoardConfig.mk
 alias cleanri='rm -rf $OUT/obj/SHARED_LIBRARIES/libandroid_runtime_intermediates'
