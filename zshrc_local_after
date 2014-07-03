@@ -41,9 +41,6 @@ function pj() {
 }
 
 # Homebrew and Related Tools
-export PATH=~/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
