@@ -1,5 +1,2 @@
 # local binaries
 PATH=~/bin:$PATH
-
-# 6.01 libraries and software
-add -f 6.01
