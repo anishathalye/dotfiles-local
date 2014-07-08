@@ -6,12 +6,15 @@ adbss() {
         adb shell start
 }
 
-remakefb() {
+makefb() {
     (
     croot &&
-        mmm -j12 frameworks/base frameworks/base/core/jni &&
-        adbss
+        mmm -j12 frameworks/base frameworks/base/core/jni
     )
+}
+
+syncfb() {
+    makefb && adbss
 }
 
 alias lc='adb logcat'
