@@ -1,11 +1,17 @@
 [
     {
+        "clean": ["~"]
+    },
+    {
         "link": {
             "~/.bashrc.mine": "bashrc.mine",
-            "~/.bash_environment": "bash_environment"
+            "~/.bash_environment": "bash_environment",
+            "~/.gitconfig_local": "gitconfig_local"
         }
     },
     {
-        "shell": []
+        "shell": [
+            ["git update-submodules", "Installing/updating submodules"]
+        ]
     }
 ]
