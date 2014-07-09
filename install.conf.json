@@ -3,7 +3,9 @@
         "clean": ["~"]
     },
     {
-        "link": {}
+        "link": {
+            "~/.gitconfig_local": "gitconfig_local"
+        }
     },
     {
         "shell": [
