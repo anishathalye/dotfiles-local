@@ -1,6 +1,5 @@
 adbss() {
-    adb root && 
-        adb shell stop &&
+    adb shell stop &&
         adb remount &&
         adb sync &&
         adb shell start
