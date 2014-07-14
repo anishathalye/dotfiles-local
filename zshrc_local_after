@@ -1,3 +1,6 @@
+# Set arrow symbol that is used in the prompt
+PR_ARROW_CHAR=$(echo '\xe2\x9d\xb1')
+
 # autojump config
 [[ -s /usr/local/google/home/aathalye/.autojump/etc/profile.d/autojump.sh ]] && source /usr/local/google/home/aathalye/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
