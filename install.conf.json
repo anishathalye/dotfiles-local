@@ -11,7 +11,6 @@
         "link": {
             "~/.config/terminator": "config/terminator/",
             "~/.zshrc_local_before": "zshrc_local_before",
-            "~/.zshrc_local_after": "zshrc_local_after",
             "~/.gitconfig_local": "gitconfig_local"
         }
     },
