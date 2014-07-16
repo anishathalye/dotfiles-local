@@ -19,7 +19,7 @@ function pj() {
 
 # open development environment
 function initdev() {
-    bash --rcfile <(echo ". ${HOME}/.bashrc && cd /media/ssd/aathalye/src/android/master && . ./build/envsetup.sh && lunch ${1}")
+    bash --rcfile <(echo ". ${HOME}/.bashrc && cd /media/ssd/aathalye/src/android/master && . ./build/envsetup.sh && lunch ${1} && inferdevice")
 }
 
 # prompt settings

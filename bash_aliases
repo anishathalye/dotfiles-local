@@ -4,25 +4,36 @@ setdeviceprompt() {
 
 CURRENT_DEVICE=""
 
-FLO="070877dd"
-flo() {
-    CURRENT_DEVICE=$FLO
-    setdeviceprompt flo
+setdevice() {
+    case "${1}" in
+        "hammerhead")
+            CURRENT_DEVICE="06f0930b00743ab1"
+            ;;
+        "flo")
+            CURRENT_DEVICE="070877dd"
+            ;;
+        *)
+            CURRENT_DEVICE=""
+            ;;
+    esac
+    if [[ -n $CURRENT_DEVICE ]]; then
+        setdeviceprompt $1
+    else
+        if [[ -n $1 ]]; then
+            setdeviceprompt "$1 | default"
+        else
+            setdeviceprompt "unknown"
+        fi
+    fi
 }
 
-HAMMERHEAD="06f0930b00743ab1"
-hammerhead() {
-    CURRENT_DEVICE=$HAMMERHEAD
-    setdeviceprompt hammerhead
+inferdevice() {
+    if [[ -n $ANDROID_PRODUCT_OUT ]]; then
+        setdevice $(basename $ANDROID_PRODUCT_OUT)
+    else
+        setdevice ""
+    fi
 }
-
-DEFAULTDEVICE=""
-defaultdevice() {
-    CURRENT_DEVICE=$DEFAULTDEVICE
-    setdeviceprompt "default"
-}
-
-defaultdevice
 
 runcurrent() {
     local CMD=$1 && shift
