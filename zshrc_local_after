@@ -25,3 +25,10 @@ function initdev() {
 # prompt settings
 RPR_SHOW_USER=false
 RPR_SHOW_HOST=false
+
+# Update local dotfiles
+function ldfu() {
+    (
+        cd ~/.dotfiles_local && git pullff && ./install -q
+    )
+}

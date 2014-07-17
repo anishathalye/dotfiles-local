@@ -14,7 +14,8 @@
             "~/.zshrc_local_after": "zshrc_local_after",
             "~/.bash_aliases": "bash_aliases",
             "~/.tmux_local.conf": "tmux_local.conf",
-            "~/.gitconfig_local": "gitconfig_local"
+            "~/.gitconfig_local": "gitconfig_local",
+            "~/.dotfiles_local": ""
         }
     },
     {
