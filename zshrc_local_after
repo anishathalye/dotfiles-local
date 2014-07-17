@@ -1,0 +1,6 @@
+# Update local dotfiles
+function ldfu() {
+    (
+        cd ~/.dotfiles_local && git pullff && ./install -q
+    )
+}
