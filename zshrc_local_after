@@ -44,3 +44,10 @@ function pj() {
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+
+# Update local dotfiles
+function ldfu() {
+    (
+        cd ~/.dotfiles_local && git pullff && ./install -q
+    )
+}
