@@ -1,2 +1,9 @@
 # Set arrow symbol that is used in the prompt
 PR_ARROW_CHAR=$(echo '\xe2\x9d\xb1')
+
+# Update local dotfiles
+function ldfu() {
+    (
+        cd ~/.dotfiles_local && git pullff && ./install -q
+    )
+}
