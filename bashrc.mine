@@ -14,3 +14,9 @@ dfu() {
         cd ~/.dotfiles && git pullff && ./install -q
     )
 }
+
+ldfu() {
+    (
+        cd ~/.dotfiles_local && git pullff && ./install -q
+    )
+}
