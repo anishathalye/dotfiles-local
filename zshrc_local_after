@@ -73,3 +73,10 @@ export PATH="/home/server/bin:$PATH"
 #sudo update-grub
 
 # CP PROGRESS BAR - do rsync -WavP source destination
+
+# Update local dotfiles
+function ldfu() {
+    (
+        cd ~/.dotfiles_local && git pullff && ./install -q
+    )
+}
