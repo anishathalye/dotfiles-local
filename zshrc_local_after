@@ -32,3 +32,8 @@ function ldfu() {
         cd ~/.dotfiles_local && git pullff && ./install -q
     )
 }
+
+# keychain
+if keychain_loc="$(type -p 'keychain')" && [ -n "$keychain_loc" ]; then
+    eval $(keychain --eval --agents ssh --quiet id_rsa)
+fi
