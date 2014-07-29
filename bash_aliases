@@ -65,6 +65,17 @@ syncfb() {
     makefb && adbss
 }
 
+makemb() {
+    (
+    croot &&
+        mmm -j12 vendor/google_experimental/users/aathalye/Markbench
+    )
+}
+
+syncmb() {
+    makemb && adbss
+}
+
 alias lc='adb logcat'
 alias lcc='adb logcat -c && adb logcat' # clear logcat buffer
 
