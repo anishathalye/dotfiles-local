@@ -13,7 +13,7 @@ alias router='ssh root@192.168.0.29'
 alias shire='ssh -t anish@shire.anishathalye.com'
 alias gondor='ssh -t anish@gondor.anishathalye.com'
 alias gondorx='ssh -X anish@gondor.anishathalye.com'
-alias isengard='ssh -t anish@isengard.anishathalye.com'
+alias isengard='ssh -t -p 20022 anish@isengard.anishathalye.com'
 # MIT
 alias athena='ssh -t aathalye@athena.dialup.mit.edu'
 alias athenax='ssh -X aathalye@athena.dialup.mit.edu'
