@@ -1,3 +1,7 @@
+# autojump config
+[[ -s /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.sh &&
+    autoload -U compinit && compinit -u
+
 # Update local dotfiles
 function ldfu() {
     (
