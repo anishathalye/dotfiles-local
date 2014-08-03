@@ -28,6 +28,12 @@ alias ubuntu2='ssh -i ~/.ssh/aws2.pem ubuntu@ec2-54-187-229-41.us-west-2.compute
 # Document Sync
 alias docsync="unison -auto /Users/anish/Documents/Anish ssh://server@home.anishathalye.com//media/raid/unison/Anish -sshargs '-p 10022'"
 
+# Simple prompt for displaying shell sessions
+function blogprompt() {
+    PS1='anish@host %~$ '
+    RPS1=''
+}
+
 # Make a 4GB (2048 * 4096M) RAM Disk
 function ramdisk() {
     diskutil erasevolume HFS+ 'RAM Disk' $(hdiutil attach -nomount ram://8388608)
