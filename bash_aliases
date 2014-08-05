@@ -36,16 +36,17 @@ inferdevice() {
 }
 
 runcurrent() {
-    local CMD=$1 && shift
+    local CMD="$1" && shift
     if [[ "$CURRENT_DEVICE" != "" ]]; then
-        $CMD -s $CURRENT_DEVICE $@
+        $CMD -s $CURRENT_DEVICE "$@"
     else
-        $CMD $@
+        $CMD "$@"
     fi
 }
 
 alias adb='runcurrent adb'
 alias fastboot='runcurrent fastboot'
+alias flashall='runcurrent "$(gettop)/vendor/google/tools/flashall"'
 
 adbss() {
     adb shell stop &&
