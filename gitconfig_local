@@ -2,6 +2,9 @@
 	name = Anish Athalye
 	email = aathalye@google.com
 
+[github]
+	user = anishathalye
+
 [credential]
 	helper = corpsso
 
