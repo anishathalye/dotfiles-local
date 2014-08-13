@@ -12,6 +12,9 @@ setdevice() {
         "flo")
             CURRENT_DEVICE="070877dd"
             ;;
+        "sprout")
+            CURRENT_DEVICE="6I2I04CGG24E06A"
+            ;;
         *)
             CURRENT_DEVICE=""
             ;;
