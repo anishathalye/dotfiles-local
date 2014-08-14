@@ -30,7 +30,7 @@ alias docsync="unison -auto /Users/anish/Documents/Anish ssh://server@home.anish
 
 # Simple prompt for displaying shell sessions
 function blogprompt() {
-    PS1='anish@host %~$ '
+    PS1='[anish@blog %1~]$ '
     RPS1=''
 }
 
