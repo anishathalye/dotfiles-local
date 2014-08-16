@@ -58,6 +58,11 @@ adbss() {
         adb shell start
 }
 
+screenshot() {
+    local screencap_name="screenshot-$(date +%Y%m%d%H%M%S).png"
+    adb shell screencap -p | sed 's/\r$//' > $screencap_name
+}
+
 makefb() {
     (
     croot &&
