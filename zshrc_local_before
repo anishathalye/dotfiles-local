@@ -1,3 +1,4 @@
 # Homebrew and Related Tools
-export PATH=~/bin:/usr/local/bin:$PATH
+export PATH=~/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
