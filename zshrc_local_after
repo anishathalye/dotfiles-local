@@ -2,6 +2,10 @@
 [[ -s /usr/local/google/home/aathalye/.autojump/etc/profile.d/autojump.sh ]] && source /usr/local/google/home/aathalye/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 
+# make it easier to insert unicode characters
+autoload insert-unicode-char && zle -N insert-unicode-char
+bindkey '^X' insert-unicode-char
+
 # android build tools
 export PATH=${PATH/\/usr\/local\/buildtools\/java\/jdk\/bin:/}
 
