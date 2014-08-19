@@ -4,6 +4,7 @@
 
 # Update local dotfiles
 function ldfu() {
+    declare -f dfu > /dev/null && dfu &&
     (
         cd ~/.dotfiles_local && git pullff && ./install -q
     )
