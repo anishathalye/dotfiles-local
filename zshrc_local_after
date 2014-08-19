@@ -53,6 +53,7 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 
 # Update local dotfiles
 function ldfu() {
+    declare -f dfu > /dev/null && dfu &&
     (
         cd ~/.dotfiles_local && git pullff && ./install -q
     )

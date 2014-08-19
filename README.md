@@ -15,5 +15,12 @@ files are organized.
 Configuration for specific computers (or groups of computers) is maintained in
 separate branches in this repo.
 
+License
+-------
+
+Copyright (c) 2014 Anish Athalye. Released under the MIT License. See
+[LICENSE.md][license] for details.
+
 [dotbot]: https://github.com/anishathalye/dotbot
 [dotfiles]: https://github.com/anishathalye/dotfiles
+[license]: LICENSE.md
