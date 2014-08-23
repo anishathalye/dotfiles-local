@@ -10,10 +10,7 @@ alias ts100='ssh -t founder@192.168.0.125'
 alias ts100x='ssh -X founder@192.168.0.125'
 alias router='ssh root@192.168.0.29'
 # Dorm
-alias shire='ssh -t anish@shire.anishathalye.com'
-alias gondor='ssh -t anish@gondor.anishathalye.com'
-alias gondorx='ssh -X anish@gondor.anishathalye.com'
-alias isengard='ssh -t -p 20022 anish@isengard.anishathalye.com'
+alias isengard='ssh -t -p 20022 anish@isengard.anish.io'
 # MIT
 alias athena='ssh -t aathalye@athena.dialup.mit.edu'
 alias athenax='ssh -X aathalye@athena.dialup.mit.edu'
@@ -26,7 +23,7 @@ alias ubuntu1='ssh -i ~/.ssh/aws1.pem ubuntu@ec2-54-186-157-83.us-west-2.compute
 alias ubuntu2='ssh -i ~/.ssh/aws2.pem ubuntu@ec2-54-187-229-41.us-west-2.compute.amazonaws.com'
 
 # Document Sync
-alias docsync="unison -auto /Users/anish/Documents/Anish ssh://server@home.anishathalye.com//media/raid/unison/Anish -sshargs '-p 10022'"
+alias docsync="unison -auto /Users/anish/Documents/Anish ssh://server@home.anish.io//media/raid/unison/Anish -sshargs '-p 10022'"
 
 # Simple prompt for displaying shell sessions
 function blogprompt() {
