@@ -13,6 +13,7 @@ alias router='ssh root@192.168.0.29'
 alias gitlive='ssh -t anish@107.170.152.190'
 # Dorm
 alias isengard='ssh -t anish@isengard.anish.io'
+alias isengardx='ssh -X anish@isengard.anish.io'
 # MIT
 alias athena='ssh -t aathalye@athena.dialup.mit.edu'
 alias athenax='ssh -X aathalye@athena.dialup.mit.edu'
