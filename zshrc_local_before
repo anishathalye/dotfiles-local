@@ -2,3 +2,5 @@
 export PATH=~/bin:$PATH
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+
+source ~/.dotfiles_local/bootstrap.zsh

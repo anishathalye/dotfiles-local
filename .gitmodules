@@ -4,3 +4,6 @@
 [submodule "misc/solarized-sublimetext2"]
 	path = misc/solarized-sublimetext2
 	url = https://github.com/mybuddymichael/solarized-sublimetext2.git
+[submodule "packages/git-remote-hg"]
+	path = packages/git-remote-hg
+	url = https://github.com/felipec/git-remote-hg
