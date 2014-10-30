@@ -60,3 +60,7 @@ function ldfu() {
         cd ~/.dotfiles_local && git pullff && ./install -q
     )
 }
+
+# GPG Key
+
+export GPGKEY=086B3B32
