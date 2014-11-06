@@ -4,8 +4,6 @@
     },
     {
         "link": {
-            "~/.bashrc.mine": "bashrc.mine",
-            "~/.bash_environment": "bash_environment",
             "~/.zshrc_local_after": "zshrc_local_after",
             "~/.gitconfig_local": "gitconfig_local",
             "~/.dotfiles_local": ""
