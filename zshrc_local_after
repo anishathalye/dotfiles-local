@@ -20,7 +20,7 @@ alias isengardx='ssh -X anish@isengard.anish.io'
 alias athena='ssh -t aathalye@athena.dialup.mit.edu'
 alias athenax='ssh -X aathalye@athena.dialup.mit.edu'
 # 6-858 VM
-alias ssh6858='ssh httpd@192.168.184.128'
+alias ssh6858='ssh -L localhost:8080:localhost:8080 httpd@192.168.184.128'
 # PDOS
 alias mitben='ssh anish@ben.csail.mit.edu'
 alias mittom='ssh anish@tom.csail.mit.edu'
