@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles_local: ''
+    ~/.gitconfig_local: gitconfig_local
+    ~/.tmux_local.conf: tmux_local.conf
+    ~/.zshrc_local_after: zshrc_local_after
+    ~/.zshrc_local_before: zshrc_local_before
+
+- shell:
+  - [git update-submodules, Installing/updating submodules]
