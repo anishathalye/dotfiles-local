@@ -14,6 +14,7 @@ alias router='ssh root@192.168.0.29'
 # Digital Ocean
 alias gitlive='ssh -t anish@107.170.152.190'
 # Dorm
+alias mordor='ssh -t anish@codeforgood.mit.edu'
 alias isengard='ssh -t anish@isengard.anish.io'
 alias isengardx='ssh -X anish@isengard.anish.io'
 # MIT
