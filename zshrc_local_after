@@ -1,6 +1,7 @@
 # Aliases
 # GPG
 alias gpgst='gpg2 -k --list-options show-uid-validity'
+alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 # SSH
 # Home
 alias server='ssh -t server@192.168.0.105'
