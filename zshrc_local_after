@@ -31,8 +31,12 @@ alias mitjosmp='ssh anish@josmp.csail.mit.edu'
 alias ubuntu1='ssh -i ~/.ssh/aws1.pem ubuntu@ec2-54-186-157-83.us-west-2.compute.amazonaws.com'
 alias ubuntu2='ssh -i ~/.ssh/aws2.pem ubuntu@ec2-54-187-229-41.us-west-2.compute.amazonaws.com'
 
+# Sync and Backup
+DOCUMENT_ROOT='/Users/anish/Documents/Anish'
 # Document Sync
-alias docsync="unison -auto /Users/anish/Documents/Anish ssh://server@home.anish.io//media/raid/unison/Anish -sshargs '-p 10022'"
+alias docsync="unison -auto ${DOCUMENT_ROOT} ssh://server@home.anish.io//media/raid/unison/Anish -sshargs '-p 10022'"
+# Backup
+alias backup-isengard="rsync -avP --delete ${DOCUMENT_ROOT} anish@isengard.anish.io:/home/anish/backup"
 
 # Simple prompt for displaying shell sessions
 function blogprompt() {
