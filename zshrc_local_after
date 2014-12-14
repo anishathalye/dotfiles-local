@@ -21,15 +21,10 @@ alias isengardx='ssh -X anish@isengard.anish.io'
 # MIT
 alias athena='ssh -t aathalye@athena.dialup.mit.edu'
 alias athenax='ssh -X aathalye@athena.dialup.mit.edu'
-# 6-858 VM
-alias ssh6858='ssh -L localhost:8080:localhost:8080 httpd@192.168.184.128'
 # PDOS
 alias mitben='ssh anish@ben.csail.mit.edu'
 alias mittom='ssh anish@tom.csail.mit.edu'
 alias mitjosmp='ssh anish@josmp.csail.mit.edu'
-# Amazon
-alias ubuntu1='ssh -i ~/.ssh/aws1.pem ubuntu@ec2-54-186-157-83.us-west-2.compute.amazonaws.com'
-alias ubuntu2='ssh -i ~/.ssh/aws2.pem ubuntu@ec2-54-187-229-41.us-west-2.compute.amazonaws.com'
 
 # Sync and Backup
 DOCUMENT_ROOT='/Users/anish/Documents/Anish'
