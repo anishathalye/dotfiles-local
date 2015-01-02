@@ -5,11 +5,8 @@ alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 # SSH
 # Home
 alias server='ssh -t server@192.168.0.105'
-alias serverx='ssh -X server@192.168.0.105'
-alias servervnc='ssh -L 5901:localhost:5901 server@192.168.0.105'
 alias emc='ssh -t emc@emc-PC.local'
 alias ts100='ssh -t founder@192.168.0.125'
-alias ts100x='ssh -X founder@192.168.0.125'
 alias router='ssh root@192.168.0.29'
 # Digital Ocean
 alias gitlive='ssh -t anish@107.170.152.190'
