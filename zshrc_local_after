@@ -37,7 +37,17 @@ function blogprompt() {
 
 # Make a 4GB (2048 * 4096M) RAM Disk
 function ramdisk() {
-    diskutil erasevolume HFS+ 'RAM Disk' $(hdiutil attach -nomount ram://8388608)
+    local size
+    if [[ -z "${1}" ]]; then
+        size=4
+    else
+        size="${1}"
+    fi
+    if ! [[ ${size} =~ '^[0-9]+$' && $((${size} > 0)) == "1" && $((${size} <= 12)) == "1" ]]; then
+        echo 'Size must be an integer parameter between 1 and 12'
+        return 1
+    fi
+    diskutil erasevolume HFS+ 'RAM Disk' $(hdiutil attach -nomount ram://$((${size} * 2097152)))
 }
 
 # Push and jump
