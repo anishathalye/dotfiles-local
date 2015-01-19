@@ -24,10 +24,9 @@ alias mitjosmp='ssh anish@josmp.csail.mit.edu'
 
 # Sync and Backup
 DOCUMENT_ROOT='/Users/anish/Documents/Anish'
-# Document Sync
-alias docsync="unison -auto ${DOCUMENT_ROOT} ssh://server@home.anish.io//media/raid/unison/Anish -sshargs '-p 10022'"
 # Backup
 alias backup-isengard="rsync -avP --delete ${DOCUMENT_ROOT} anish@isengard.anish.io:/home/anish/backup"
+alias backup-server="rsync -e 'ssh -p 10022' -avP --delete ${DOCUMENT_ROOT} server@home.anish.io:/media/raid/unison"
 
 # Simple prompt for displaying shell sessions
 function blogprompt() {
