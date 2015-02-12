@@ -1,0 +1,9 @@
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.dotfiles_local: ''
+    ~/.gitconfig_local: gitconfig_local
+    ~/.zshrc_local_after: zshrc_local_after
+
+- shell:
+  - git update-submodules # after linking ~/.gitconfig
