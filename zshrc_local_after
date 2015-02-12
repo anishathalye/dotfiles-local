@@ -11,6 +11,14 @@ alias startvnc='tightvncserver -nolisten tcp -localhost :1'
 alias stopvnc='tightvncserver -kill :1'
 alias glados='cd /media/raid/unison/Anish/Developer/src/Python/GLaDOS && ./glados.py'
 
+# Backup
+function backup-ts100() {
+    time (
+        rsync -avP /media/raid2/home/data2/Media founder@192.168.0.125:/home/founder/server_backup &&
+            rsync -avP /media/raid/home/data founder@192.168.0.125:/media/data/server_backup
+    )
+}
+
 # Virtual Machines
 alias debian='ssh -t anish@192.168.0.172'
 # Machines
