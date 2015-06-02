@@ -1,3 +1,6 @@
+# Homebrew and Related Tools
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
 # Update local dotfiles
 function ldfu() {
     declare -f dfu > /dev/null && dfu &&
