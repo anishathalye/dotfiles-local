@@ -1,0 +1,59 @@
+[ui]
+merge = internal:merge
+verbose = True
+
+[auth]
+sonic.prefix = https://sonic.corp.dropbox.com
+
+[extensions]
+color =
+extdiff =
+graphlog =
+mq =
+pager =
+parentrevspec =
+progress =
+purge =
+rebase =
+record =
+transplant =
+
+[smtp]
+host = tarak.corp.dropbox.com
+
+[pager]
+pager = LESS='FSRX' less
+attend = annotate, cat, diff, export, glog, log, qdiff, bdiff, out
+
+[annotate]
+ignorews = 1
+
+[revsetalias]
+; Gets you the parent branch of your branch.  This is also the common ancestor.
+bparent = parents(min(branch(.)))
+; Gets you the head of the parent branch of your branch.
+bdest = max(branch(bparent))
+; Simple alias for 0.7-split which is stupid
+server = '0.7-split'
+
+[alias]
+; Show changed files between your branch and the last parent branch at the point you branched.
+bst = status --rev bparent
+; Gets the diff between your branch and the last parent branch at the point you branched.
+bdiff = diff -r bparent
+; Gets you the name of your parent in case you forget.
+bparent = id -b -r bparent
+
+; Usage: hg bopen <new-branch-name>
+bopen = !$HG branch $1 && $HG commit -m "<<Replace me with a good title. branch: $1, parent: `hg id -b -r .`>>"
+; Usage: hg bfinish <parent-branch-name>
+bfinish = rebase --collapse --dest $1
+; Usage: hg brebase <parent-branch-name>
+brebase = rebase --keepbranches --dest $1
+; Trashes a branch, maybe it got completely rejected or you have a completely different approach.
+btrash = strip -r "branch($1)"
+; Pushes only the branch you are currently on.
+bpush = push -b .
+freebase = rebase
+; Puts all commits in the current branch in the "draft" phase (so you can rebase them)
+bmakedraft = phase -d --force -r "branch($1)"

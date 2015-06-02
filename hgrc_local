@@ -1,2 +1,11 @@
+%include ~/.hgrc_common
+
 [ui]
-username = Anish Athalye <me@anishathalye.com>
+username = Anish Athalye <aathalye@dropbox.com>
+
+[auth]
+
+sonic.username = aathalye
+
+[extensions]
+mercurial_keyring =
