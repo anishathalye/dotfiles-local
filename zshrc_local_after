@@ -1,3 +1,7 @@
+# Aliases
+
+alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --enable-experimental-web-platform-features'
+
 # Homebrew and Related Tools
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
