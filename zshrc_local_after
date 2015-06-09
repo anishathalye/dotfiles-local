@@ -16,3 +16,7 @@ function ldfu() {
         cd ~/.dotfiles_local && git pullff && ./install -q
     )
 }
+
+# Prompt customization
+RPR_SHOW_USER=false
+RPR_SHOW_HOST=false
