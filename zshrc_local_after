@@ -71,4 +71,4 @@ function ldfu() {
 
 # GPG Key
 
-export GPGKEY=086B3B32
+GPGKEY=086B3B32
