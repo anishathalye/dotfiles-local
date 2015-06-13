@@ -1,5 +1,6 @@
 # Homebrew and Related Tools
-PATH=~/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH
-MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+PATH=~/bin:$PATH
+PATH=/usr/local/sbin:/usr/local/bin:$PATH
+PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 
 source ~/.dotfiles_local/bootstrap.zsh
