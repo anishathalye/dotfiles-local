@@ -1,2 +1,6 @@
 [user]
 	name = Anish Athalye
+    email = me@anishathalye.com
+
+[github]
+    user = anishathalye
