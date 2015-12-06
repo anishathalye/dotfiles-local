@@ -9,19 +9,11 @@ alias emc='ssh -t emc@emc-PC.local'
 alias ts100='ssh -t founder@192.168.0.125'
 alias router='ssh root@192.168.0.29'
 # Digital Ocean
-alias gitlive='ssh -t anish@107.170.152.190'
 alias ashay='ssh anish@159.203.143.183'
 # Dorm
-alias mordor='ssh -t anish@mordor.anish.io'
 alias isengard='ssh -t anish@isengard.anish.io'
-alias isengardx='ssh -X anish@isengard.anish.io'
 # MIT
 alias athena='ssh -t aathalye@athena.dialup.mit.edu'
-alias athenax='ssh -X aathalye@athena.dialup.mit.edu'
-# PDOS
-alias mitben='ssh anish@ben.csail.mit.edu'
-alias mittom='ssh anish@tom.csail.mit.edu'
-alias mitjosmp='ssh anish@josmp.csail.mit.edu'
 
 # Sync and Backup
 DOCUMENT_ROOT='/Users/anish/Documents/Anish'
