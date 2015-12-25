@@ -65,4 +65,4 @@ function ldfu() {
 
 # GPG Key
 
-GPGKEY=086B3B32
+GPGKEY="0xC3F6E4F5086B3B32"
