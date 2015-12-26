@@ -5,7 +5,7 @@ alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 # SSH
 # Home
 alias server='ssh -t server@192.168.0.105'
-alias gondor='ssh -p 20022 anish@home.anish.io'
+alias gondor='ssh -t -p 20022 anish@home.anish.io'
 alias emc='ssh -t emc@emc-PC.local'
 alias ts100='ssh -t founder@192.168.0.125'
 alias router='ssh root@192.168.0.29'
