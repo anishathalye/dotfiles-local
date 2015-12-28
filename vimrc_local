@@ -1,0 +1,2 @@
+set runtimepath+=/usr/local/share/lilypond/2.18.2/vim/
+autocmd BufNewFile,BufRead *.ly set ft=lilypond
