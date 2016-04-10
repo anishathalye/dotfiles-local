@@ -7,3 +7,6 @@
 [submodule "packages/git-remote-hg"]
 	path = packages/git-remote-hg
 	url = https://github.com/felipec/git-remote-hg
+[submodule "misc/solarized-limechat"]
+	path = misc/solarized-limechat
+	url = https://github.com/paulcpederson/solarized-limechat

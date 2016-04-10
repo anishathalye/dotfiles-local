@@ -12,6 +12,10 @@
     ~/.vimrc_local: vimrc_local
     ~/.zshrc_local_after: zshrc_local_after
     ~/.zshrc_local_before: zshrc_local_before
+    ~/Library/Application Support/LimeChat/Themes/Solarized Light.yaml:
+      path: misc/solarized-limechat/Solarized Light.yaml
+    ~/Library/Application Support/LimeChat/Themes/Solarized Light.css:
+      path: misc/solarized-limechat/Solarized Light.css
 
 - shell:
   - git update-submodules # after linking ~/.gitconfig
