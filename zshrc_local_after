@@ -13,6 +13,7 @@ alias router='ssh root@192.168.0.29'
 alias ashay='ssh anish@159.203.143.183'
 # Dorm
 alias isengard='ssh -t anish@isengard.anish.io'
+alias raspi='ssh -t pi@hackpi.mit.edu'
 # MIT
 alias athena='ssh -t aathalye@athena.dialup.mit.edu'
 
