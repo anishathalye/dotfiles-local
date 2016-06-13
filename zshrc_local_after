@@ -9,13 +9,13 @@ alias gondor='ssh -t -p 20022 anish@home.anish.io'
 alias emc='ssh -t emc@emc-PC.local'
 alias ts100='ssh -t founder@192.168.0.125'
 alias router='ssh root@192.168.0.29'
-# Digital Ocean
-alias ashay='ssh anish@159.203.143.183'
 # Dorm
 alias isengard='ssh -t anish@isengard.anish.io'
 alias raspi='ssh -t pi@hackpi.mit.edu'
 # MIT
 alias athena='ssh -t aathalye@athena.dialup.mit.edu'
+# TechX / HackMIT
+alias hacksvc='ssh ec2-user@52.25.156.219'
 
 # Sync and Backup
 DOCUMENT_ROOT='/Users/anish/Documents/Anish'
