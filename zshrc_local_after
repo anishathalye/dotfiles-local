@@ -4,7 +4,7 @@ alias gpgst='gpg2 -k --list-options show-uid-validity'
 alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 # SSH
 # Home
-alias server='ssh -t server@192.168.0.105'
+alias server='ssh -t -p 10022 server@home.anish.io'
 alias gondor='ssh -t -p 20022 anish@home.anish.io'
 alias emc='ssh -t emc@emc-PC.local'
 alias ts100='ssh -t founder@192.168.0.125'
