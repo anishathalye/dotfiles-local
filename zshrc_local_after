@@ -18,6 +18,7 @@ alias athena='ssh -t aathalye@athena.dialup.mit.edu'
 alias ssh-hackmit-hackbot='ssh ec2-user@52.25.156.219'
 alias ssh-hackmit-oscar='ssh ec2-user@52.25.156.219'
 alias ssh-techx-nginx='ssh ec2-user@52.70.144.55'
+alias ssh-hackmit-nginx='ssh ec2-user@52.25.70.64'
 alias ssh-hackmit-puzzle-1='ssh ubuntu@54.87.233.142'
 
 # Sync and Backup
