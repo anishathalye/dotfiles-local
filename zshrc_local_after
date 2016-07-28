@@ -2,6 +2,8 @@
 # GPG
 alias gpgst='gpg2 -k --list-options show-uid-validity'
 alias gpgsgn='gpg2 --ask-cert-level --edit-key'
+# Git / Hub
+alias git='hub'
 # SSH
 # Home
 alias server='ssh -t -p 10022 server@home.anish.io'
