@@ -71,6 +71,7 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 # the anaconda bin is not added to $PATH because it has binaries that override
 # default stuff and cause problems (e.g. python gets overridden with python3)
 alias jupyter="~/anaconda3/bin/jupyter"
+alias anaconda-python3="~/anaconda3/bin/python3"
 
 # Update local dotfiles
 function ldfu() {
