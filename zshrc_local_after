@@ -15,6 +15,9 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
 export CUDA_HOME="/usr/local/cuda"
 export PATH="$CUDA_HOME/bin":$PATH
 
+# Torch
+source "$HOME/torch/install/bin/torch-activate"
+
 # Anaconda
 alias anaconda-python3="~/anaconda3/bin/python3"
 
