@@ -33,6 +33,9 @@ DOCUMENT_ROOT='/Users/anish/Documents/Anish'
 alias backup-isengard="rsync -avP --delete ${DOCUMENT_ROOT} anish@isengard.anish.io:/home/anish/backup"
 alias backup-server="rsync -e 'ssh -p 10022' -avP --delete ${DOCUMENT_ROOT} server@home.anish.io:/media/raid/unison"
 
+# Named directories
+hash -d src="/Users/anish/Documents/Anish/Developer/src"
+
 # Simple prompt for displaying shell sessions
 function blogprompt() {
     PS1='[anish@blog %1~]$ '
