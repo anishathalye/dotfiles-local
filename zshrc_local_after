@@ -28,6 +28,7 @@ alias ssh-hackmit-puzzle-4='ssh ubuntu@75.101.224.214'
 alias ssh-hackmit-puzzle-5='ssh ubuntu@54.173.39.176'
 # Code for Good
 alias codeforgood='ssh codeforgood@codeforgood.xvm.mit.edu'
+alias xvm='ssh anish@x.anish.io'
 
 # Sync and Backup
 DOCUMENT_ROOT='/Users/anish/Documents/Anish'
