@@ -6,16 +6,15 @@ alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 alias git='hub'
 # SSH
 # Home
-alias server='ssh -t -p 10022 server@home.anish.io'
-alias gondor='ssh -t -p 20022 anish@home.anish.io'
-alias emc='ssh -t emc@emc-PC.local'
-alias ts100='ssh -t founder@192.168.0.125'
+alias server='ssh -p 10022 server@home.anish.io'
+alias gondor='ssh -p 20022 anish@home.anish.io'
+alias ts100='ssh founder@192.168.0.125'
 alias router='ssh root@192.168.0.29'
 # Dorm
-alias isengard='ssh -t anish@isengard.anish.io'
-alias raspi='ssh -t pi@hackpi.mit.edu'
+alias isengard='ssh anish@isengard.anish.io'
+alias raspi='ssh pi@hackpi.mit.edu'
 # MIT
-alias athena='ssh -t aathalye@athena.dialup.mit.edu'
+alias athena='ssh aathalye@athena.dialup.mit.edu'
 # TechX / HackMIT
 alias ssh-hackmit-hackbot='ssh ec2-user@52.25.156.219'
 alias ssh-hackmit-oscar='ssh ec2-user@52.25.156.219'
