@@ -13,10 +13,11 @@ alias router='ssh root@192.168.0.29'
 alias raspi-home='ssh pi@192.168.0.110'
 # Dorm
 alias isengard='ssh anish@isengard.anish.io'
+alias raspi='ssh pi@raspi.freedns.anish.io'
 # MIT
 alias athena='ssh aathalye@athena.dialup.mit.edu'
 # TechX / HackMIT
-alias hackmit-raspi='ssh pi@hackpi.mit.edu'
+alias ssh-hackmit-raspi='ssh pi@hackpi.mit.edu'
 alias ssh-hackmit-hackbot='ssh ec2-user@52.25.156.219'
 alias ssh-hackmit-oscar='ssh ec2-user@52.25.156.219'
 alias ssh-techx-nginx='ssh ec2-user@52.70.144.55'
