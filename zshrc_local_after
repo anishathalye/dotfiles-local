@@ -4,6 +4,7 @@ alias gpgst='gpg2 -k --list-options show-uid-validity'
 alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 # Git / Hub
 alias git='hub'
+
 # SSH
 # Home
 alias server='ssh -p 10022 server@home.anish.io'
@@ -16,6 +17,7 @@ alias raspi='ssh pi@raspi.freedns.anish.io'
 alias gondor='ssh anish@gondor.freedns.anish.io'
 # MIT
 alias athena='ssh aathalye@athena.dialup.mit.edu'
+alias xvm='ssh anish@x.anish.io'
 # TechX / HackMIT
 alias ssh-hackmit-raspi='ssh pi@hackpi.mit.edu'
 alias ssh-hackmit-hackbot='ssh ec2-user@52.25.156.219'
@@ -29,7 +31,8 @@ alias ssh-hackmit-puzzle-4='ssh ubuntu@75.101.224.214'
 alias ssh-hackmit-puzzle-5='ssh ubuntu@54.173.39.176'
 # Code for Good
 alias codeforgood='ssh codeforgood@codeforgood.xvm.mit.edu'
-alias xvm='ssh anish@x.anish.io'
+# HKN
+alias hkn='ssh aathalye@hkn.mit.edu'
 
 # Sync and Backup
 DOCUMENT_ROOT='/Users/anish/Documents/Anish'
