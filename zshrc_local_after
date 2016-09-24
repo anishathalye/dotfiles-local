@@ -2,7 +2,8 @@
 alias gpgst='gpg2 -k --list-options show-uid-validity'
 alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 alias git='hub'
-alias emacs='reattach-to-user-namespace emacs'
+alias emacs='emacs -nw'
+alias guiemacs='reattach-to-user-namespace emacs'
 
 # SSH
 # Home
