@@ -16,6 +16,8 @@ alias isengard='ssh anish@isengard.anish.io'
 alias raspi='ssh pi@raspi.freedns.anish.io'
 alias gondor='ssh anish@gondor.freedns.anish.io'
 # MIT
+# Classes
+alias ssh-6829='ssh anish_athalye@130.211.182.80' # to GCP
 alias athena='ssh aathalye@athena.dialup.mit.edu'
 alias xvm='ssh anish@x.anish.io'
 # TechX / HackMIT
