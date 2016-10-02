@@ -90,7 +90,7 @@ alias anaconda-python3="~/anaconda/bin/python3"
 function ldfu() {
     declare -f dfu > /dev/null && dfu &&
     (
-        cd ~/.dotfiles_local && git pullff && ./install -q
+        cd ~/.dotfiles_local && git pull --ff-only && ./install -q
     )
 }
 
