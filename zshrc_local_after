@@ -86,6 +86,6 @@ export PATH="/home/server/bin:$PATH"
 function ldfu() {
     declare -f dfu > /dev/null && dfu &&
     (
-        cd ~/.dotfiles_local && git pullff && ./install -q
+        cd ~/.dotfiles_local && git pull --ff-only && ./install -q
     )
 }
