@@ -35,6 +35,7 @@ DOCUMENT_ROOT='/Users/anish/Documents/Anish'
 # Backup
 alias backup-isengard="rsync -avP --delete ${DOCUMENT_ROOT} anish@isengard.anish.io:/home/anish/backup"
 alias backup-server="rsync -e 'ssh -p 10022' -avP --delete ${DOCUMENT_ROOT} server@home.anish.io:/media/raid/unison"
+alias backup-server-home="rsync -avP --delete ${DOCUMENT_ROOT} server@192.168.0.105:/media/raid/unison"
 
 # Named directories
 hash -d src="/Users/anish/Documents/Anish/Developer/src"
