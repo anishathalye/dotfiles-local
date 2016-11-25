@@ -7,11 +7,11 @@
 
 - link:
     ~/.dotfiles_local: ''
-    ~/.gitconfig_local: gitconfig_local
-    ~/.hgrc_local: hgrc_local
-    ~/.vimrc_local: vimrc_local
-    ~/.zshrc_local_after: zshrc_local_after
-    ~/.zshrc_local_before: zshrc_local_before
+    ~/.gitconfig_local:
+    ~/.hgrc_local:
+    ~/.vimrc_local:
+    ~/.zshrc_local_after:
+    ~/.zshrc_local_before:
 
 - shell:
   - git update-submodules # after linking ~/.gitconfig
