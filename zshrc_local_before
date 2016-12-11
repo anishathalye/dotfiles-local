@@ -3,4 +3,7 @@ PATH=~/bin:$PATH
 PATH=/usr/local/sbin:/usr/local/bin:$PATH
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 
+# CrossPack
+PATH=/usr/local/CrossPack-AVR/bin:$PATH
+
 source ~/.dotfiles_local/bootstrap.zsh
