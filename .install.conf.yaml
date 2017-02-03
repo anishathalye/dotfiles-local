@@ -4,6 +4,7 @@
     ~/.dotfiles_local: ''
     ~/.gitconfig_local: gitconfig_local
     ~/.zshrc_local_after: zshrc_local_after
+    ~/.bashrc_local_before: bashrc_local_before
 
 - shell:
   - git update-submodules # after linking ~/.gitconfig
