@@ -1,17 +1,8 @@
-# Shortcuts
-mbpwifi='anish@192.168.0.136'
-mbpdl="${mbpwifi}:~/Downloads"
+# Bootstrap
 
-# Aliases
-alias grep='grep --color'
-alias nload='nload -u K'
-alias hddtemps='sudo hddtemp /dev/sda /dev/sdb /dev/sdc /dev/sdd /dev/sde'
-# alias desk="dvtm htop 'screen -SRd desk3' 'screen -SRd desk2' 'screen -SRd desk1'"
-alias startvnc='tightvncserver -nolisten tcp -localhost :1'
-alias stopvnc='tightvncserver -kill :1'
-alias glados='cd /media/raid/unison/Anish/Developer/src/Python/GLaDOS && ./glados.py'
+[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
 
-# Backup
+# Aliases and Functions
 function backup-ts100() {
     time (
         rsync -avP --delete /media/raid2/home/data2/Media founder@192.168.0.125:/home/founder/server_backup &&
@@ -19,47 +10,8 @@ function backup-ts100() {
     )
 }
 
-# Virtual Machines
-alias debian='ssh -t anish@192.168.0.172'
 # Machines
-alias emc='ssh -t emc@emc-PC.local'
-alias ts100='ssh -t founder@ts100.local'
-
-alias mirrorsite='wget -m -k -K -E -e robots=off'
-alias topprocs='ps -eo pcpu,cmd | tail -n +2 | sort -rk 1 | head'
-
-[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
-
-export PATH="/home/server/bin:$PATH"
-
-## IPTables INFO
-# to ban IP
-# sudo iptables -A INPUT -s <IP> -j DROP
-# for chain name > we can do INPUT, OUTPUT, FORWARD
-# for effect > we can do ACCEPT, DENY (sends error message back), DROP (ignores packet)
-# -A adds rule
-# sudo iptables -A <Chain_Name> -s <IP> -j <effect>
-# -j specifies effect (ACCEPT, DENY, DROP)
-# to remove rule:
-# -D removes rule
-# sudo iptables -D <Chain_Name> <Rule_number>
-# rule starts with 1 and counts down from the top of the list
-# sudo iptables -L to list
-# Guide: http://www.cae.wisc.edu/iptables-using
-
-# To add new rules to IPTables, log in as root and modify /etc/default/iptables
-# to restore, do iptables-restore < /etc/default/iptables
-
-#####
-# irssi auto commands
-#####
-
-# /network ADD NetworkName # (just network NAME here, custom name)
-# /server ADD -auto -network NetworkName server.ip.here 6667 {password}
-# /channel ADD -auto #channel NetworkName {channel password}
-
-## ARCHIVE WEBSITE
-#  wget -m -k -K -E http://user:password@domain/path/
+alias ts100='ssh -t founder@192.168.0.125'
 
 # PURE-FTPD
 # To add user
@@ -70,17 +22,6 @@ export PATH="/home/server/bin:$PATH"
 # pure-pw userdel user
 # pure-pw mkdb
 # service pure-ftpd restart
-
-
-#TO DISABLE GUI LOGIN
-#in /etc/default/grub, comment out
-#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-#add
-#GRUB_CMDLINE_LINUX_DEFAULT="text"
-#then
-#sudo update-grub
-
-# CP PROGRESS BAR - do rsync -WavP source destination
 
 # Update local dotfiles
 function ldfu() {
