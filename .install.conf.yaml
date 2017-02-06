@@ -7,9 +7,9 @@
 
 - link:
     ~/.dotfiles_local: ''
-    ~/.gitconfig_local: gitconfig_local
-    ~/.hgrc_local: hgrc_local
-    ~/.zshrc_local_after: zshrc_local_after
+    ~/.gitconfig_local:
+    ~/.hgrc_local:
+    ~/.zshrc_local_after:
 
 - shell:
   - git update-submodules # after linking ~/.gitconfig
