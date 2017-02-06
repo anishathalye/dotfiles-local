@@ -6,7 +6,8 @@ alias emacs='emacs -nw'
 
 # SSH
 # Home
-alias server='ssh -p 10022 server@home.anish.io'
+alias server='ssh server@192.168.0.105'
+alias server-remote='ssh -p 10022 server@home.anish.io'
 alias ts100='ssh founder@192.168.0.125'
 alias router='ssh root@192.168.0.29'
 alias raspi-home='ssh pi@192.168.0.110'
