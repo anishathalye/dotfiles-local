@@ -29,8 +29,6 @@ alias ssh-techx-nginx='ssh ec2-user@52.70.144.55'
 alias ssh-hackmit-nginx='ssh ec2-user@52.25.70.64'
 # Code for Good
 alias codeforgood='ssh codeforgood@codeforgood.xvm.mit.edu'
-# HKN
-alias hkn='ssh aathalye@hkn.mit.edu'
 
 # Sync and Backup
 DOCUMENT_ROOT='/Users/anish/Documents/Anish'
