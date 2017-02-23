@@ -2,6 +2,9 @@
 [[ -s /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.sh &&
     autoload -U compinit && compinit -u
 
+# Go
+export PATH=$PATH:/usr/local/go/bin
+
 # Update local dotfiles
 function ldfu() {
     declare -f dfu > /dev/null && dfu &&
