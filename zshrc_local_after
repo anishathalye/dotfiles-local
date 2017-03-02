@@ -25,8 +25,9 @@ alias xvm='ssh anish@x.anish.io'
 alias ssh-hackmit-raspi='ssh pi@hackpi.mit.edu'
 alias ssh-hackmit-hackbot='ssh ec2-user@52.25.156.219'
 alias ssh-hackmit-oscar='ssh ec2-user@52.25.156.219'
-alias ssh-techx-nginx='ssh ec2-user@52.70.144.55'
 alias ssh-hackmit-nginx='ssh ec2-user@52.25.70.64'
+alias ssh-techx-nginx='ssh ec2-user@52.70.144.55'
+alias ssh-techx-hackmit='ssh ubuntu@52.90.83.209'
 # Code for Good
 alias codeforgood='ssh codeforgood@codeforgood.xvm.mit.edu'
 
