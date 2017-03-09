@@ -7,7 +7,7 @@ function backup-ts100() {
     time (
         rsync -avP --delete /media/raid2/home/data2/Media founder@192.168.0.125:/home/founder/server_backup &&
             rsync -avP --delete /media/raid/home/data founder@192.168.0.125:/media/data/server_backup &&
-            rsync -avP --delete /media/raid/unison/Anish --exclude /media/raid/unison/Anish/Media founder@192.168.0.125:/media/data/server_backup/Anish
+            rsync -avP --delete /media/raid/unison/Anish/ --exclude '/Media' --exclude '/Edited Media' founder@192.168.0.125:/media/data/server_backup/Anish
     )
 }
 
