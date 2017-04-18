@@ -8,6 +8,7 @@
 - link:
     ~/.dotfiles_local: ''
     ~/.gitconfig_local:
+    ~/.hammerspoon:
     ~/.hgrc_local:
     ~/.vimrc_local:
     ~/.zshrc_local_after:
