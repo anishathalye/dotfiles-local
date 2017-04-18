@@ -88,18 +88,28 @@ function ldfu() {
     )
 }
 
-# Tor
+# SOCKS proxy
 
-function tor-on() {
+function proxy-on() {
     local interface='Wi-Fi'
     sudo networksetup -setsocksfirewallproxy $interface 127.0.0.1 9050 off
     sudo networksetup -setsocksfirewallproxystate $interface on
+}
+
+function proxy-off() {
+    local interface='Wi-Fi'
+    sudo networksetup -setsocksfirewallproxystate $interface off
+}
+
+# Tor
+
+function tor-on() {
+    proxy-on
     tor
 }
 
 function tor-off() {
-    local interface='Wi-Fi'
-    sudo networksetup -setsocksfirewallproxystate $interface off
+    proxy-off
 }
 
 # GPG Key
