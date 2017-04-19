@@ -61,11 +61,17 @@ end)
 -- move between displays
 hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'right', function()
   local win = hs.window.focusedWindow()
-  win:moveToScreen(win:screen():next())
+  local next = win:screen():toEast()
+  if next then
+    win:moveToScreen(next, true)
+  end
 end)
 hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'left', function()
   local win = hs.window.focusedWindow()
-  win:moveToScreen(win:screen():previous())
+  local next = win:screen():toWest()
+  if next then
+    win:moveToScreen(next, true)
+  end
 end)
 
 -- window hints
