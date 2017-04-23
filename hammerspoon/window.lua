@@ -1,93 +1,20 @@
-function half(orientation, first)
-  return function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local max = win:screen():frame()
-
-    if orientation == 'horizontal' and not first then
-        f.x = max.x + max.w / 2
-    else
-      f.x = max.x
-    end
-
-    if orientation == 'vertical' and not first then
-      f.y = max.y + max.h / 2
-    else
-      f.y = max.y
-    end
-
-    if orientation == 'horizontal' then
-      f.w = max.w / 2
-      f.h = max.h
-    else
-      f.w = max.w
-      f.h = max.h / 2
-    end
-
-    win:setFrame(f)
-  end
-end
-
 -- half of screen
-hs.hotkey.bind({'alt', 'cmd'}, 'left', half('horizontal', true))
-hs.hotkey.bind({'alt', 'cmd'}, 'right', half('horizontal', false))
-hs.hotkey.bind({'alt', 'cmd'}, 'up', half('vertical', true))
-hs.hotkey.bind({'alt', 'cmd'}, 'down', half('vertical', false))
-
-function quarter(row, col)
-  return function()
-    local win = hs.window.focusedWindow()
-    local f = win:frame()
-    local max = win:screen():frame()
-
-    if row == 0 then
-      f.y = max.y
-    else
-      f.y = max.y + max.h / 2
-    end
-
-    if col == 0 then
-      f.x = max.x
-    else
-      f.x = max.x + max.w / 2
-    end
-
-    f.w = max.w / 2
-    f.h = max.h / 2
-
-    win:setFrame(f)
-  end
-end
+hs.hotkey.bind({'alt', 'cmd'}, 'left', function() hs.window.focusedWindow():moveToUnit({0, 0, 0.5, 1}) end)
+hs.hotkey.bind({'alt', 'cmd'}, 'right', function() hs.window.focusedWindow():moveToUnit({0.5, 0, 0.5, 1}) end)
+hs.hotkey.bind({'alt', 'cmd'}, 'up', function() hs.window.focusedWindow():moveToUnit({0, 0, 1, 0.5}) end)
+hs.hotkey.bind({'alt', 'cmd'}, 'down', function() hs.window.focusedWindow():moveToUnit({0, 0.5, 1, 0.5}) end)
 
 -- quarter of screen
-hs.hotkey.bind({'shift', 'alt', 'cmd'}, 'left', quarter(0, 0))
-hs.hotkey.bind({'shift', 'alt', 'cmd'}, 'right', quarter(1, 1))
-hs.hotkey.bind({'shift', 'alt', 'cmd'}, 'up', quarter(0, 1))
-hs.hotkey.bind({'shift', 'alt', 'cmd'}, 'down', quarter(1, 0))
+hs.hotkey.bind({'shift', 'alt', 'cmd'}, 'left', function() hs.window.focusedWindow():moveToUnit({0, 0, 0.5, 0.5}) end)
+hs.hotkey.bind({'shift', 'alt', 'cmd'}, 'right', function() hs.window.focusedWindow():moveToUnit({0.5, 0.5, 0.5, 0.5}) end)
+hs.hotkey.bind({'shift', 'alt', 'cmd'}, 'up', function() hs.window.focusedWindow():moveToUnit({0.5, 0, 0.5, 0.5}) end)
+hs.hotkey.bind({'shift', 'alt', 'cmd'}, 'down', function() hs.window.focusedWindow():moveToUnit({0, 0.5, 0.5, 0.5}) end)
 
 -- full screen
-hs.hotkey.bind({'alt', 'cmd'}, 'f', function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local max = win:screen():frame()
-
-  f.x = max.x
-  f.y = max.y
-  f.w = max.w
-  f.h = max.h
-  win:setFrame(f)
-end)
+hs.hotkey.bind({'alt', 'cmd'}, 'f', function() hs.window.focusedWindow():moveToUnit({0, 0, 1, 1}) end)
 
 -- center screen
-hs.hotkey.bind({'alt', 'cmd'}, 'c', function()
-  local win = hs.window.focusedWindow()
-  local f = win:frame()
-  local max = win:screen():frame()
-
-  f.x = max.x + (max.w - f.w) / 2
-  f.y = max.y + (max.h - f.h) / 2
-  win:setFrame(f)
-end)
+hs.hotkey.bind({'alt', 'cmd'}, 'c', function() hs.window.focusedWindow():centerOnScreen() end)
 
 -- move between displays
 hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'right', function()
