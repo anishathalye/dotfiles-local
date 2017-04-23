@@ -34,6 +34,37 @@ hs.hotkey.bind({'alt', 'cmd'}, 'right', half('horizontal', false))
 hs.hotkey.bind({'alt', 'cmd'}, 'up', half('vertical', true))
 hs.hotkey.bind({'alt', 'cmd'}, 'down', half('vertical', false))
 
+function quarter(row, col)
+  return function()
+    local win = hs.window.focusedWindow()
+    local f = win:frame()
+    local max = win:screen():frame()
+
+    if row == 0 then
+      f.y = max.y
+    else
+      f.y = max.y + max.h / 2
+    end
+
+    if col == 0 then
+      f.x = max.x
+    else
+      f.x = max.x + max.w / 2
+    end
+
+    f.w = max.w / 2
+    f.h = max.h / 2
+
+    win:setFrame(f)
+  end
+end
+
+-- quarter of screen
+hs.hotkey.bind({'shift', 'alt', 'cmd'}, 'left', quarter(0, 0))
+hs.hotkey.bind({'shift', 'alt', 'cmd'}, 'right', quarter(1, 1))
+hs.hotkey.bind({'shift', 'alt', 'cmd'}, 'up', quarter(0, 1))
+hs.hotkey.bind({'shift', 'alt', 'cmd'}, 'down', quarter(1, 0))
+
 -- full screen
 hs.hotkey.bind({'alt', 'cmd'}, 'f', function()
   local win = hs.window.focusedWindow()
