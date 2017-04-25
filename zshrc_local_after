@@ -17,6 +17,8 @@ alias gondor='ssh anish@gondor.freedns.anish.io'
 # EC2
 alias telemetry='ssh ubuntu@telemetry.anish.io'
 # MIT
+# PDOS
+alias csail='ssh aathalye@login.csail.mit.edu'
 # Classes
 alias athena='ssh aathalye@athena.dialup.mit.edu'
 alias xvm='ssh anish@x.anish.io'
