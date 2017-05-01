@@ -9,6 +9,7 @@
     ~/.dotfiles_local: ''
     ~/.gitconfig_local:
     ~/.hgrc_local:
+    ~/.bash_login:
     ~/.bashrc_local_before:
     ~/.zshrc_local_after:
 
