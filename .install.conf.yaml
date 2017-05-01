@@ -11,7 +11,6 @@
     ~/.hgrc_local:
     ~/.bash_login:
     ~/.bashrc_local_before:
-    ~/.zshrc_local_after:
 
 - shell:
   - git update-submodules # after linking ~/.gitconfig
