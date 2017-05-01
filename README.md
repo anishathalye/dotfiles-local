@@ -15,6 +15,35 @@ files are organized.
 Configuration for specific computers (or groups of computers) is maintained in
 separate branches in this repo.
 
+Branch Hierarchy
+----------------
+
+```
+master
+|
++- mac
+|
++- linux-server
+|  |
+|  +- a-srvr
+|  |
+|  +- isengard
+|  |
+|  +- gondor
+|
++- athena
+|
++- csail
+|
++- linux-desktop
+|  |
+|  +- google-android
+|
++- dropbox
+
+old
+```
+
 License
 -------
 
