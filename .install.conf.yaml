@@ -10,7 +10,9 @@
     ~/.gitconfig_local:
     ~/.hgrc_local:
     ~/.bash_login:
+    ~/.bashrc_local_after:
     ~/.bashrc_local_before:
+    ~/.xlog:
 
 - shell:
   - git update-submodules # after linking ~/.gitconfig
