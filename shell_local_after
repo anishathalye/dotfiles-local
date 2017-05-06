@@ -1,0 +1,7 @@
+# Update local dotfiles
+ldfu() {
+    declare -f dfu > /dev/null && dfu &&
+    (
+        cd ~/.dotfiles_local && git pull --ff-only && ./install -q
+    )
+}
