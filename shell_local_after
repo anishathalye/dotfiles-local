@@ -8,3 +8,4 @@ ldfu() {
 
 # Aliases
 alias ben='ssh anish@ben.csail.mit.edu'
+alias jarvis='ssh alarm@jarvis.pdos.csail.mit.edu'
