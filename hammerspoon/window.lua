@@ -34,3 +34,6 @@ end)
 
 -- window hints
 hs.hotkey.bind({'shift', 'cmd'}, 'h', hs.hints.windowHints)
+
+-- grid gui
+hs.hotkey.bind({'shift', 'cmd'}, 'g', hs.grid.show)
