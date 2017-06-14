@@ -22,6 +22,8 @@ Branch Hierarchy
 master
 |
 +- mac
+|  |
+|  +- openai
 |
 +- linux-server
 |  |
