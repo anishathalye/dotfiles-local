@@ -1,3 +1,6 @@
 # Homebrew and Related Tools
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 export HOMEBREW_NO_ANALYTICS=1
+
+# prompt
+RPR_SHOW_USER=false
