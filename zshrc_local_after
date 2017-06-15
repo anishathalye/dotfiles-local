@@ -7,3 +7,6 @@ RPR_SHOW_USER=false
 
 # pip
 PIP_REQUIRE_VIRTUALENV='' # install packages system-wide if not in a virtualenv
+
+# aliases
+alias cirra='cirrascale-cli'
