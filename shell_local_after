@@ -8,3 +8,6 @@ ldfu() {
 
 # aliases
 alias cirra='cirrascale-cli'
+
+# pip
+PIP_REQUIRE_VIRTUALENV=''
