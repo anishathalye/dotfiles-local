@@ -4,3 +4,6 @@ export HOMEBREW_NO_ANALYTICS=1
 
 # prompt
 RPR_SHOW_USER=false
+
+# pip
+PIP_REQUIRE_VIRTUALENV='' # install packages system-wide if not in a virtualenv
