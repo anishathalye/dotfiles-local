@@ -10,3 +10,9 @@ PIP_REQUIRE_VIRTUALENV='' # install packages system-wide if not in a virtualenv
 
 # aliases
 alias cirra='cirrascale-cli'
+cirra-forward() {
+    local machine=$1
+    local port=$2
+    echo "Forwarding localhost:${port} to ${machine}.cirrascale.sci.openai.org:${port}"
+    ssh -NL "${port}:localhost:${port}" "${OPENAI_USER}@${machine}.cirrascale.sci.openai.org"
+}
