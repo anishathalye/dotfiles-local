@@ -9,6 +9,7 @@
     ~/.dotfiles_local: ''
     ~/.gitconfig_local:
     ~/.hgrc_local:
+    ~/.jupyter/jupyter_notebook_config.py:
     ~/.shell_local_after:
     ~/.ssh/config: ssh/config
 
