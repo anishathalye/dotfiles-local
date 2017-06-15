@@ -5,3 +5,6 @@ ldfu() {
         cd ~/.dotfiles_local && git pull --ff-only && ./install -q
     )
 }
+
+# aliases
+alias cirra='cirrascale-cli'
