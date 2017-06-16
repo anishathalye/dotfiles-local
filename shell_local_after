@@ -11,3 +11,9 @@ alias cirra='cirrascale-cli'
 
 # pip
 PIP_REQUIRE_VIRTUALENV=''
+
+# cuda
+#
+# work around system only setting $CUDA_VISIBLE_DEVICES from $GPUS for login
+# shells
+export CUDA_VISIBLE_DEVICES="$GPUS"
