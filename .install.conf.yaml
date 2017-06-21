@@ -6,6 +6,7 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.bashrc_local_after:
     ~/.dotfiles_local: ''
     ~/.gitconfig_local:
     ~/.hgrc_local:
