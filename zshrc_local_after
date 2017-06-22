@@ -1,0 +1,5 @@
+# prompt
+RPR_EXTRA() {
+    echo " %{$fg[violet]%}(%{$fg[green]%}%BG:%b%{$fg[yellow]%}$CUDA_VISIBLE_DEVICES%{$fg[violet]%})%{$reset_color%}"
+}
+RPR_SHOW_USER=false
