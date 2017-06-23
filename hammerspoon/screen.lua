@@ -1,1 +1,1 @@
-hs.grid.setGrid('5x3', 'B326HK')
+hs.grid.setGrid('6x3', 'B326HK')
