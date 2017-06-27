@@ -78,6 +78,8 @@ export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 
+export JUPYTER_PATH="$HOME/.local/share/jupyter"
+
 # anaconda related binaries
 # the anaconda bin is not added to $PATH because it has binaries that override
 # default stuff and cause problems (e.g. python gets overridden with python3)
