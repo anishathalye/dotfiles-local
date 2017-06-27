@@ -2,6 +2,8 @@
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 export HOMEBREW_NO_ANALYTICS=1
 
+export JUPYTER_PATH="$HOME/.local/share/jupyter"
+
 # prompt
 RPR_SHOW_USER=false
 
