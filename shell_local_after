@@ -5,3 +5,6 @@ ldfu() {
         cd ~/.dotfiles_local && git pull --ff-only && ./install -q
     )
 }
+
+# GVM
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
