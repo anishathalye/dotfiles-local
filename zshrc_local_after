@@ -17,10 +17,10 @@ alias raspi='ssh pi@raspi.freedns.anish.io'
 alias gondor='ssh -p 20022 anish@gondor.freedns.anish.io'
 # EC2
 alias telemetry='ssh ubuntu@telemetry.anish.io'
+alias zero='ssh ubuntu@52.87.201.195'
 # MIT
 # PDOS
 alias csail='ssh aathalye@login.csail.mit.edu'
-alias zero='ssh ubuntu@52.87.201.195'
 # Classes
 alias athena='ssh aathalye@athena.dialup.mit.edu'
 alias xvm='ssh anish@x.anish.io'
