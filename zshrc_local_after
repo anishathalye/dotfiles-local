@@ -17,6 +17,7 @@ alias cirra='cirrascale-cli'
 cirra-forward() {
     local machine=$1
     local port=$2
-    echo "Forwarding localhost:${port} to ${machine}.cirrascale.sci.openai.org:${port}"
-    ssh -NL "${port}:localhost:${port}" "${OPENAI_USER}@${machine}.cirrascale.sci.openai.org"
+    local localport=${3:-$port}
+    echo "Forwarding localhost:${localport} to ${machine}.cirrascale.sci.openai.org:${port}"
+    ssh -NL "${localport}:localhost:${port}" "${OPENAI_USER}@${machine}.cirrascale.sci.openai.org"
 }
