@@ -18,8 +18,5 @@ PIP_REQUIRE_VIRTUALENV=''
 # shells
 export CUDA_VISIBLE_DEVICES="$GPUS"
 
-# work around an issue where scipy can't find libgfortran
-#
-# not sure why this isn't working otherwise, but working around it is less
-# effort than fixing it
-export LD_PRELOAD=/opt/anaconda/4.2.0/lib/libgfortran.so.3
+# include anaconda library path in ld search path
+export LD_LIBRARY_PATH=/opt/anaconda/4.2.0/lib
