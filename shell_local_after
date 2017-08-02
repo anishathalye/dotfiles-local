@@ -17,3 +17,9 @@ PIP_REQUIRE_VIRTUALENV=''
 # work around system only setting $CUDA_VISIBLE_DEVICES from $GPUS for login
 # shells
 export CUDA_VISIBLE_DEVICES="$GPUS"
+
+# work around an issue where scipy can't find libgfortran
+#
+# not sure why this isn't working otherwise, but working around it is less
+# effort than fixing it
+export LD_PRELOAD=/opt/anaconda/4.2.0/lib/libgfortran.so.3
