@@ -1,8 +1,10 @@
 # prompt
 RPR_EXTRA() {
     local gpus
-    if [[ "$CUDA_VISIBLE_DEVICES" == "" ]]; then
-        gpus='%{$fg[red]%}!!!'
+    if [[ ! -v CUDA_VISIBLE_DEVICES ]]; then
+        gpus='%{$fg[red]%}unset'
+    elif [[ "$CUDA_VISIBLE_DEVICES" == "" ]]; then
+        gpus='%{$fg[red]%}nil'
     else
         gpus="$CUDA_VISIBLE_DEVICES"
     fi
