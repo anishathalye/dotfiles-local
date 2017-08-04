@@ -32,6 +32,8 @@ RPR_EXTRA() {
     local gpus
     if [[ ! -v CUDA_VISIBLE_DEVICES ]]; then
         gpus='%{$fg[red]%}unset'
+    elif ! export | grep -Eq '^CUDA_VISIBLE_DEVICES='; then
+        gpus='%{$fg[red]%}unexported'
     elif [[ "$CUDA_VISIBLE_DEVICES" == "" ]]; then
         gpus='%{$fg[red]%}nil'
     else
