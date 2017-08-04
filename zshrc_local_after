@@ -26,3 +26,16 @@ alias anaconda-python3="~/anaconda3/bin/python3"
 
 # PATH
 PATH=~/bin:$PATH
+
+# prompt
+RPR_EXTRA() {
+    local gpus
+    if [[ ! -v CUDA_VISIBLE_DEVICES ]]; then
+        gpus='%{$fg[red]%}unset'
+    elif [[ "$CUDA_VISIBLE_DEVICES" == "" ]]; then
+        gpus='%{$fg[red]%}nil'
+    else
+        gpus="$CUDA_VISIBLE_DEVICES"
+    fi
+    echo " %{$fg[violet]%}(%{$fg[green]%}%BG:%b%{$fg[yellow]%}$gpus%{$fg[violet]%})%{$reset_color%}"
+}
