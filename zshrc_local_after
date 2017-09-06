@@ -14,7 +14,7 @@ alias raspi-home='ssh pi@192.168.0.110'
 # Dorm
 alias isengard='ssh anish@isengard.anish.io'
 alias raspi='ssh pi@raspi.freedns.anish.io'
-alias gondor='ssh -p 20022 anish@gondor.freedns.anish.io'
+alias gondor='ssh anish@gondor.freedns.anish.io'
 # EC2
 alias telemetry='ssh ubuntu@telemetry.anish.io'
 alias zero='ssh ubuntu@52.87.201.195'
