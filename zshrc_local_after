@@ -41,3 +41,5 @@ RPR_EXTRA() {
     fi
     echo " %{$fg[violet]%}(%{$fg[green]%}%BG:%b%{$fg[yellow]%}$gpus%{$fg[violet]%})%{$reset_color%}"
 }
+
+export CUDA_VISIBLE_DEVICES='' # always set, use CPU by default (safe default)
