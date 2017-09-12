@@ -17,6 +17,8 @@ function ldfu() {
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
 export CUDA_HOME="/usr/local/cuda"
 export PATH="$CUDA_HOME/bin":$PATH
+export CUDA_VISIBLE_DEVICES='' # always set, use CPU by default (safe default)
+export CUDA_DEVICE_ORDER='PCI_BUS_ID' # same order as `nvidia-smi`
 
 # Torch
 source "$HOME/torch/install/bin/torch-activate"
@@ -41,5 +43,3 @@ RPR_EXTRA() {
     fi
     echo " %{$fg[violet]%}(%{$fg[green]%}%BG:%b%{$fg[yellow]%}$gpus%{$fg[violet]%})%{$reset_color%}"
 }
-
-export CUDA_VISIBLE_DEVICES='' # always set, use CPU by default (safe default)
