@@ -35,14 +35,14 @@ alias ssh-techx-hackmit='ssh ubuntu@52.90.83.209'
 alias codeforgood='ssh codeforgood@codeforgood.xvm.mit.edu'
 
 # Sync and Backup
-DOCUMENT_ROOT='/Users/anish/Documents/Anish'
+DOCUMENT_ROOT="$HOME/Documents/Anish"
 # Backup
 alias backup-isengard="rsync -avP --delete ${DOCUMENT_ROOT} anish@isengard.anish.io:/home/anish/backup"
 alias backup-server="rsync -avP --delete ${DOCUMENT_ROOT} server@192.168.0.105:/media/raid/unison"
 alias backup-server-remote="rsync -e 'ssh -p 10022' -avP --delete ${DOCUMENT_ROOT} server@home.anish.io:/media/raid/unison"
 
 # Named directories
-hash -d src="/Users/anish/Documents/Anish/Developer/src"
+hash -d src="$HOME/Documents/Anish/Developer/src"
 
 # Simple prompt for displaying shell sessions
 function blogprompt() {
@@ -80,9 +80,12 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 
 export JUPYTER_PATH="$HOME/.local/share/jupyter"
 
+# OPAM configuration
+. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
 # Go
 
-export GOPATH="/Users/anish/Documents/Anish/Developer"
+export GOPATH="$HOME/Documents/Anish/Developer"
 
 # anaconda related binaries
 # the anaconda bin is not added to $PATH because it has binaries that override
