@@ -20,9 +20,6 @@ export PATH="$CUDA_HOME/bin":$PATH
 export CUDA_VISIBLE_DEVICES='' # always set, use CPU by default (safe default)
 export CUDA_DEVICE_ORDER='PCI_BUS_ID' # same order as `nvidia-smi`
 
-# Torch
-source "$HOME/torch/install/bin/torch-activate"
-
 # Anaconda
 alias anaconda-python3="~/anaconda3/bin/python3"
 
