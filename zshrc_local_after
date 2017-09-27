@@ -20,6 +20,7 @@ alias shire='ssh anish@shire.freedns.anish.io'
 # EC2
 alias telemetry='ssh ubuntu@telemetry.anish.io'
 alias zero='ssh ubuntu@52.87.201.195'
+alias rivendell='ssh anish@rivendell.freedns.anish.io'
 # MIT
 # PDOS
 alias csail='ssh aathalye@login.csail.mit.edu'
