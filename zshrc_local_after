@@ -3,42 +3,6 @@ alias gpgst='gpg2 -k --list-options show-uid-validity'
 alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 alias git='hub'
 
-# SSH
-# Home
-alias server='ssh server@192.168.0.105'
-alias server-remote='ssh -p 10022 server@home.anish.io'
-alias ts100='ssh founder@192.168.0.125'
-alias router='ssh root@192.168.1.1'
-alias router-remote='ssh -p 10022 root@router.freedns.anish.io'
-alias raspi-home='ssh pi@192.168.0.110'
-# Dorm
-alias isengard='ssh anish@isengard.anish.io'
-alias raspi='ssh pi@raspi.freedns.anish.io'
-alias gondor='ssh anish@gondor.freedns.anish.io'
-alias ithilien='ssh anish@ithilien.freedns.anish.io'
-alias shire='ssh anish@shire.freedns.anish.io'
-# EC2
-alias telemetry='ssh ubuntu@telemetry.anish.io'
-alias zero='ssh ubuntu@52.87.201.195'
-alias rivendell='ssh anish@rivendell.freedns.anish.io'
-alias mordor='ssh anish@mordor.freedns.anish.io'
-alias valinor='ssh anish@valinor.freedns.anish.io'
-# MIT
-# PDOS
-alias csail='ssh aathalye@login.csail.mit.edu'
-# Classes
-alias athena='ssh aathalye@athena.dialup.mit.edu'
-alias xvm='ssh anish@x.anish.io'
-# TechX / HackMIT
-alias ssh-hackmit-raspi='ssh pi@hackpi.mit.edu'
-alias ssh-hackmit-hackbot='ssh ec2-user@52.25.156.219'
-alias ssh-hackmit-oscar='ssh ec2-user@52.25.156.219'
-alias ssh-hackmit-nginx='ssh ec2-user@52.25.70.64'
-alias ssh-techx-nginx='ssh ec2-user@52.70.144.55'
-alias ssh-techx-hackmit='ssh ubuntu@52.90.83.209'
-# Code for Good
-alias codeforgood='ssh codeforgood@codeforgood.xvm.mit.edu'
-
 # Sync and Backup
 DOCUMENT_ROOT="$HOME/Documents/Anish"
 # Backup
