@@ -33,7 +33,7 @@ master
 |  |
 |  +- isengard
 |  |
-|  +- gondor
+|  +- labsix
 |
 +- athena
 |
