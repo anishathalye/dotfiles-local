@@ -11,6 +11,7 @@ alias backup-server-remote="rsync -e 'ssh -p 10022' -avP --delete ${DOCUMENT_ROO
 
 # Named directories
 hash -d src="$HOME/Documents/Anish/Developer/src"
+hash -d labsix="$HOME/Documents/Anish/Developer/src/labsix"
 
 # Simple prompt for displaying shell sessions
 function blogprompt() {
