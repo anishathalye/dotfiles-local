@@ -55,6 +55,7 @@ export JUPYTER_PATH="$HOME/.local/share/jupyter"
 # Go
 
 export GOPATH="$HOME/Documents/Anish/Developer"
+PATH="$GOPATH/bin:$PATH"
 
 # anaconda related binaries
 # the anaconda bin is not added to $PATH because it has binaries that override
