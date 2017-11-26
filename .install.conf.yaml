@@ -12,6 +12,7 @@
     ~/.hgrc_local:
     ~/.ocamlinit:
     ~/.shell_local_after:
+    ~/.ssh/config: ssh/config
     ~/.vimrc_local:
     ~/.zshrc_local_after:
     ~/.zshrc_local_before:
