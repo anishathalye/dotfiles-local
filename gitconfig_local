@@ -10,3 +10,7 @@
 
 [gpg]
 	program = gpg2
+
+[diff "scpt"]
+    textconv = osadecompile
+    binary=true
