@@ -1,6 +1,6 @@
 PKGS="${HOME}/.dotfiles_local/packages"
 
-function add() {
+add() {
     local LOC="${PKGS}/${1}"
     PATH=$LOC:$PATH
 }

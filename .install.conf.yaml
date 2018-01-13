@@ -12,10 +12,10 @@
     ~/.hgrc_local:
     ~/.ocamlinit:
     ~/.shell_local_after:
+    ~/.shell_local_before:
     ~/.ssh/config: ssh/config
     ~/.vimrc_local:
     ~/.zshrc_local_after:
-    ~/.zshrc_local_before:
 
 - shell:
   - git update-submodules # after linking ~/.gitconfig
