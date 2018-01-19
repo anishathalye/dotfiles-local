@@ -19,3 +19,4 @@
 
 - shell:
   - git update-submodules # after linking ~/.gitconfig
+  - ./macos
