@@ -3,6 +3,7 @@ PATH=~/bin:$PATH
 # Homebrew and Related Tools
 PATH=/usr/local/sbin:/usr/local/bin:$PATH
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+PATH=/usr/local/opt/python/libexec/bin:$PATH
 
 # CrossPack
 PATH=/usr/local/CrossPack-AVR/bin:$PATH
