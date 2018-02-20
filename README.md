@@ -22,6 +22,10 @@ Branch Hierarchy
 master
 |
 +- mac
+|  |
+|  +- openai
+|
++- openai-cirrascale
 |
 +- linux-server
 |  |
@@ -29,7 +33,7 @@ master
 |  |
 |  +- isengard
 |  |
-|  +- gondor
+|  +- gpu
 |
 +- athena
 |
@@ -38,6 +42,8 @@ master
 +- linux-desktop
 |  |
 |  +- google-android
+|
++- telemetry
 |
 +- dropbox
 
