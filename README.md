@@ -33,7 +33,7 @@ master
 |  |
 |  +- isengard
 |  |
-|  +- labsix
+|  +- gpu
 |
 +- athena
 |
