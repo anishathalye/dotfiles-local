@@ -38,16 +38,6 @@ Host xvm
     User anish
     HostName x.anish.io
 
-# clubs
-
-Host hackpi
-    User pi
-    HostName hackpi.mit.edu
-
-Host codeforgood
-    User codeforgood
-    HostName codeforgood.xvm.mit.edu
-
 # home
 
 Host server
