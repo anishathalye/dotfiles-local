@@ -61,6 +61,21 @@ menu = {
       menuItem.checked = not menuItem.checked
       reloadMenu()
     end
+  },
+  {
+    title = "Caffeinate",
+    checked = false,
+    fn = function(modifiers, menuItem)
+      local enabled = hs.caffeinate.toggle('displayIdle')
+      if enabled then
+        hs.notify.new({title='Caffeinate', informativeText='Caffeinate on'}):send()
+      else
+        hs.notify.new({title='Caffeinate', informativeText='Caffeinate off'}):send()
+      end
+
+      menuItem.checked = enabled
+      reloadMenu()
+    end
   }
 }
 
