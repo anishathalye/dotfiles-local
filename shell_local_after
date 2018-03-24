@@ -3,7 +3,7 @@
     autoload -U compinit && compinit -u
 
 # Update local dotfiles
-function ldfu() {
+ldfu() {
     declare -f dfu > /dev/null && dfu &&
     (
         cd ~/.dotfiles_local && git pull --ff-only && ./install -q
