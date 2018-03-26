@@ -8,6 +8,7 @@
 - link:
     ~/.dotfiles_local: ''
     ~/.gitconfig_local:
+    ~/.gnupg/gpg-agent.conf: gpg-agent.conf
     ~/.hammerspoon:
     ~/.hgrc_local:
     ~/.ocamlinit:
