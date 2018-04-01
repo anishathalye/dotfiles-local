@@ -22,12 +22,6 @@ export PATH="$CUDA_HOME/bin":$PATH
 export CUDA_VISIBLE_DEVICES='' # always set, use CPU by default (safe default)
 export CUDA_DEVICE_ORDER='PCI_BUS_ID' # same order as `nvidia-smi`
 
-# Anaconda
-alias anaconda-python3="~/anaconda3/bin/python3"
-
-# PATH
-PATH=~/bin:$PATH
-
 # prompt
 RPR_EXTRA() {
     local gpus
