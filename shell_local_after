@@ -3,7 +3,9 @@
     autoload -U compinit && compinit -u
 
 # Go
-export PATH=$PATH:/usr/local/go/bin
+export PATH="/usr/local/go/bin:$PATH"
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 
 # Update local dotfiles
 ldfu() {

@@ -16,6 +16,10 @@ Host csail
     User aathalye
     HostName login.csail.mit.edu
 
+Host ben
+    User anish
+    HostName ben.csail.mit.edu
+
 Host zero
     User ubuntu
     HostName 52.87.201.195
@@ -29,16 +33,6 @@ Host athena
 Host xvm
     User anish
     HostName x.anish.io
-
-# clubs
-
-Host hackpi
-    User pi
-    HostName hackpi.mit.edu
-
-Host codeforgood
-    User codeforgood
-    HostName codeforgood.xvm.mit.edu
 
 # home
 
