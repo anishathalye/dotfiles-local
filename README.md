@@ -31,8 +31,6 @@ master
 |  |
 |  +- a-srvr
 |  |
-|  +- isengard
-|  |
 |  +- gpu
 |
 +- athena
