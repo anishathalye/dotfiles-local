@@ -28,6 +28,10 @@ Host zero
     User ubuntu
     HostName 52.87.201.195
 
+Host nil
+    User aathalye
+    HostName nil.csail.mit.edu
+
 # mit
 
 Host athena
