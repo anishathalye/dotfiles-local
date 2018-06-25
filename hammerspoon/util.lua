@@ -76,6 +76,15 @@ menu = {
       menuItem.checked = enabled
       reloadMenu()
     end
+  },
+  {
+    title = "-" -- separator
+  },
+  {
+    title = "Layout: Lab Emacs",
+    fn = function(modifiers, menuItem)
+      applyLabEmacs()
+    end
   }
 }
 

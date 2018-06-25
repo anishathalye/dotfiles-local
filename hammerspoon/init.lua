@@ -1,5 +1,7 @@
+require('config')
 require('settings')
 require('screen')
 require('reload')
 require('window')
+require('layout')
 require('util')

@@ -1,2 +1,2 @@
-hs.grid.setGrid('5x3', 'P2715Q')
-hs.grid.setGrid('2x4', 'ZR2740w')
+hs.grid.setGrid('5x3', LAB_RIGHT_MONITOR)
+hs.grid.setGrid('2x4', LAB_LEFT_MONITOR)
