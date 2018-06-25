@@ -81,9 +81,15 @@ menu = {
     title = "-" -- separator
   },
   {
+    title = "Layout: Dorm Terminal",
+    fn = function()
+      applyLayout("Dorm Terminal", layoutDormTerminal)
+    end
+  },
+  {
     title = "Layout: Lab Emacs",
-    fn = function(modifiers, menuItem)
-      applyLabEmacs()
+    fn = function()
+      applyLayout("Lab Emacs", layoutLabEmacs)
     end
   }
 }
