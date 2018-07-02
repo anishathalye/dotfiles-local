@@ -8,6 +8,10 @@ Host isengard
     User anish
     HostName isengard.anish.io
 
+Host shire
+    User anish
+    HostName shire.freedns.anish.io
+
 # cloud
 
 Host telemetry
@@ -66,10 +70,6 @@ Host gondor
 Host ithilien
     User anish
     HostName ithilien.freedns.anish.io
-
-Host shire
-    User anish
-    HostName shire.freedns.anish.io
 
 ## ec2
 
