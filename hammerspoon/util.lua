@@ -81,6 +81,13 @@ menu = {
     title = "-" -- separator
   },
   {
+    title = "Rescue windows",
+    fn = rescue
+  },
+  {
+    title = "-" -- separator
+  },
+  {
     title = "Layout: Dorm Terminal",
     fn = function()
       applyLayout("Dorm Terminal", layoutDormTerminal)
