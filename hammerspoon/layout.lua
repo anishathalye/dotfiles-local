@@ -9,7 +9,8 @@ layoutLabEmacs = {
   {'Emacs', nil, LAB_RIGHT_MONITOR, u(0, 0, 3/5, 1), nil, nil},
   {'iTerm2', nil, LAB_RIGHT_MONITOR, u(3/5, 0, 2/5, 1), nil, nil},
 
-  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil},
+  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1/2), nil, nil},
+  {'Zulip', nil, MACBOOK_MONITOR, u(0, 1/2, 1/2, 1/2), nil, nil},
   {'Spotify', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil}
 }
 
