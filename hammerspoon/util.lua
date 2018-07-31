@@ -90,13 +90,13 @@ menu = {
   {
     title = "Layout: Dorm Terminal",
     fn = function()
-      applyLayout("Dorm Terminal", layoutDormTerminal)
+      applyLayout("Dorm Terminal", layoutDormTerminal, layoutDormTerminalHidden)
     end
   },
   {
     title = "Layout: Lab Emacs",
     fn = function()
-      applyLayout("Lab Emacs", layoutLabEmacs)
+      applyLayout("Lab Emacs", layoutLabEmacs, nil)
     end
   }
 }

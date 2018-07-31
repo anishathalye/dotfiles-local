@@ -21,13 +21,32 @@ layoutDormTerminal = {
 
   {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1/2), nil, nil},
   {'Things', nil, MACBOOK_MONITOR, u(0, 1/2, 1/2, 1/2), nil, nil},
-  {'Spotify', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 65/100), nil, nil},
-  {'Mail', nil, MACBOOK_MONITOR, u(1/2, 65/100, 1/2, 35/100), nil, nil}
+  {'Zulip', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1/2), nil, nil},
+  {'Mail', nil, MACBOOK_MONITOR, u(1/2, 1/2, 1/2, 1/2), nil, nil},
+
+  {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
+  {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
+
+  {'Emacs', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil}
 }
 
-applyLayout = function(name, layout)
+layoutDormTerminalHidden = {
+  'Spotify',
+  'Calendar',
+  'Emacs'
+}
+
+applyLayout = function(name, layout, hide)
   hs.notify.new({title='Layout', informativeText='Applied layout: ' .. name}):send()
   hs.layout.apply(layout)
+  if hide then
+    for i, name in ipairs(hide) do
+      local app = hs.application.get(name)
+      if app then
+        app:hide()
+      end
+    end
+  end
 end
 
 rescue = function()
