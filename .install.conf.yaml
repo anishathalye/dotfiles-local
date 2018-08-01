@@ -13,4 +13,5 @@
     ~/.ssh/config: ssh/config
 
 - shell:
+  - git submodule sync --recursive
   - git update-submodules # after linking ~/.gitconfig
