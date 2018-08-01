@@ -9,7 +9,9 @@
     ~/.dotfiles_local: ''
     ~/.gitconfig_local:
     ~/.hgrc_local:
-    ~/.zshrc_local_after:
+    ~/.shell_local_after:
+    ~/.ssh/config: ssh/config
 
 - shell:
+  - git submodule sync --recursive
   - git update-submodules # after linking ~/.gitconfig

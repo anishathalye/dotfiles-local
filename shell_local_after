@@ -24,8 +24,13 @@ alias ts100='ssh -t founder@192.168.0.125'
 # pure-pw mkdb
 # service pure-ftpd restart
 
+# Go
+export PATH="/usr/local/go/bin:$PATH"
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
+
 # Update local dotfiles
-function ldfu() {
+ldfu() {
     declare -f dfu > /dev/null && dfu &&
     (
         cd ~/.dotfiles_local && git pull --ff-only && ./install -q
