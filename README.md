@@ -23,9 +23,9 @@ master
 |
 +- mac
 |  |
-|  +- openai
+|  +- openai [inactive]
 |
-+- openai-cirrascale
++- openai-cirrascale [inactive]
 |
 +- linux-server
 |  |
@@ -39,11 +39,11 @@ master
 |
 +- linux-desktop
 |  |
-|  +- google-android
+|  +- google-android [inactive]
 |
 +- telemetry
 |
-+- dropbox
++- dropbox [inactive]
 
 old
 ```
