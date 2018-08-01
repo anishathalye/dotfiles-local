@@ -19,5 +19,6 @@
     ~/.zshrc_local_after:
 
 - shell:
+  - git submodule sync --recursive
   - git update-submodules # after linking ~/.gitconfig
   - ./macos
