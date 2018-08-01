@@ -4,6 +4,22 @@ Host isengard
     User anish
     HostName isengard.anish.io
 
+Host shire
+    User anish
+    HostName shire.freedns.anish.io
+
+Host gondor
+    User anish
+    HostName gondor.freedns.anish.io
+
+Host ithilien
+    User anish
+    HostName ithilien.freedns.anish.io
+
+Host mordor
+    User anish
+    HostName mordor.freedns.anish.io
+
 # cloud
 
 Host telemetry
@@ -23,6 +39,10 @@ Host ben
 Host zero
     User ubuntu
     HostName 52.87.201.195
+
+Host nil
+    User aathalye
+    HostName nil.csail.mit.edu
 
 # mit
 
@@ -48,35 +68,3 @@ Host server-remote
 Host ts100
     User founder
     HostName 192.168.0.125
-
-# labsix
-
-Host gondor
-    User anish
-    HostName gondor.freedns.anish.io
-
-Host ithilien
-    User anish
-    HostName ithilien.freedns.anish.io
-
-Host shire
-    User anish
-    HostName shire.freedns.anish.io
-
-## ec2
-
-Host rivendell
-    User anish
-    HostName rivendell.freedns.anish.io
-
-Host mordor
-    User anish
-    HostName mordor.freedns.anish.io
-
-Host valinor
-    User anish
-    HostName valinor.freedns.anish.io
-
-Host moria
-    User anish
-    HostName moria.freedns.anish.io
