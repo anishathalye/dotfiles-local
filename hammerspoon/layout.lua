@@ -36,11 +36,30 @@ layoutDormTerminalHidden = {
   'Emacs'
 }
 
+tableToSet = function(table)
+  local s = {}
+  if not table then
+    return s
+  end
+  for _, v in ipairs(table) do s[v] = true end
+  return s
+end
+
 applyLayout = function(name, layout, hide)
   hs.notify.new({title='Layout', informativeText='Applied layout: ' .. name}):send()
   hs.layout.apply(layout)
+  hiddenSet = tableToSet(hide)
+  for _, entry in ipairs(layout) do
+    local name = entry[1]
+    if not hiddenSet[name] then
+      local app = hs.application.get(entry[1])
+      if app then
+        app:unhide()
+      end
+    end
+  end
   if hide then
-    for i, name in ipairs(hide) do
+    for _, name in ipairs(hide) do
       local app = hs.application.get(name)
       if app then
         app:hide()
@@ -53,7 +72,7 @@ rescue = function()
   local screen = hs.screen.mainScreen()
   local screenFrame = screen:fullFrame()
   local wins = hs.window.visibleWindows()
-  for i, win in ipairs(wins) do
+  for _, win in ipairs(wins) do
     local frame = win:frame()
     if not frame:inside(screenFrame) then
       win:moveToScreen(screen, true, true)
