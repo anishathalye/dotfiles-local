@@ -44,6 +44,19 @@ layoutDormTerminal = {
   {'Emacs', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false}
 }
 
+layoutLaptop = {
+  {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Emacs', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Google Chrome', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Zulip', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'iTerm2', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
+}
+
+
 tableToSet = function(table)
   local s = {}
   if not table then

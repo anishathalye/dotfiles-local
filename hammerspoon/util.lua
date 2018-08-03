@@ -104,7 +104,13 @@ menu = {
     fn = function()
       applyLayout("Lab Emacs (focus)", layoutLabEmacsFocus)
     end
-  }
+  },
+  {
+    title = "Layout: Laptop",
+    fn = function()
+      applyLayout("Laptop", layoutLaptop)
+    end
+  },
 }
 
 reloadMenu()
