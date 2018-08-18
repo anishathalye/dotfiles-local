@@ -16,10 +16,6 @@ Host gondor
     User anish
     HostName gondor.freedns.anish.io
 
-Host ithilien
-    User anish
-    HostName ithilien.freedns.anish.io
-
 Host mordor
     User anish
     HostName mordor.freedns.anish.io
@@ -68,6 +64,15 @@ Host server-remote
     User server
     HostName home.anish.io
     Port 10022
+
+Host bongo
+    User anish
+    HostName 192.168.0.134
+
+Host bongo-remote
+    User anish
+    HostName home.anish.io
+    Port 30022
 
 Host ts100
     User founder
