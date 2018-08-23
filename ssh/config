@@ -28,6 +28,10 @@ Host telemetry
 
 # csail / pdos
 
+Host g
+    User git
+    HostName g.csail.mit.edu
+
 Host csail
     User aathalye
     HostName login.csail.mit.edu
