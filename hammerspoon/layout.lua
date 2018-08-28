@@ -44,7 +44,7 @@ layoutDormTerminal = {
   {'Emacs', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false}
 }
 
-layoutLaptop = {
+layoutLaptopTerminal = {
   {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Emacs', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Google Chrome', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
