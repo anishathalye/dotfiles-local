@@ -32,6 +32,8 @@ master
 |  +- a-srvr
 |  |
 |  +- gpu
+|  |
+|  +- zero
 |
 +- athena
 |
@@ -41,7 +43,7 @@ master
 |  |
 |  +- google-android [inactive]
 |
-+- telemetry
++- telemetry [inactive]
 |
 +- dropbox [inactive]
 
