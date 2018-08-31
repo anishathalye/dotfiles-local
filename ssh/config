@@ -33,6 +33,8 @@ Host csail
 Host ben
     User anish
     HostName ben.csail.mit.edu
+    # use old login server because SSH key authentication works here
+    ProxyJump aathalye@trusty-login.csail.mit.edu
 
 Host zero
     User anish
