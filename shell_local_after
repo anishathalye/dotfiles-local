@@ -4,7 +4,7 @@
 
 # Go
 export PATH="/usr/local/go/bin:$PATH"
-export GOPATH="$HOME/go"
+export GOPATH="$HOME/"
 export PATH="$GOPATH/bin:$PATH"
 
 # Update local dotfiles
