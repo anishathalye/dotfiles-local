@@ -20,12 +20,6 @@ Host mordor
     User anish
     HostName mordor.freedns.anish.io
 
-# cloud
-
-Host telemetry
-    User ubuntu
-    HostName telemetry.anish.io
-
 # csail / pdos
 
 Host g
@@ -41,8 +35,8 @@ Host ben
     HostName ben.csail.mit.edu
 
 Host zero
-    User ubuntu
-    HostName 52.87.201.195
+    User anish
+    HostName zero.aathalye.csail.mit.edu
 
 Host nil
     User aathalye
