@@ -94,9 +94,14 @@ menu = {
     end
   },
   {
-    title = "Layout: Lab Emacs",
+    title = "Layout: Lab",
     fn = function()
-      applyLayout("Lab Emacs", layoutLabEmacs)
+      -- choose layout based on whether Emacs is running
+      if hs.application.get('Emacs') then
+        applyLayout("Lab Emacs", layoutLabEmacs)
+      else
+        applyLayout("Lab Terminal", layoutLabTerminal)
+      end
     end
   },
   {
