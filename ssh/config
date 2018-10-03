@@ -6,7 +6,7 @@ Host *
 
 Host isengard
     User anish
-    HostName isengard.anish.io
+    HostName isengard.freedns.anish.io
 
 Host shire
     User anish
