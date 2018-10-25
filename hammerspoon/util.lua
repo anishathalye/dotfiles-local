@@ -111,9 +111,9 @@ menu = {
     end
   },
   {
-    title = "Layout: Laptop Terminal",
+    title = "Layout: Laptop",
     fn = function()
-      applyLayout("Laptop Terminal", layoutLaptopTerminal)
+      applyLayout("Laptop", layoutLaptop)
     end
   },
 }

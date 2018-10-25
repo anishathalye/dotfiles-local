@@ -57,16 +57,16 @@ layoutDormTerminal = {
   {'Emacs', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false}
 }
 
-layoutLaptopTerminal = {
-  {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Emacs', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Google Chrome', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Zulip', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'iTerm2', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
+layoutLaptop = {
+  {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
+  {'Emacs', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
+  {'Google Chrome', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
+  {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
+  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
+  {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
+  {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
+  {'Zulip', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
+  {'iTerm2', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
 }
 
 
@@ -83,12 +83,14 @@ applyLayout = function(name, layout)
   for _, entry in ipairs(layout) do
     local name = entry[1]
     local show = entry['visible']
-    local app = hs.application.get(name)
-    if app then
-      if show then
-        app:unhide()
-      else
-        app:hide()
+    if show ~= nil then
+      local app = hs.application.get(name)
+      if app then
+        if show then
+          app:unhide()
+        else
+          app:hide()
+        end
       end
     end
   end
