@@ -2,7 +2,7 @@
 
 Host isengard
     User anish
-    HostName isengard.anish.io
+    HostName isengard.freedns.anish.io
 
 Host shire
     User anish
@@ -12,21 +12,15 @@ Host gondor
     User anish
     HostName gondor.freedns.anish.io
 
-Host ithilien
-    User anish
-    HostName ithilien.freedns.anish.io
-
 Host mordor
     User anish
     HostName mordor.freedns.anish.io
 
-# cloud
-
-Host telemetry
-    User ubuntu
-    HostName telemetry.anish.io
-
 # csail / pdos
+
+Host g
+    User git
+    HostName g.csail.mit.edu
 
 Host csail
     User aathalye
@@ -35,10 +29,12 @@ Host csail
 Host ben
     User anish
     HostName ben.csail.mit.edu
+    # use old login server because SSH key authentication works here
+    ProxyJump aathalye@trusty-login.csail.mit.edu
 
 Host zero
-    User ubuntu
-    HostName 52.87.201.195
+    User anish
+    HostName zero.aathalye.csail.mit.edu
 
 Host nil
     User aathalye
@@ -57,13 +53,22 @@ Host xvm
 # home
 
 Host server
-    User server
+    User anish
     HostName 192.168.0.105
 
 Host server-remote
-    User server
+    User anish
     HostName home.anish.io
     Port 10022
+
+Host bongo
+    User anish
+    HostName 192.168.0.134
+
+Host bongo-remote
+    User anish
+    HostName home.anish.io
+    Port 30022
 
 Host ts100
     User founder
