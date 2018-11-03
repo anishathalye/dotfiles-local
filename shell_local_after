@@ -1,25 +1,6 @@
-# Bootstrap
-
-[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
-
-# Aliases and Functions
-function backup-ts100() {
-    time (
-        rsync -avP --delete /media/raid2/home/data2/Media founder@192.168.0.125:/home/founder/server_backup &&
-            rsync -avP --delete /media/raid/home/data founder@192.168.0.125:/media/data/server_backup &&
-            rsync -avP --delete /media/raid/unison/Anish/ --exclude '/Media' --exclude '/Edited Media' founder@192.168.0.125:/media/data/server_backup/Anish
-    )
-}
-
-# PURE-FTPD
-# To add user
-# pure-pw useradd user -u vftp -g vftp -d /usr/home/vftp/user # where -d * is directory and useradd **** is username
-# pure-pw mkdb
-
-# To remove user
-# pure-pw userdel user
-# pure-pw mkdb
-# service pure-ftpd restart
+# autojump config
+[[ -s /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.sh &&
+    autoload -U compinit && compinit -u
 
 # Go
 export PATH="/usr/local/go/bin:$PATH"
@@ -31,5 +12,14 @@ ldfu() {
     declare -f dfu > /dev/null && dfu &&
     (
         cd ~/.dotfiles_local && git pull --ff-only && ./install -q
+    )
+}
+
+# Aliases and Functions
+function backup-ts100() {
+    time (
+        rsync -avP --delete /media/raid2/home/data2/Media founder@192.168.0.125:/home/founder/server_backup &&
+            rsync -avP --delete /media/raid/home/data founder@192.168.0.125:/media/data/server_backup &&
+            rsync -avP --delete /media/raid/unison/Anish/ --exclude '/Media' --exclude '/Edited Media' founder@192.168.0.125:/media/data/server_backup/Anish
     )
 }
