@@ -98,16 +98,21 @@ menu = {
     fn = function()
       -- choose layout based on whether Emacs is running
       if hs.application.get('Emacs') then
-        applyLayout("Lab Emacs", layoutLabEmacs)
+        applyLayout("Lab (Emacs)", layoutLabEmacs)
       else
-        applyLayout("Lab Terminal", layoutLabTerminal)
+        applyLayout("Lab (Terminal)", layoutLabTerminal)
       end
     end
   },
   {
-    title = "Layout: Lab Emacs (focus)",
+    title = "Layout: Lab Focus",
     fn = function()
-      applyLayout("Lab Emacs (focus)", layoutLabEmacsFocus)
+      -- choose layout based on whether Emacs is running
+      if hs.application.get('Emacs') then
+        applyLayout("Lab Focus (Emacs)", layoutLabEmacsFocus)
+      else
+        applyLayout("Lab Focus (Terminal)", layoutLabTerminalFocus)
+      end
     end
   },
   {

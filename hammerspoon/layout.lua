@@ -42,6 +42,20 @@ layoutLabEmacsFocus = {
   {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
 }
 
+layoutLabTerminalFocus = {
+  {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
+
+  {'iTerm2', nil, LAB_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
+
+  {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
+  {'Calendar', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
+
+  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Zulip', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+}
+
 layoutDormTerminal = {
   {'Google Chrome', nil, DORM_LEFT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
 
