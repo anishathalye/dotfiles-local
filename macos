@@ -45,3 +45,6 @@ defaults write -g AppleShowAllExtensions -bool true
 
 # disable warning when changing file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# disable screenshot preview thumbnail
+defaults write com.apple.screencapture show-thumbnail -bool false
