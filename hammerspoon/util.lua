@@ -94,6 +94,12 @@ menu = {
     end
   },
   {
+    title = "Layout: Dorm Terminal Focus",
+    fn = function()
+      applyLayout("Dorm Terminal Focus", layoutDormTerminalFocus)
+    end
+  },
+  {
     title = "Layout: Lab",
     fn = function()
       -- choose layout based on whether Emacs is running
