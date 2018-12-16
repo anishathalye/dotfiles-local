@@ -6,6 +6,6 @@ PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 PATH=/usr/local/opt/python/libexec/bin:$PATH
 
 # CrossPack
-PATH=/usr/local/CrossPack-AVR/bin:$PATH
+PATH=$PATH:/usr/local/CrossPack-AVR/bin
 
 source ~/.dotfiles_local/bootstrap.sh
