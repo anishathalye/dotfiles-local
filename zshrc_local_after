@@ -1,3 +1,4 @@
 # Named directories
 hash -d src="$HOME/Documents/Anish/Developer/src"
 hash -d labsix="$HOME/Documents/Anish/Developer/src/labsix"
+hash -d pdos="$HOME/Documents/Anish/Developer/src/pdos"
