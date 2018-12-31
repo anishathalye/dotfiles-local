@@ -73,3 +73,12 @@ Host bongo-remote
 Host ts100
     User founder
     HostName 192.168.0.125
+
+Host router
+    User root
+    HostName 192.168.0.29
+
+Host router-wireless
+    User root
+    HostName 192.168.0.30
+    KexAlgorithms +diffie-hellman-group1-sha1
