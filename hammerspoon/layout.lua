@@ -9,8 +9,7 @@ layoutLabEmacs = {
   {'Emacs', nil, LAB_RIGHT_MONITOR, u(0, 0, 3/5, 1), nil, nil, visible=true},
   {'iTerm2', nil, LAB_RIGHT_MONITOR, u(3/5, 0, 2/5, 1), nil, nil, visible=true},
 
-  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1/2), nil, nil, visible=true},
-  {'Zulip', nil, MACBOOK_MONITOR, u(0, 1/2, 1/2, 1/2), nil, nil, visible=true},
+  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
   {'Spotify', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true}
 }
 
@@ -22,8 +21,7 @@ layoutLabTerminal = {
 
   {'iTerm2', nil, LAB_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
 
-  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1/2), nil, nil, visible=true},
-  {'Zulip', nil, MACBOOK_MONITOR, u(0, 1/2, 1/2, 1/2), nil, nil, visible=true},
+  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
   {'Spotify', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true}
 }
 
@@ -37,7 +35,6 @@ layoutLabEmacsFocus = {
   {'Calendar', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
 
   {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Zulip', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
 }
@@ -51,7 +48,6 @@ layoutLabTerminalFocus = {
   {'Calendar', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
 
   {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Zulip', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
 }
@@ -62,9 +58,8 @@ layoutDormTerminal = {
   {'iTerm2', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
 
   {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1/2), nil, nil, visible=true},
-  {'Things', nil, MACBOOK_MONITOR, u(0, 1/2, 1/2, 1/2), nil, nil, visible=true},
-  {'Zulip', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1/2), nil, nil, visible=true},
-  {'Mail', nil, MACBOOK_MONITOR, u(1/2, 1/2, 1/2, 1/2), nil, nil, visible=true},
+  {'Mail', nil, MACBOOK_MONITOR, u(0, 1/2, 1/2, 1/2), nil, nil, visible=true},
+  {'Things', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
 
   {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
@@ -79,7 +74,6 @@ layoutDormTerminalFocus = {
   {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
   {'Calendar', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
   {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Zulip', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Emacs', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false}
@@ -93,7 +87,6 @@ layoutLaptop = {
   {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
-  {'Zulip', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'iTerm2', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
 }
 
