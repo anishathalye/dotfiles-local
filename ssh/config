@@ -82,3 +82,9 @@ Host router-wireless
     User root
     HostName 192.168.0.30
     KexAlgorithms +diffie-hellman-group1-sha1
+
+# other
+
+Host github
+    User git
+    HostName github.com
