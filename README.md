@@ -53,7 +53,7 @@ old
 License
 -------
 
-Copyright (c) 2014-2018 Anish Athalye. Released under the MIT License. See
+Copyright (c) 2014-2019 Anish Athalye. Released under the MIT License. See
 [LICENSE.md][license] for details.
 
 [dotbot]: https://github.com/anishathalye/dotbot
