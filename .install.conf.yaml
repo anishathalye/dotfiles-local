@@ -11,6 +11,7 @@
     ~/.gnupg/gpg-agent.conf: gpg-agent.conf
     ~/.hammerspoon:
     ~/.hgrc_local:
+    ~/.name:
     ~/.ocamlinit:
     ~/.shell_local_after:
     ~/.shell_local_before:
