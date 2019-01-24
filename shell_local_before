@@ -1,11 +1,12 @@
-PATH=~/bin:$PATH
+path_prepend '~/bin'
 
 # Homebrew and Related Tools
-PATH=/usr/local/sbin:/usr/local/bin:$PATH
-PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-PATH=/usr/local/opt/python/libexec/bin:$PATH
+path_prepend '/usr/local/sbin'
+path_prepend '/usr/local/bin'
+path_prepend '/usr/local/opt/coreutils/libexec/gnubin'
+path_prepend '/usr/local/opt/python/libexec/bin'
 
 # CrossPack
-PATH=$PATH:/usr/local/CrossPack-AVR/bin
+path_prepend "/usr/local/CrossPack-AVR/bin"
 
 source ~/.dotfiles_local/bootstrap.sh

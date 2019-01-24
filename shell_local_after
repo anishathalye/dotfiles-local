@@ -53,7 +53,7 @@ export JUPYTER_PATH="$HOME/.local/share/jupyter"
 # Go
 
 export GOPATH="$HOME/Documents/Anish/Developer"
-PATH="$GOPATH/bin:$PATH"
+path_prepend "$GOPATH/bin"
 
 # SOCKS proxy
 

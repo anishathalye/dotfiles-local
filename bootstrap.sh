@@ -1,8 +1,7 @@
-PKGS="${HOME}/.dotfiles_local/packages"
+PKGS='~/.dotfiles_local/packages'
 
 add() {
-    local LOC="${PKGS}/${1}"
-    PATH=$LOC:$PATH
+    path_prepend "${PKGS}/${1}"
 }
 
-add git-remote-hg
+add 'git-remote-hg'
