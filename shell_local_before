@@ -7,6 +7,6 @@ path_prepend '/usr/local/opt/coreutils/libexec/gnubin'
 path_prepend '/usr/local/opt/python/libexec/bin'
 
 # CrossPack
-path_prepend "/usr/local/CrossPack-AVR/bin"
+path_append "/usr/local/CrossPack-AVR/bin"
 
 source ~/.dotfiles_local/bootstrap.sh
