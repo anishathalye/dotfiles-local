@@ -35,7 +35,7 @@ menu = {
         tell application "System Events"
           tell application process "System Preferences"
             set frontmost to true
-            tell window "Accessibility"
+            tell group 1 of window "Accessibility"
               activate
               repeat until checkbox "Play stereo audio as mono" exists
                 delay 0.05
