@@ -2,6 +2,9 @@
 [[ -s /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.sh &&
     autoload -U compinit && compinit -u
 
+# PATH
+path_prepend "$HOME/.local/bin"
+
 # Go
 export PATH="/usr/local/go/bin:$PATH"
 export GOPATH="$HOME/go"
