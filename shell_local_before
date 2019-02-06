@@ -1,4 +1,4 @@
-path_prepend '~/bin'
+path_prepend "$HOME/bin"
 
 # Homebrew and Related Tools
 path_prepend '/usr/local/sbin'
