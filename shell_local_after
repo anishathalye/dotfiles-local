@@ -1,6 +1,5 @@
 # autojump config
-[[ -s /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.sh &&
-    autoload -U compinit && compinit -u
+[[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
 
 # PATH
 path_prepend "$HOME/.local/bin"
