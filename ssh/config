@@ -24,7 +24,8 @@ Host mordor
 
 Host raspi
     User pi
-    HostName raspi.freedns.anish.io
+    HostName raspi.aathalye.csail.mit.edu
+    Port 222
     LocalForward 5900 localhost:5900
 
 Host g
