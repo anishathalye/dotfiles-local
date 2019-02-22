@@ -18,6 +18,11 @@ Host mordor
 
 # csail / pdos
 
+Host raspi
+    User pi
+    HostName raspi.freedns.anish.io
+    LocalForward 5900 localhost:5900
+
 Host g
     User git
     HostName g.csail.mit.edu
