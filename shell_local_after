@@ -1,3 +1,6 @@
+# autojump config
+[[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
+
 # PATH
 path_prepend "$HOME/.local/bin"
 
