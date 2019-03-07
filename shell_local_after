@@ -1,3 +1,6 @@
+# PATH
+path_prepend "$HOME/.local/bin"
+
 # Update local dotfiles
 ldfu() {
     declare -f dfu > /dev/null && dfu &&
