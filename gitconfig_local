@@ -8,9 +8,6 @@
 [core]
     pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
 
-[gpg]
-	program = gpg
-
 [diff "scpt"]
     textconv = osadecompile
     binary=true
