@@ -5,6 +5,9 @@
 [github]
 	user = anishathalye
 
+[log]
+    date = auto:human
+
 [core]
     pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
 
