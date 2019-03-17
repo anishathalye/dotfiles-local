@@ -122,6 +122,12 @@ menu = {
     end
   },
   {
+    title = "Layout: Home",
+    fn = function()
+      applyLayout("Home", layoutHome)
+    end
+  },
+  {
     title = "Layout: Laptop",
     fn = function()
       applyLayout("Laptop", layoutLaptop)

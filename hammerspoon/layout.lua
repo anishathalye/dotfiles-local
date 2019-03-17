@@ -85,6 +85,19 @@ layoutDormTerminalFocus = {
   {'Emacs', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false}
 }
 
+layoutHome = {
+  {'iTerm2', nil, HOME_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
+
+  {'Google Chrome', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
+  {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Emacs', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Mattermost', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+}
+
 layoutLaptop = {
   {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Emacs', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
