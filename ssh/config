@@ -2,19 +2,19 @@
 
 Host isengard
     User anish
-    HostName isengard.freedns.anish.io
+    HostName isengard-aathalye.mit.edu
 
 Host shire
     User anish
-    HostName shire.freedns.anish.io
+    HostName shire-aathalye.mit.edu
 
 Host gondor
     User anish
-    HostName gondor.freedns.anish.io
+    HostName gondor-aathalye.mit.edu
 
 Host mordor
     User anish
-    HostName mordor.freedns.anish.io
+    HostName mordor-aathalye.mit.edu
 
 # csail / pdos
 
