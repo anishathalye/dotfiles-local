@@ -23,15 +23,17 @@ master
 |
 +- mac
 |  |
-|  +- openai
+|  +- openai [inactive]
 |
-+- openai-cirrascale
++- openai-cirrascale [inactive]
 |
 +- linux-server
 |  |
 |  +- a-srvr
 |  |
 |  +- gpu
+|  |
+|  +- zero
 |
 +- athena
 |
@@ -39,11 +41,11 @@ master
 |
 +- linux-desktop
 |  |
-|  +- google-android
+|  +- google-android [inactive]
 |
-+- telemetry
++- telemetry [inactive]
 |
-+- dropbox
++- dropbox [inactive]
 
 old
 ```
@@ -51,7 +53,7 @@ old
 License
 -------
 
-Copyright (c) 2014-2017 Anish Athalye. Released under the MIT License. See
+Copyright (c) 2014-2019 Anish Athalye. Released under the MIT License. See
 [LICENSE.md][license] for details.
 
 [dotbot]: https://github.com/anishathalye/dotbot
