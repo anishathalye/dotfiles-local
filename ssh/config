@@ -2,21 +2,27 @@
 
 Host isengard
     User anish
-    HostName isengard.freedns.anish.io
+    HostName isengard-aathalye.mit.edu
 
 Host shire
     User anish
-    HostName shire.freedns.anish.io
+    HostName shire-aathalye.mit.edu
 
 Host gondor
     User anish
-    HostName gondor.freedns.anish.io
+    HostName gondor-aathalye.mit.edu
 
 Host mordor
     User anish
-    HostName mordor.freedns.anish.io
+    HostName mordor-aathalye.mit.edu
 
 # csail / pdos
+
+Host raspi
+    User pi
+    HostName raspi.aathalye.csail.mit.edu
+    Port 222
+    LocalForward 5900 localhost:5900
 
 Host g
     User git
@@ -31,13 +37,21 @@ Host ben
     HostName ben.csail.mit.edu
     ProxyJump csail
 
+Host nil
+    User aathalye
+    HostName nil.csail.mit.edu
+
 Host zero
     User anish
     HostName zero.aathalye.csail.mit.edu
 
-Host nil
-    User aathalye
-    HostName nil.csail.mit.edu
+Host one
+    User anish
+    HostName one.aathalye.csail.mit.edu
+
+Host two
+    User anish
+    HostName two.aathalye.csail.mit.edu
 
 # mit
 
