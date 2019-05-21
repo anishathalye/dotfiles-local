@@ -62,6 +62,7 @@ Host two
 Host athena
     User aathalye
     HostName athena.dialup.mit.edu
+    PreferredAuthentications password
 
 Host xvm
     User anish
