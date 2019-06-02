@@ -2,6 +2,7 @@
 [[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
 
 # PATH
+path_prepend "$HOME/bin"
 path_prepend "$HOME/.local/bin"
 
 # Update local dotfiles
