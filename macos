@@ -48,3 +48,11 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # disable screenshot preview thumbnail
 defaults write com.apple.screencapture show-thumbnail -bool false
+
+# Third-party apps
+##################
+
+## Chrome
+#########
+
+defaults write com.google.Chrome DisablePrintPreview -bool true
