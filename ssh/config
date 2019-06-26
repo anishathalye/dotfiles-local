@@ -1,4 +1,5 @@
 Host *
+    ServerAliveInterval 120
     UseKeychain yes
     AddKeysToAgent yes
 

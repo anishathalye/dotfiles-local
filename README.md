@@ -47,7 +47,7 @@ master
 |
 +- dropbox [inactive]
 
-old
+old [inactive]
 ```
 
 License
