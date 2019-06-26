@@ -1,3 +1,6 @@
+Host *
+    ServerAliveInterval 120
+
 # dorm
 
 Host isengard
