@@ -13,7 +13,7 @@ alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 # Sync and Backup
 DOCUMENT_ROOT="$HOME/Documents/Anish"
 # Backup
-alias backup-isengard="rsync -avP --delete ${DOCUMENT_ROOT} anish@isengard.anish.io:/home/anish/backup"
+alias backup-media-isengard="rsync -avP --delete ${DOCUMENT_ROOT}/Media anish@isengard.anish.io:/home/anish/backup/Anish"
 alias backup-shire="rsync -avP --delete ${DOCUMENT_ROOT} anish@shire.freedns.anish.io:/home/anish/backup"
 alias backup-server="rsync -avP --delete ${DOCUMENT_ROOT} anish@192.168.0.105:/media/raid/backup/anish"
 alias backup-server-remote="rsync -e 'ssh -p 10022' -avP --delete ${DOCUMENT_ROOT} anish@home.anish.io:/media/raid/backup/anish"
