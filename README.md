@@ -37,7 +37,7 @@ master
 |
 +- athena
 |
-+- csail
++- csail [inactive]
 |
 +- linux-desktop
 |  |
