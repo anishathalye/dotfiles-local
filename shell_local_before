@@ -10,4 +10,7 @@ path_prepend '/usr/local/opt/python/libexec/bin'
 # CrossPack
 path_append "/usr/local/CrossPack-AVR/bin"
 
+# RISC-V toolchain
+path_append "/usr/local/opt/riscv-gnu-toolchain/bin"
+
 source ~/.dotfiles_local/bootstrap.sh
