@@ -1,60 +1,68 @@
 local u = hs.geometry.unitrect
 
-layoutLabEmacs = {
-  {'Things', nil, LAB_LEFT_MONITOR, u(0, 0, 1/2, 1/4), nil, nil, visible=true},
-  {'Calendar', nil, LAB_LEFT_MONITOR, u(1/2, 0, 1/2, 1/4), nil, nil, visible=true},
-  {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 1/4, 1, 1/2), nil, nil, visible=true},
-  {'Mail', nil, LAB_LEFT_MONITOR, u(0, 3/4, 1, 1/4), nil, nil, visible=true},
+local detectIDE = function()
+  local ide = nil
+  for _, v in ipairs(IDEs) do
+    if hs.application.get(v) then
+      ide = v
+      break
+    end
+  end
+  return ide
+end
 
-  {'Emacs', nil, LAB_RIGHT_MONITOR, u(0, 0, 3/5, 1), nil, nil, visible=true},
-  {'iTerm2', nil, LAB_RIGHT_MONITOR, u(3/5, 0, 2/5, 1), nil, nil, visible=true},
+layoutLab = function()
+  local ide = detectIDE()
+  local right
+  if ide then
+    right = {
+      {ide, nil, LAB_RIGHT_MONITOR, u(0, 0, 3/5, 1), nil, nil, visible=true},
+      {'iTerm2', nil, LAB_RIGHT_MONITOR, u(3/5, 0, 2/5, 1), nil, nil, visible=true}
+    }
+  else
+    right = {{'iTerm2', nil, LAB_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true}}
+  end
+  local left = {
+    {'Things', nil, LAB_LEFT_MONITOR, u(0, 0, 1/2, 1/4), nil, nil, visible=true},
+    {'Calendar', nil, LAB_LEFT_MONITOR, u(1/2, 0, 1/2, 1/4), nil, nil, visible=true},
+    {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 1/4, 1, 1/2), nil, nil, visible=true},
+    {'Mail', nil, LAB_LEFT_MONITOR, u(0, 3/4, 1, 1/4), nil, nil, visible=true}
+  }
+  local mb = {
+    {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
+    {'Mattermost', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=false},
+    {'Spotify', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true}
+  }
+  return ide, concat(left, right, mb)
+end
 
-  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
-  {'Mattermost', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=false},
-  {'Spotify', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true}
-}
+layoutLabFocus = function()
+  local ide = detectIDE()
+  local left, right
+  if ide then
+    left = {
+      {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 0, 1, 1/2), nil, nil, visible=true},
+      {'iTerm2', nil, LAB_LEFT_MONITOR, u(0, 1/2, 1, 1/2), nil, nil, visible=true},
+    }
+    right = {
+      {ide, nil, LAB_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
+    }
+  else
+    left = {{'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true}}
 
-layoutLabTerminal = {
-  {'Things', nil, LAB_LEFT_MONITOR, u(0, 0, 1/2, 1/4), nil, nil, visible=true},
-  {'Calendar', nil, LAB_LEFT_MONITOR, u(1/2, 0, 1/2, 1/4), nil, nil, visible=true},
-  {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 1/4, 1, 1/2), nil, nil, visible=true},
-  {'Mail', nil, LAB_LEFT_MONITOR, u(0, 3/4, 1, 1/4), nil, nil, visible=true},
+    right = {{'iTerm2', nil, LAB_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true}}
+  end
+  local mb = {
+    {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
+    {'Calendar', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
 
-  {'iTerm2', nil, LAB_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
-
-  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
-  {'Mattermost', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=false},
-  {'Spotify', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true}
-}
-
-layoutLabEmacsFocus = {
-  {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 0, 1, 1/2), nil, nil, visible=true},
-  {'iTerm2', nil, LAB_LEFT_MONITOR, u(0, 1/2, 1, 1/2), nil, nil, visible=true},
-
-  {'Emacs', nil, LAB_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
-
-  {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
-  {'Calendar', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
-
-  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Mattermost', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-}
-
-layoutLabTerminalFocus = {
-  {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
-
-  {'iTerm2', nil, LAB_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
-
-  {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
-  {'Calendar', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
-
-  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Mattermost', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-}
+    {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+    {'Mattermost', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+    {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+    {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  }
+  return ide, concat(left, right, mb)
+end
 
 layoutDormTerminal = {
   {'Google Chrome', nil, DORM_LEFT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},

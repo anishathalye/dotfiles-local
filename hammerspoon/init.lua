@@ -1,3 +1,4 @@
+require('lib')
 require('config')
 require('settings')
 require('screen')

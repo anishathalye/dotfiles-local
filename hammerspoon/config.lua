@@ -7,3 +7,8 @@ LAB_LEFT_MONITOR = 'HP ZR2740w'
 LAB_RIGHT_MONITOR = 'DELL P2715Q'
 
 HOME_MONITOR = 'SyncMaster'
+
+IDEs = {
+  'Emacs',
+  'DrRacket',
+}
