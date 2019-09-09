@@ -88,15 +88,9 @@ menu = {
     title = "-" -- separator
   },
   {
-    title = "Layout: Dorm Terminal",
+    title = "Layout: Dorm",
     fn = function()
-      applyLayout("Dorm Terminal", layoutDormTerminal)
-    end
-  },
-  {
-    title = "Layout: Dorm Terminal Focus",
-    fn = function()
-      applyLayout("Dorm Terminal Focus", layoutDormTerminalFocus)
+      applyLayout("Dorm", layoutDorm)
     end
   },
   {
@@ -115,12 +109,6 @@ menu = {
       local name = ide or 'Terminal'
       local description = 'Lab Focus (' .. name .. ')'
       applyLayout(description, layout)
-    end
-  },
-  {
-    title = "Layout: Home",
-    fn = function()
-      applyLayout("Home", layoutHome)
     end
   },
   {
