@@ -1,20 +1,23 @@
+Host *
+    ServerAliveInterval 120
+
 # dorm
 
 Host isengard
     User anish
-    HostName isengard-aathalye.mit.edu
+    HostName isengard.anish.io
 
 Host shire
     User anish
-    HostName shire-aathalye.mit.edu
+    HostName shire.anish.io
 
 Host gondor
     User anish
-    HostName gondor-aathalye.mit.edu
+    HostName gondor.anish.io
 
 Host mordor
     User anish
-    HostName mordor-aathalye.mit.edu
+    HostName mordor.anish.io
 
 # csail / pdos
 
@@ -58,7 +61,7 @@ Host two
 Host athena
     User aathalye
     HostName athena.dialup.mit.edu
-    PreferredAuthentications password
+    PreferredAuthentications password,keyboard-interactive
 
 Host xvm
     User anish
