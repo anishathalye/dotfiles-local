@@ -45,6 +45,9 @@ export HOMEBREW_AUTO_UPDATE_SECS=86400
 
 export JUPYTER_PATH="$HOME/.local/share/jupyter"
 
+# LLVM 8
+path_prepend '/usr/local/opt/llvm@8/bin'
+
 # OPAM configuration
 . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
