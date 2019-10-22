@@ -103,15 +103,6 @@ menu = {
     end
   },
   {
-    title = "Layout: Lab Focus",
-    fn = function()
-      local ide, layout = layoutLabFocus()
-      local name = ide or 'Terminal'
-      local description = 'Lab Focus (' .. name .. ')'
-      applyLayout(description, layout)
-    end
-  },
-  {
     title = "Layout: Laptop",
     fn = function()
       applyLayout("Laptop", layoutLaptop)

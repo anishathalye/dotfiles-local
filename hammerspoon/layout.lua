@@ -36,34 +36,6 @@ layoutLab = function()
   return ide, concat(left, right, mb)
 end
 
-layoutLabFocus = function()
-  local ide = detectIDE()
-  local left, right
-  if ide then
-    left = {
-      {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 0, 1, 1/2), nil, nil, visible=true},
-      {'iTerm2', nil, LAB_LEFT_MONITOR, u(0, 1/2, 1, 1/2), nil, nil, visible=true},
-    }
-    right = {
-      {ide, nil, LAB_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
-    }
-  else
-    left = {{'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true}}
-
-    right = {{'iTerm2', nil, LAB_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true}}
-  end
-  local mb = {
-    {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
-    {'Calendar', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
-
-    {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-    {'Mattermost', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-    {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-    {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  }
-  return ide, concat(left, right, mb)
-end
-
 layoutDorm = {
   {'Google Chrome', nil, DORM_LEFT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
 
