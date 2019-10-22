@@ -25,8 +25,9 @@ layoutLab = function()
   local left = {
     {'Things', nil, LAB_LEFT_MONITOR, u(0, 0, 1/2, 1/4), nil, nil, visible=true},
     {'Calendar', nil, LAB_LEFT_MONITOR, u(1/2, 0, 1/2, 1/4), nil, nil, visible=true},
-    {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 1/4, 1, 1/2), nil, nil, visible=true},
-    {'Mail', nil, LAB_LEFT_MONITOR, u(0, 3/4, 1, 1/4), nil, nil, visible=true}
+    {'Mail', nil, LAB_LEFT_MONITOR, u(0, 1/4, .45, 1/4), nil, nil, visible=true},
+    {'Keybase', nil, LAB_LEFT_MONITOR, u(.45, 1/4, .55, 1/4), nil, nil, visible=true},
+    {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 1/2, 1, 1/2), nil, nil, visible=true},
   }
   local mb = {
     {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
