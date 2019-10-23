@@ -25,14 +25,13 @@ layoutLab = function()
   local left = {
     {'Things', nil, LAB_LEFT_MONITOR, u(0, 0, 1/2, 1/4), nil, nil, visible=true},
     {'Calendar', nil, LAB_LEFT_MONITOR, u(1/2, 0, 1/2, 1/4), nil, nil, visible=true},
-    {'Mail', nil, LAB_LEFT_MONITOR, u(0, 1/4, .45, 1/4), nil, nil, visible=true},
-    {'Keybase', nil, LAB_LEFT_MONITOR, u(.45, 1/4, .55, 1/4), nil, nil, visible=true},
-    {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 1/2, 1, 1/2), nil, nil, visible=true},
+    {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 1/4, 1, 3/4), nil, nil, visible=true},
   }
   local mb = {
-    {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
-    {'Mattermost', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=false},
-    {'Spotify', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true}
+    {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
+    {'Mail', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
+    {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+    {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false}
   }
   return ide, concat(left, right, mb)
 end
@@ -46,7 +45,6 @@ layoutDorm = {
   {'Mail', nil, MACBOOK_MONITOR, u(0, 1/2, 1/2, 1/2), nil, nil, visible=true},
   {'Things', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
 
-  {'Mattermost', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Emacs', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false}
@@ -58,7 +56,6 @@ layoutLaptop = {
   {'Google Chrome', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
-  {'Mattermost', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'iTerm2', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
