@@ -41,12 +41,13 @@ layoutDorm = {
 
   {'iTerm2', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
 
-  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1/2), nil, nil, visible=true},
+  {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1/2), nil, nil, visible=true},
   {'Mail', nil, MACBOOK_MONITOR, u(0, 1/2, 1/2, 1/2), nil, nil, visible=true},
   {'Things', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
 
   {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
   {'Emacs', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false}
 }
 
@@ -59,6 +60,7 @@ layoutLaptop = {
   {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'iTerm2', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
+  {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil}
 }
 
 
