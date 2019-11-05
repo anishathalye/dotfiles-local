@@ -41,8 +41,8 @@ layoutDorm = {
 
   {'iTerm2', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
 
-  {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1/2), nil, nil, visible=true},
-  {'Mail', nil, MACBOOK_MONITOR, u(0, 1/2, 1/2, 1/2), nil, nil, visible=true},
+  {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1/2, .60), nil, nil, visible=true},
+  {'Mail', nil, MACBOOK_MONITOR, u(0, .60, 1/2, .40), nil, nil, visible=true},
   {'Things', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
 
   {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
