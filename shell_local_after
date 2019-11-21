@@ -84,7 +84,3 @@ tor-off() {
 # GPG Key
 
 GPGKEY="0x72EE4824FA6EFF1FE750A015C3F6E4F5086B3B32"
-
-# Workaround for slightly broken RISC-V GDB installation
-
-alias riscv64-unknown-elf-gdb='riscv64-unknown-elf-gdb --data-directory=/usr/local/share/gdb'
