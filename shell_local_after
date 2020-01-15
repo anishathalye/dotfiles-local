@@ -51,7 +51,7 @@ path_prepend '/usr/local/opt/ruby/bin'
 export JUPYTER_PATH="$HOME/.local/share/jupyter"
 
 # OPAM configuration
-. ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # Go
 
