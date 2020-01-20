@@ -5,6 +5,10 @@ path_prepend '/usr/local/sbin'
 path_prepend '/usr/local/bin'
 path_prepend '/usr/local/opt/coreutils/libexec/gnubin'
 path_prepend '/usr/local/opt/make/libexec/gnubin'
+path_prepend '/usr/local/opt/gnu-sed/libexec/gnubin'
+path_prepend '/usr/local/opt/findutils/libexec/gnubin'
+path_prepend '/usr/local/opt/gnu-tar/libexec/gnubin'
+path_prepend '/usr/local/opt/grep/libexec/gnubin'
 path_prepend '/usr/local/opt/python/libexec/bin'
 
 # CrossPack
