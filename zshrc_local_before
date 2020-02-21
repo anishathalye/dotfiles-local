@@ -1,0 +1,29 @@
+# We use a number of hacks to make zsh accept Athena configuration files, which
+# are designed for bash.
+
+# /usr/athena/lib/init/env_setup.bash uses a bash-ism on line 6, but by
+# default, zsh treats a bare == differently. Un-setting the EQUALS option fixes
+# this. This has to be done before sourcing the Athena stuff.
+unsetopt equals
+
+# shopt is used to set bash options. We just ignore these; the options that
+# Athena sets aren't relevant for zsh anyways.
+shopt() {}
+
+# /etc/profile checks $BASH to see if it should execute bash-specific
+# initialization code. We need to pretend we are bash.
+BASH=$SHELL
+
+# zsh does not execute /etc/profile, but /etc/zprofile. So we manually source
+# /etc/profile.
+if [ -f /etc/profile ]; then
+    . /etc/profile
+fi
+
+# Source the default user .bashrc file, which we have renamed to
+# bashrc_local_before.
+. $HOME/.bashrc_local_before
+
+# It should be safe to undo some of our hacks at this point.
+unset -f shopt
+unset -v BASH
