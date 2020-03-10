@@ -12,9 +12,12 @@ path_prepend '/usr/local/opt/grep/libexec/gnubin'
 path_prepend '/usr/local/opt/python/libexec/bin'
 
 # CrossPack
-path_append "/usr/local/CrossPack-AVR/bin"
+path_append '/usr/local/CrossPack-AVR/bin'
 
 # RISC-V toolchain
-path_append "/usr/local/opt/riscv-gnu-toolchain/bin"
+path_append '/usr/local/opt/riscv-gnu-toolchain/bin'
+
+# Racket
+path_append '/Applications/Racket v7.6/bin'
 
 source ~/.dotfiles_local/bootstrap.sh
