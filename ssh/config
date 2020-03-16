@@ -64,7 +64,7 @@ Host one
 Host two
     User anish
     HostName two.aathalye.csail.mit.edu
-    ProxyJump csail
+    Port 10022
 
 # mit
 
