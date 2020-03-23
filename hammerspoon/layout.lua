@@ -63,6 +63,30 @@ layoutLaptop = {
   {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil}
 }
 
+layoutHome = function()
+  local ide = detectIDE()
+  local coding
+  if ide then
+    coding = {
+      {ide, nil, HOME_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
+      {'iTerm2', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
+    }
+  else
+    coding = {{'iTerm2', nil, HOME_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true}}
+  end
+  local main = {
+    {'Google Chrome', nil, HOME_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  }
+  local macbook = {
+    {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
+    {'Mail', nil, MACBOOK_MONITOR, u(1/2, 1/2, 1/2, 1/2), nil, nil, visible=true},
+    {'Things', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1/2), nil, nil, visible=true},
+    {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+    {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+    {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  }
+  return ide, concat(coding, main, macbook)
+end
 
 tableToSet = function(table)
   local s = {}

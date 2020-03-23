@@ -88,6 +88,15 @@ menu = {
     title = "-" -- separator
   },
   {
+    title = "Layout: Home",
+    fn = function()
+      local ide, layout = layoutHome()
+      local name = ide or 'Terminal'
+      local description = 'Home (' .. name .. ')'
+      applyLayout(description, layout)
+    end
+  },
+  {
     title = "Layout: Dorm",
     fn = function()
       applyLayout("Dorm", layoutDorm)
