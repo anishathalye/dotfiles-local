@@ -64,28 +64,37 @@ layoutLaptop = {
 }
 
 layoutHome = function()
+  local mainScreen
+  local secondaryScreen
+  if hasScreen(HOME_MONITOR_MAIN) then
+    mainScreen = HOME_MONITOR_MAIN
+    secondaryScreen = MACBOOK_MONITOR
+  else
+    mainScreen = MACBOOK_MONITOR
+    secondaryScreen = HOME_MONITOR_SECONDARY
+  end
   local ide = detectIDE()
   local coding
   if ide then
     coding = {
-      {ide, nil, HOME_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
-      {'iTerm2', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
+      {ide, nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=true},
+      {'iTerm2', nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=false},
     }
   else
-    coding = {{'iTerm2', nil, HOME_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true}}
+    coding = {{'iTerm2', nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=true}}
   end
   local main = {
-    {'Google Chrome', nil, HOME_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+    {'Google Chrome', nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=false},
+    {'Spotify', nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=false},
   }
-  local macbook = {
-    {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
-    {'Mail', nil, MACBOOK_MONITOR, u(1/2, 1/2, 1/2, 1/2), nil, nil, visible=true},
-    {'Things', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1/2), nil, nil, visible=true},
-    {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-    {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-    {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
+  local secondary = {
+    {'Keybase', nil, secondaryScreen, u(0, 0, 1/2, 1), nil, nil, visible=true},
+    {'Mail', nil, secondaryScreen, u(1/2, 1/2, 1/2, 1/2), nil, nil, visible=true},
+    {'Things', nil, secondaryScreen, u(1/2, 0, 1/2, 1/2), nil, nil, visible=true},
+    {'Calendar', nil, secondaryScreen, u(0, 0, 1, 1), nil, nil, visible=false},
+    {'Slack', nil, secondaryScreen, u(0, 0, 1, 1), nil, nil, visible=false},
   }
-  return ide, concat(coding, main, macbook)
+  return ide, concat(coding, main, secondary)
 end
 
 tableToSet = function(table)
@@ -126,4 +135,13 @@ rescue = function()
       win:moveToScreen(screen, true, true)
     end
   end
+end
+
+hasScreen = function(name)
+  for _, screen in ipairs(hs.screen.allScreens()) do
+    if screen:name() == name then
+      return true
+    end
+  end
+  return false
 end
