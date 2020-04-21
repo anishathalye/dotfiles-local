@@ -18,9 +18,21 @@ alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 DOCUMENT_ROOT="$HOME/Documents/Anish"
 # Backup
 alias backup-media-isengard="rsync -avP --delete ${DOCUMENT_ROOT}/Media anish@isengard.anish.io:/home/anish/backup/Anish"
-alias backup-shire="rsync -avP --delete ${DOCUMENT_ROOT} anish@shire.freedns.anish.io:/home/anish/backup"
-alias backup-server="rsync -avP --delete ${DOCUMENT_ROOT} anish@192.168.0.105:/media/raid/backup/anish"
-alias backup-server-remote="rsync -e 'ssh -p 10022' -avP --delete ${DOCUMENT_ROOT} anish@home.anish.io:/media/raid/backup/anish"
+BORGPREFIX="mbp-"
+do-borg-backup() {
+(
+local repo=$1
+cd $DOCUMENT_ROOT && \
+    borg create --progress --stats "$repo::$BORGPREFIX$(date +%FT%T%z)" . && \
+    borg prune "$repo" --prefix "$BORGPREFIX" --stats \
+        --keep-within=3d --keep-daily=30 --keep-weekly=24 \
+        --keep-monthly=12 --keep-yearly=-1
+)
+}
+BORGSHIRE='shire:borg'
+alias backup-shire="do-borg-backup $BORGSHIRE"
+BORGSERVER='server:/media/raid2/anish/borg'
+alias backup-server="do-borg-backup $BORGSERVER"
 
 # Make a 4GB (2048 * 4096M) RAM Disk
 ramdisk() {
