@@ -19,20 +19,10 @@ DOCUMENT_ROOT="$HOME/Documents/Anish"
 # Backup
 alias backup-media-isengard="rsync -avP --delete ${DOCUMENT_ROOT}/Media anish@isengard.anish.io:/home/anish/backup/Anish"
 BORGPREFIX="mbp-"
-do-borg-backup() {
-(
-local repo=$1
-cd $DOCUMENT_ROOT && \
-    borg create --progress --stats "$repo::$BORGPREFIX$(date +%FT%T%z)" . && \
-    borg prune "$repo" --prefix "$BORGPREFIX" --stats \
-        --keep-within=3d --keep-daily=30 --keep-weekly=24 \
-        --keep-monthly=12 --keep-yearly=-1
-)
-}
 BORGSHIRE='shire:borg'
-alias backup-shire="do-borg-backup $BORGSHIRE"
+alias backup-shire="do-borg-backup $DOCUMENT_ROOT $BORGSHIRE $BORGPREFIX $HOME/.borg.shire"
 BORGSERVER='server:/media/raid2/anish/borg'
-alias backup-server="do-borg-backup $BORGSERVER"
+alias backup-server="do-borg-backup $DOCUMENT_ROOT $BORGSERVER $BORGPREFIX"
 
 # Make a 4GB (2048 * 4096M) RAM Disk
 ramdisk() {
