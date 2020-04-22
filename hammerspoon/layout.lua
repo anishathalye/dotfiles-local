@@ -78,7 +78,7 @@ layoutHome = function()
   if ide then
     coding = {
       {ide, nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=true},
-      {'iTerm2', nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=false},
+      {'iTerm2', nil, mainScreen, u(0, 0, 1, 1), nil, nil},
     }
   else
     coding = {{'iTerm2', nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=true}}
