@@ -21,7 +21,7 @@ alias backup-media-isengard="rsync -avP --delete ${DOCUMENT_ROOT}/Media anish@is
 BORGPREFIX="mbp-"
 BORGSHIRE='shire:borg'
 alias backup-shire="do-borg-backup $DOCUMENT_ROOT $BORGSHIRE $BORGPREFIX $HOME/.borg.shire"
-BORGSERVER='server:/media/raid2/anish/borg'
+BORGSERVER='server:/media/raid2/borg/anish'
 alias backup-server="do-borg-backup $DOCUMENT_ROOT $BORGSERVER $BORGPREFIX"
 
 # Make a 4GB (2048 * 4096M) RAM Disk
