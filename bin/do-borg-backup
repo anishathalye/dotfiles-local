@@ -23,5 +23,5 @@ withpw() {
 cd "$document_root"
 withpw borg create --progress --stats "${repo}::${prefix}$(date +%FT%T%z)" .
 withpw borg prune "$repo" --prefix "$prefix" --stats \
-    --keep-within=3d --keep-daily=30 --keep-weekly=24 \
+    --keep-within=7d --keep-daily=30 --keep-weekly=24 \
     --keep-monthly=12 --keep-yearly=-1
