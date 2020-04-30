@@ -1,20 +1,23 @@
+Host *
+    ServerAliveInterval 120
+
 # dorm
 
 Host isengard
     User anish
-    HostName isengard-aathalye.mit.edu
+    HostName isengard.anish.io
 
 Host shire
     User anish
-    HostName shire-aathalye.mit.edu
+    HostName shire.anish.io
 
 Host gondor
     User anish
-    HostName gondor-aathalye.mit.edu
+    HostName gondor.anish.io
 
 Host mordor
     User anish
-    HostName mordor-aathalye.mit.edu
+    HostName mordor.anish.io
 
 # csail / pdos
 
@@ -41,23 +44,37 @@ Host nil
     User aathalye
     HostName nil.csail.mit.edu
 
+Host vm-screen
+    User arch
+    HostName vm-screen.pdos.csail.mit.edu
+    ProxyJump csail
+
+Host vm-web
+    User arch
+    HostName vm-web.pdos.csail.mit.edu
+    ProxyJump csail
+
 Host zero
     User anish
     HostName zero.aathalye.csail.mit.edu
+    ProxyJump csail
 
 Host one
     User anish
     HostName one.aathalye.csail.mit.edu
+    ProxyJump csail
 
 Host two
     User anish
     HostName two.aathalye.csail.mit.edu
+    Port 10022
 
 # mit
 
 Host athena
     User aathalye
     HostName athena.dialup.mit.edu
+    PreferredAuthentications password,keyboard-interactive
 
 Host xvm
     User anish

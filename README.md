@@ -37,7 +37,7 @@ master
 |
 +- athena
 |
-+- csail
++- csail [inactive]
 |
 +- linux-desktop
 |  |
@@ -47,7 +47,7 @@ master
 |
 +- dropbox [inactive]
 
-old
+old [inactive]
 ```
 
 License
