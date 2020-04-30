@@ -9,6 +9,10 @@ export PATH="/usr/local/go/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
+# Add scripts to path
+
+path_prepend "$HOME/.dotfiles_local/bin"
+
 # Update local dotfiles
 ldfu() {
     declare -f dfu > /dev/null && dfu &&
