@@ -84,7 +84,7 @@ layoutHome = function()
     coding = {{'iTerm2', nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=true}}
   end
   local main = {
-    {'Google Chrome', nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=false},
+    {'Google Chrome', nil, mainScreen, u(0, 0, 1, 1), nil, nil},
     {'Spotify', nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=false},
   }
   local secondary = {
