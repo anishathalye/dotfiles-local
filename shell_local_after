@@ -22,9 +22,27 @@ ldfu() {
 }
 
 # Aliases and Functions
-function backup-ts100() {
+backup-ts100() {
     time (
-        rsync -avP --delete /media/raid2/home/data2/Media founder@192.168.0.125:/home/founder/server_backup &&
-            rsync -avP --delete /media/raid/home/data founder@192.168.0.125:/media/data/server_backup
+        rsync -avP --delete /media/raid2/home/data2/Media ts100:/home/founder/server_backup &&
+            rsync -avP --delete /media/raid/home/data ts100:/media/data/server_backup
     )
+}
+
+borg-summary-for() {
+    user="$1"
+    repo="$2"
+    echo "=== $user @ $repo ==="
+    echo
+    sudo su $user -c "borg info $repo"
+    sudo su $user -c "borg list --last 5 $repo"
+}
+
+borg-summary() {
+    sudo -v
+    borg-summary-for anish /media/raid2/borg/anish
+    echo
+    borg-summary-for manisha /media/raid2/borg/manisha
+    echo
+    borg-summary-for ratnakar /media/raid2/borg/ratnakar
 }
