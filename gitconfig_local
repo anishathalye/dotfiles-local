@@ -6,11 +6,11 @@
 	user = anishathalye
 
 [log]
-    date = auto:human
+	date = auto:human
 
 [core]
-    pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
+	pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
 
 [diff "scpt"]
-    textconv = osadecompile
-    binary=true
+	textconv = osadecompile
+	binary=true
