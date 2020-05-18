@@ -1,0 +1,12 @@
+language: generic
+os: bionic
+
+sudo: false
+
+before_script:
+  - mkdir -p ~/dotfiles-install-dir
+  - git clone https://github.com/anishathalye/dotfiles
+  - HOME=~/dotfiles-install-dir dotfiles/install
+
+script:
+  - HOME=~/dotfiles-install-dir ./install

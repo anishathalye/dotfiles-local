@@ -1,5 +1,4 @@
-Dotfiles (local)
-================
+# Dotfiles (local) [[![Build Status](https://travis-ci.com/anishathalye/dotfiles-local.svg?branch=master)](https://travis-ci.com/anishathalye/dotfiles-local)]
 
 After cloning this repo, run `install` to automatically set up the development
 environment. Note that the install script is idempotent - running it multiple
@@ -15,10 +14,45 @@ files are organized.
 Configuration for specific computers (or groups of computers) is maintained in
 separate branches in this repo.
 
+Branch Hierarchy
+----------------
+
+```
+master
+|
++- mac
+|  |
+|  +- openai [inactive]
+|
++- openai-cirrascale [inactive]
+|
++- linux-server
+|  |
+|  +- a-srvr
+|  |
+|  +- gpu
+|  |
+|  +- zero
+|
++- athena
+|
++- csail [inactive]
+|
++- linux-desktop
+|  |
+|  +- google-android [inactive]
+|
++- telemetry [inactive]
+|
++- dropbox [inactive]
+
+old [inactive]
+```
+
 License
 -------
 
-Copyright (c) 2014 Anish Athalye. Released under the MIT License. See
+Copyright (c) 2014-2019 Anish Athalye. Released under the MIT License. See
 [LICENSE.md][license] for details.
 
 [dotbot]: https://github.com/anishathalye/dotbot
