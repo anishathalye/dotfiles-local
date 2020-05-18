@@ -6,12 +6,12 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.bash_login:
+    ~/.bashrc_local_before:
     ~/.dotfiles_local: ''
     ~/.gitconfig_local:
     ~/.hgrc_local:
-    ~/.bash_login:
-    ~/.bashrc_local_after:
-    ~/.bashrc_local_before:
+    ~/.shell_local_after:
     ~/.xlog:
     ~/.zshrc_local_before:
 
