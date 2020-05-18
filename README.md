@@ -1,5 +1,4 @@
-Dotfiles (local)
-================
+# Dotfiles (local) [[![Build Status](https://travis-ci.com/anishathalye/dotfiles-local.svg?branch=master)](https://travis-ci.com/anishathalye/dotfiles-local)]
 
 After cloning this repo, run `install` to automatically set up the development
 environment. Note that the install script is idempotent - running it multiple
@@ -37,7 +36,7 @@ master
 |
 +- athena
 |
-+- csail
++- csail [inactive]
 |
 +- linux-desktop
 |  |
@@ -47,7 +46,7 @@ master
 |
 +- dropbox [inactive]
 
-old
+old [inactive]
 ```
 
 License
