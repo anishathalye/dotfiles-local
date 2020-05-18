@@ -1,9 +1,6 @@
-# autojump config
-[[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
+# Add scripts to path
 
-# PATH
-path_prepend "$HOME/bin"
-path_prepend "$HOME/.local/bin"
+path_prepend "$HOME/.dotfiles_local/bin"
 
 # Update local dotfiles
 ldfu() {
@@ -12,3 +9,10 @@ ldfu() {
         cd ~/.dotfiles_local && git pull --ff-only && ./install -q
     )
 }
+
+# autojump config
+[[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
+
+# PATH
+path_prepend "$HOME/bin"
+path_prepend "$HOME/.local/bin"
