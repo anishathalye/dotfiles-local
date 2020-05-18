@@ -26,33 +26,15 @@ master
 |
 +- openai-cirrascale [inactive]
 |
-+- linux-server
-|  |
-|  +- a-srvr
-|  |
 |  +- gpu
-|  |
-|  +- zero
 |
 +- athena
-|
-+- csail [inactive]
-|
-+- linux-desktop
-|  |
-|  +- google-android [inactive]
-|
-+- telemetry [inactive]
-|
-+- dropbox [inactive]
-
-old [inactive]
 ```
 
 License
 -------
 
-Copyright (c) 2014-2019 Anish Athalye. Released under the MIT License. See
+Copyright (c) 2014-2020 Anish Athalye. Released under the MIT License. See
 [LICENSE.md][license] for details.
 
 [dotbot]: https://github.com/anishathalye/dotbot
