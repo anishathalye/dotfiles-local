@@ -1,4 +1,4 @@
-PKGS='~/.dotfiles_local/packages'
+PKGS="${HOME}/.dotfiles_local/packages"
 
 add() {
     path_prepend "${PKGS}/${1}"
