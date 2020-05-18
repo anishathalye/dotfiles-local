@@ -1,11 +1,17 @@
 # autojump config
-[[ -s /usr/share/autojump/autojump.zsh ]] && source /usr/share/autojump/autojump.sh &&
-    autoload -U compinit && compinit -u
+[[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
+
+# PATH
+path_prepend "$HOME/.local/bin"
 
 # Go
 export PATH="/usr/local/go/bin:$PATH"
 export GOPATH="$HOME/"
 export PATH="$GOPATH/bin:$PATH"
+
+# Add scripts to path
+
+path_prepend "$HOME/.dotfiles_local/bin"
 
 # Update local dotfiles
 ldfu() {
