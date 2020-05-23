@@ -42,6 +42,8 @@ borg-summary() {
     sudo -v
     borg-summary-for anish /media/raid2/borg/anish
     echo
+    borg-summary-for ashay /media/raid2/borg/ashay
+    echo
     borg-summary-for manisha /media/raid2/borg/manisha
     echo
     borg-summary-for ratnakar /media/raid2/borg/ratnakar
