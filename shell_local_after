@@ -13,6 +13,8 @@ ldfu() {
 # Aliases
 alias gpgst='gpg2 -k --list-options show-uid-validity'
 alias gpgsgn='gpg2 --ask-cert-level --edit-key'
+alias open-emacs='open -a /Applications/Emacs.app'
+alias e='open-emacs'
 
 # Sync and Backup
 DOCUMENT_ROOT="$HOME/Documents/Anish"
