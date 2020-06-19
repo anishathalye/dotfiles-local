@@ -19,7 +19,6 @@ alias e='open-emacs'
 # Sync and Backup
 DOCUMENT_ROOT="$HOME/Documents/Anish"
 # Backup
-alias backup-media-isengard="rsync -avP --delete ${DOCUMENT_ROOT}/Media anish@isengard.anish.io:/home/anish/backup/Anish"
 BORGPREFIX="mbp-"
 BORGSHIRE='shire:borg'
 alias backup-shire="do-borg-backup $DOCUMENT_ROOT $BORGSHIRE $BORGPREFIX $HOME/.borg.shire"
