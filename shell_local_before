@@ -18,6 +18,6 @@ path_append '/usr/local/CrossPack-AVR/bin'
 path_append '/usr/local/opt/riscv-gnu-toolchain/bin'
 
 # Racket
-path_append '/Applications/Racket v7.6/bin'
+path_append '/Applications/Racket v7.7/bin'
 
 source ~/.dotfiles_local/bootstrap.sh
