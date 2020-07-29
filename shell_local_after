@@ -6,9 +6,9 @@ path_prepend "$HOME/bin"
 path_prepend "$HOME/.local/bin"
 
 # Go
-export PATH="/usr/local/go/bin:$PATH"
+path_prepend "/usr/local/go/bin"
 export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:$PATH"
+path_prepend "$GOPATH/bin"
 
 # Add scripts to path
 
