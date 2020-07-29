@@ -1,0 +1,19 @@
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    palette = "#1c1c1c:#d00000:#5f8700:#af8700:#0087ff:#af005f:#00afaf:#808080:#555555:#d00000:#5f8700:#af8700:#0087ff:#af005f:#00afaf:#808080"
+    cursor_shape = underline
+    scrollbar_position = hidden
+    foreground_color = "#808080"
+    show_titlebar = False
+    background_color = "#1c1c1c"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
