@@ -26,9 +26,27 @@ master
 |
 +- openai-cirrascale [inactive]
 |
++- linux [formerly linux-server]
+|  |
+|  +- a-srvr
+|  |
 |  +- gpu
+|  |
+|  +- zero
 |
 +- athena
+|
++- csail [inactive]
+|
++- linux-desktop [inactive]
+|  |
+|  +- google-android [inactive]
+|
++- telemetry [inactive]
+|
++- dropbox [inactive]
+
+old [inactive]
 ```
 
 License
