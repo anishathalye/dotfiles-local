@@ -56,3 +56,15 @@ defaults write com.apple.screencapture show-thumbnail -bool false
 #########
 
 defaults write com.google.Chrome DisablePrintPreview -bool true
+
+## Spotify
+##########
+
+SPOTIFY_PREFS="$HOME/Library/Application Support/Spotify/prefs"
+if [[ -f "$SPOTIFY_PREFS" ]]; then
+    if grep -q '^storage\.size=' "$SPOTIFY_PREFS"; then
+        sed -i 's/^storage\.size=.*/storage.size=1024/' "$SPOTIFY_PREFS"
+    else
+        echo 'storage.size=1024' >> "$SPOTIFY_PREFS"
+    fi
+fi
