@@ -15,7 +15,7 @@ Host shire
 
 Host gondor
     User anish
-    HostName gondor.anish.io
+    HostName 192.168.0.157
 
 Host mordor
     User anish

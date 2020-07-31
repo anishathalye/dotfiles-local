@@ -26,7 +26,7 @@ master
 |
 +- openai-cirrascale [inactive]
 |
-+- linux-server
++- linux [formerly linux-server]
 |  |
 |  +- a-srvr
 |  |
@@ -38,7 +38,7 @@ master
 |
 +- csail [inactive]
 |
-+- linux-desktop
++- linux-desktop [inactive]
 |  |
 |  +- google-android [inactive]
 |
@@ -52,7 +52,7 @@ old [inactive]
 License
 -------
 
-Copyright (c) 2014-2019 Anish Athalye. Released under the MIT License. See
+Copyright (c) 2014-2020 Anish Athalye. Released under the MIT License. See
 [LICENSE.md][license] for details.
 
 [dotbot]: https://github.com/anishathalye/dotbot
