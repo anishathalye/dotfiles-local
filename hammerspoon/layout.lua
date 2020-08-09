@@ -73,10 +73,10 @@ layoutHome = function()
     {'Spotify', nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=false},
   }
   local secondary = {
-    {'Keybase', nil, secondaryScreen, u(0, 0, 1/2, 1), nil, nil, visible=true},
-    {'Mail', nil, secondaryScreen, u(1/2, 1/2, 1/2, 1/2), nil, nil, visible=true},
-    {'Things', nil, secondaryScreen, u(1/2, 0, 1/2, 1/2), nil, nil, visible=true},
-    {'Calendar', nil, secondaryScreen, u(0, 0, 1, 1), nil, nil, visible=false},
+    {'Things', nil, secondaryScreen, u(0, 0, 1/2, 1), nil, nil, visible=true},
+    {'Calendar', nil, secondaryScreen, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
+    {'Keybase', nil, secondaryScreen, u(0, 0, 1, 1), nil, nil},
+    {'Mail', nil, secondaryScreen, u(0, 0, 1, 1), nil, nil, visible=false},
     {'Slack', nil, secondaryScreen, u(0, 0, 1, 1), nil, nil, visible=false},
   }
   return ide, concat(coding, main, secondary)
