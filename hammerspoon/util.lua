@@ -97,15 +97,6 @@ menu = {
     end
   },
   {
-    title = "Layout: Lab",
-    fn = function()
-      local ide, layout = layoutLab()
-      local name = ide or 'Terminal'
-      local description = 'Lab (' .. name .. ')'
-      applyLayout(description, layout)
-    end
-  },
-  {
     title = "Layout: Laptop",
     fn = function()
       applyLayout("Laptop", layoutLaptop)

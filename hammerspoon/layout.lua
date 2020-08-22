@@ -11,21 +11,21 @@ local detectIDE = function()
   return ide
 end
 
-layoutLab = function()
+layoutHome = function()
   local ide = detectIDE()
   local right
   if ide then
     right = {
-      {ide, nil, LAB_RIGHT_MONITOR, u(0, 0, 3/5, 1), nil, nil, visible=true},
-      {'iTerm2', nil, LAB_RIGHT_MONITOR, u(3/5, 0, 2/5, 1), nil, nil, visible=true}
+      {ide, nil, HOME_RIGHT_MONITOR, u(0, 0, 3/5, 1), nil, nil, visible=true},
+      {'iTerm2', nil, HOME_RIGHT_MONITOR, u(3/5, 0, 2/5, 1), nil, nil, visible=true}
     }
   else
-    right = {{'iTerm2', nil, LAB_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true}}
+    right = {{'iTerm2', nil, HOME_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true}}
   end
   local left = {
-    {'Things', nil, LAB_LEFT_MONITOR, u(0, 0, 1/2, 1/4), nil, nil, visible=true},
-    {'Calendar', nil, LAB_LEFT_MONITOR, u(1/2, 0, 1/2, 1/4), nil, nil, visible=true},
-    {'Google Chrome', nil, LAB_LEFT_MONITOR, u(0, 1/4, 1, 3/4), nil, nil, visible=true},
+    {'Things', nil, HOME_LEFT_MONITOR, u(0, 0, 1/2, 1/4), nil, nil, visible=true},
+    {'Calendar', nil, HOME_LEFT_MONITOR, u(1/2, 0, 1/2, 1/4), nil, nil, visible=true},
+    {'Google Chrome', nil, HOME_LEFT_MONITOR, u(0, 1/4, 1, 3/4), nil, nil, visible=true},
   }
   local mb = {
     {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
@@ -47,49 +47,6 @@ layoutLaptop = {
   {'iTerm2', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil}
 }
-
-layoutHome = function()
-  local mainScreen
-  local secondaryScreen
-  if hasScreen(HOME_MONITOR_MAIN) then
-    mainScreen = HOME_MONITOR_MAIN
-    secondaryScreen = MACBOOK_MONITOR
-  else
-    mainScreen = MACBOOK_MONITOR
-    secondaryScreen = HOME_MONITOR_SECONDARY
-  end
-  local ide = detectIDE()
-  local coding
-  if ide then
-    coding = {
-      {ide, nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=true},
-      {'iTerm2', nil, mainScreen, u(0, 0, 1, 1), nil, nil},
-    }
-  else
-    coding = {{'iTerm2', nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=true}}
-  end
-  local main = {
-    {'Google Chrome', nil, mainScreen, u(0, 0, 1, 1), nil, nil},
-    {'Spotify', nil, mainScreen, u(0, 0, 1, 1), nil, nil, visible=false},
-  }
-  local secondary = {
-    {'Things', nil, secondaryScreen, u(0, 0, 1/2, 1), nil, nil, visible=true},
-    {'Calendar', nil, secondaryScreen, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
-    {'Keybase', nil, secondaryScreen, u(0, 0, 1, 1), nil, nil},
-    {'Mail', nil, secondaryScreen, u(0, 0, 1, 1), nil, nil, visible=false},
-    {'Slack', nil, secondaryScreen, u(0, 0, 1, 1), nil, nil, visible=false},
-  }
-  return ide, concat(coding, main, secondary)
-end
-
-tableToSet = function(table)
-  local s = {}
-  if not table then
-    return s
-  end
-  for _, v in ipairs(table) do s[v] = true end
-  return s
-end
 
 applyLayout = function(name, layout)
   for _, entry in ipairs(layout) do
