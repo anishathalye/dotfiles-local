@@ -23,13 +23,13 @@ layoutHome = function()
     right = {{'iTerm2', nil, HOME_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true}}
   end
   local left = {
-    {'Things', nil, HOME_LEFT_MONITOR, u(0, 0, 1/2, 1/4), nil, nil, visible=true},
-    {'Calendar', nil, HOME_LEFT_MONITOR, u(1/2, 0, 1/2, 1/4), nil, nil, visible=true},
     {'Google Chrome', nil, HOME_LEFT_MONITOR, u(0, 1/4, 1, 3/4), nil, nil, visible=true},
   }
   local mb = {
-    {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
-    {'Mail', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
+    {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
+    {'Calendar', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
+    {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
+    {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
     {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
     {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false}
   }
