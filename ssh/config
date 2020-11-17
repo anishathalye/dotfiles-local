@@ -3,31 +3,7 @@ Host *
     UseKeychain yes
     AddKeysToAgent yes
 
-# dorm
-
-Host isengard
-    User anish
-    HostName isengard.anish.io
-
-Host shire
-    User anish
-    HostName shire.anish.io
-
-Host gondor
-    User anish
-    HostName 192.168.0.157
-
-Host mordor
-    User anish
-    HostName mordor.anish.io
-
-# csail / pdos
-
-Host raspi
-    User pi
-    HostName raspi.aathalye.csail.mit.edu
-    Port 222
-    LocalForward 5900 localhost:5900
+# mit / csail / pdos
 
 Host g
     User git
@@ -40,15 +16,6 @@ Host csail
 Host ben
     User anish
     HostName ben.csail.mit.edu
-    ProxyJump csail
-
-Host nil
-    User aathalye
-    HostName nil.csail.mit.edu
-
-Host vm-screen
-    User arch
-    HostName vm-screen.pdos.csail.mit.edu
     ProxyJump csail
 
 Host vm-web
@@ -71,16 +38,10 @@ Host two
     HostName two.aathalye.csail.mit.edu
     Port 10022
 
-# mit
-
 Host athena
     User aathalye
     HostName athena.dialup.mit.edu
     PreferredAuthentications password,keyboard-interactive
-
-Host xvm
-    User anish
-    HostName x.anish.io
 
 # home
 
@@ -88,19 +49,13 @@ Host server
     User anish
     HostName 192.168.0.105
 
-Host server-remote
+Host gondor
     User anish
-    HostName home.anish.io
-    Port 10022
+    HostName 192.168.0.157
 
 Host bongo
     User anish
     HostName 192.168.0.134
-
-Host bongo-remote
-    User anish
-    HostName home.anish.io
-    Port 30022
 
 Host ts100
     User founder
