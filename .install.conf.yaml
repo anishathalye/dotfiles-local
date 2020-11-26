@@ -17,6 +17,7 @@
     ~/.shell_local_after:
     ~/.shell_local_before:
     ~/.ssh/config: ssh/config
+    ~/.ssh/config_local: ssh/config_local
     ~/.vimrc_local:
     ~/.zshrc_local_after:
 

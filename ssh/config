@@ -6,8 +6,6 @@ Include ~/.ssh/config_extra
 
 Host *
     ServerAliveInterval 120
-    UseKeychain yes
-    AddKeysToAgent yes
 
 # mit / csail / pdos
 
