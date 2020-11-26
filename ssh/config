@@ -1,3 +1,9 @@
+# includes must go at the top
+# host-specific customization
+Include ~/.ssh/config_local
+# extra stuff not in version control
+Include ~/.ssh/config_extra
+
 Host *
     ServerAliveInterval 120
 
