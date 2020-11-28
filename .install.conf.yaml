@@ -6,6 +6,10 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.config/terminator:
+      create: true
+      force: true
+      path: config/terminator/
     ~/.dotfiles_local: ''
     ~/.gitconfig_local:
     ~/.hgrc_local:
