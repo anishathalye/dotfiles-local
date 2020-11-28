@@ -32,11 +32,6 @@ Host zero
     HostName zero.aathalye.csail.mit.edu
     ProxyJump csail
 
-Host one
-    User anish
-    HostName one.aathalye.csail.mit.edu
-    ProxyJump csail
-
 Host two
     User anish
     HostName two.aathalye.csail.mit.edu
