@@ -14,17 +14,17 @@ end
 layoutHome = function()
   local ide = detectIDE()
   local right
+  local left
   if ide then
-    right = {
-      {ide, nil, HOME_RIGHT_MONITOR, u(0, 0, 3/5, 1), nil, nil, visible=true},
-      {'iTerm2', nil, HOME_RIGHT_MONITOR, u(3/5, 0, 2/5, 1), nil, nil, visible=true}
+    right = {{ide, nil, HOME_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true}}
+    left = {
+      {'Google Chrome', nil, HOME_LEFT_MONITOR, u(0, 0, 1, 1/2), nil, nil, visible=true},
+      {'iTerm2', nil, HOME_LEFT_MONITOR, u(0, 1/2, 1, 1/2), nil, nil, visible=true}
     }
   else
     right = {{'iTerm2', nil, HOME_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true}}
+    left = {{'Google Chrome', nil, HOME_LEFT_MONITOR, u(0, 1/4, 1, 3/4), nil, nil, visible=true}}
   end
-  local left = {
-    {'Google Chrome', nil, HOME_LEFT_MONITOR, u(0, 1/4, 1, 3/4), nil, nil, visible=true},
-  }
   local mb = {
     {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1/2, 1), nil, nil, visible=true},
     {'Calendar', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
