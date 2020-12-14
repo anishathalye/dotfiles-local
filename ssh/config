@@ -52,6 +52,10 @@ Host gondor
     User anish
     HostName 192.168.0.157
 
+Host shire
+    User anish
+    HostName 192.168.0.249
+
 Host bongo
     User anish
     HostName 192.168.0.134
