@@ -61,30 +61,6 @@ test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh > /dev/null 2
 export GOPATH="$HOME/Documents/Anish/Developer"
 path_prepend "$GOPATH/bin"
 
-# SOCKS proxy
-
-proxy-on() {
-    local interface='Wi-Fi'
-    sudo networksetup -setsocksfirewallproxy $interface 127.0.0.1 9050 off
-    sudo networksetup -setsocksfirewallproxystate $interface on
-}
-
-proxy-off() {
-    local interface='Wi-Fi'
-    sudo networksetup -setsocksfirewallproxystate $interface off
-}
-
-# Tor
-
-tor-on() {
-    proxy-on
-    tor
-}
-
-tor-off() {
-    proxy-off
-}
-
 # GPG Key
 
 GPGKEY="0x72EE4824FA6EFF1FE750A015C3F6E4F5086B3B32"
