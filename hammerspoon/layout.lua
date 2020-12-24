@@ -30,7 +30,6 @@ layoutHome = function()
     {'Calendar', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
     {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
     {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-    {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
     {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false}
   }
   return ide, concat(left, right, mb)
@@ -41,7 +40,6 @@ layoutLaptop = {
   {'Emacs', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Firefox', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
-  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
   {'iTerm2', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
@@ -98,3 +96,27 @@ autoLayout = function()
     applyLayout('Laptop', layoutLaptop)
   end
 end
+
+
+local prevScreens = hs.screen.allScreens()
+
+screensEq = function(a, b)
+  if #a ~= #b then
+    return false
+  end
+  for i, x in ipairs(a) do
+    if b[i] ~= x then
+      return false
+    end
+  end
+  return true
+end
+
+screenWatcher = hs.screen.watcher.new(function()
+  local currScreens = hs.screen.allScreens()
+  if screensEq(currScreens, prevScreens) then
+    return
+  end
+  autoLayout()
+  prevScreens = currScreens
+end):start()
