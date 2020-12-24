@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+  schedule:
+    - cron: '0 8 * * 6'
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          mkdir -p ~/dotfiles-install-dir
+          git clone https://github.com/anishathalye/dotfiles
+          HOME=~/dotfiles-install-dir dotfiles/install --except shell
+      - run: |
+          HOME=~/dotfiles-install-dir ./install
