@@ -87,3 +87,14 @@ hasScreen = function(name)
   end
   return false
 end
+
+autoLayout = function()
+  if hasScreen(HOME_LEFT_MONITOR) and hasScreen(HOME_RIGHT_MONITOR) then
+    local ide, layout = layoutHome()
+    local name = ide or 'Terminal'
+    local description = 'Home (' .. name .. ')'
+    applyLayout(description, layout)
+  else
+    applyLayout('Laptop', layoutLaptop)
+  end
+end
