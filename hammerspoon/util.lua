@@ -24,7 +24,7 @@ local reloadMenu = function() utilMenu:setMenu(menu) end
 
 menu = {
   {
-    title = "Mono audio",
+    title = "Mono Audio",
     checked = false,
     fn = function(modifiers, menuItem)
       local script = [[
@@ -81,7 +81,7 @@ menu = {
     title = "-" -- separator
   },
   {
-    title = "Rescue windows",
+    title = "Rescue Windows",
     fn = rescue
   },
   {
