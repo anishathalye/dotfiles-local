@@ -92,7 +92,7 @@ autoLayout = function()
     local name = ide or 'Terminal'
     local description = 'Home (' .. name .. ')'
     applyLayout(description, layout)
-  else
+  elseif #hs.screen.allScreens() == 1 then
     applyLayout('Laptop', layoutLaptop)
   end
 end
@@ -117,6 +117,6 @@ screenWatcher = hs.screen.watcher.new(function()
   if screensEq(currScreens, prevScreens) then
     return
   end
-  autoLayout()
   prevScreens = currScreens
+  autoLayout()
 end):start()
