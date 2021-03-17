@@ -10,6 +10,9 @@ path_prepend '/usr/local/opt/findutils/libexec/gnubin'
 path_prepend '/usr/local/opt/gnu-tar/libexec/gnubin'
 path_prepend '/usr/local/opt/grep/libexec/gnubin'
 
+# Rust / Cargo
+path_prepend "$HOME/.cargo/bin"
+
 # CrossPack
 path_append '/usr/local/CrossPack-AVR/bin'
 
