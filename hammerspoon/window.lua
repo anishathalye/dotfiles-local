@@ -35,3 +35,6 @@ end)
 -- grid gui
 hs.grid.setMargins({w = 0, h = 0})
 hs.hotkey.bind({'shift', 'cmd'}, 'g', hs.grid.show)
+
+-- auto layout
+hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'l', function() autoLayout() end)
