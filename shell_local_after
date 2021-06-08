@@ -5,6 +5,15 @@
 path_prepend "$HOME/bin"
 path_prepend "$HOME/.local/bin"
 
+# Sync and Backup
+DOCUMENT_ROOT="$HOME/Documents/Anish"
+# Backup
+BORGPREFIX="linux-"
+BORGSHIRE='shire:borg'
+alias backup-shire="do-borg-backup $DOCUMENT_ROOT $BORGSHIRE $BORGPREFIX $HOME/.borg.shire"
+BORGSERVER='server:/media/raid2/borg/anish'
+alias backup-server="do-borg-backup $DOCUMENT_ROOT $BORGSERVER $BORGPREFIX"
+
 # Go
 path_prepend "/usr/local/go/bin"
 export GOPATH="$HOME/go"
