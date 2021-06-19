@@ -33,7 +33,7 @@ master
 |  +- gpu
 |  |
 |  +- zero
-|  +
+|  |
 |  +- linux-main
 |
 +- athena
