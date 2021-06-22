@@ -58,7 +58,7 @@ test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh > /dev/null 2
 
 # Go
 
-export GOPATH="$HOME/Documents/Anish/Developer"
+export GOPATH="$HOME/go"
 path_prepend "$GOPATH/bin"
 
 # GPG Key
