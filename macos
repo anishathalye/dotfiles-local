@@ -52,6 +52,9 @@ defaults write com.apple.screencapture show-thumbnail -bool false
 # hide scroll bars even if an external mouse is connected
 defaults write -g AppleShowScrollBars -string "WhenScrolling"
 
+# touch bar shows expanded control strip
+defaults write com.apple.touchbar.agent PresentationModeGlobal fullControlStrip
+
 # Third-party apps
 ##################
 
