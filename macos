@@ -74,3 +74,9 @@ if [[ -f "$SPOTIFY_PREFS" ]]; then
         echo 'storage.size=1024' >> "$SPOTIFY_PREFS"
     fi
 fi
+
+## GPGTools
+###########
+
+# disable storing PGP passwords in macOS keychain
+defaults write org.gpgtools.common DisableKeychain -bool yes
