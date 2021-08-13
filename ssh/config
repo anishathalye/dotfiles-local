@@ -56,6 +56,10 @@ Host shire
     User anish
     HostName 192.168.0.249
 
+Host isengard
+    User anish
+    HostName 192.168.0.250
+
 Host bongo
     User anish
     HostName 192.168.0.134
