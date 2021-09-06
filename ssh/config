@@ -17,24 +17,20 @@ Host csail
     User aathalye
     HostName login.csail.mit.edu
 
-Host csail-jump
-    User aathalye
-    HostName jump.csail.mit.edu
-
 Host ben
     User anish
     HostName ben.csail.mit.edu
-    ProxyJump csail-jump
+    ProxyJump csail
 
 Host vm-web
     User arch
     HostName vm-web.pdos.csail.mit.edu
-    ProxyJump csail-jump
+    ProxyJump csail
 
 Host zero
     User anish
     HostName zero.aathalye.csail.mit.edu
-    ProxyJump csail-jump
+    ProxyJump csail
 
 Host two
     User anish
@@ -52,6 +48,11 @@ Host server
     User anish
     HostName 192.168.0.105
 
+Host server-remote
+    User anish
+    HostName home.anish.io
+    Port 10022
+
 Host gondor
     User anish
     HostName 192.168.0.157
@@ -59,6 +60,10 @@ Host gondor
 Host shire
     User anish
     HostName 192.168.0.249
+
+Host isengard
+    User anish
+    HostName 192.168.0.250
 
 Host bongo
     User anish
