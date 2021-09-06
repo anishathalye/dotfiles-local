@@ -48,6 +48,11 @@ Host server
     User anish
     HostName 192.168.0.105
 
+Host server-remote
+    User anish
+    HostName home.anish.io
+    Port 10022
+
 Host gondor
     User anish
     HostName 192.168.0.157
