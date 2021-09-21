@@ -71,6 +71,11 @@ Host bongo
     User anish
     HostName 192.168.0.134
 
+Host bongo-remote
+    User anish
+    HostName 192.168.0.134
+    ProxyJump server-remote
+
 Host ts100
     User founder
     HostName 192.168.0.125
