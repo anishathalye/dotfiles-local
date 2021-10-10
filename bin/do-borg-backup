@@ -1,27 +1,92 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-set -eu
+from datetime import datetime
+import json
+import os
+import re
+import subprocess
+import sys
 
-if [[ "$#" -lt 3 ]]; then
-    echo "usage: $0 document_root repo prefix [pwfile]"
-    exit 1
-fi
 
-document_root="$1"
-repo="$2"
-prefix="$3"
-pwfile="${4-}"
+AIRPORT_PATH = '/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
 
-withpw() {
-    if [[ -z "$pwfile" ]]; then
-        "$@"
-    else
-        BORG_PASSPHRASE_FD=3 "$@" 3<"$pwfile"
-    fi
-}
 
-cd "$document_root"
-withpw borg create --progress --stats "${repo}::${prefix}$(date +%FT%T%z)" .
-withpw borg prune "$repo" --prefix "$prefix" --stats \
-    --keep-within=7d --keep-daily=30 --keep-weekly=24 \
-    --keep-monthly=12 --keep-yearly=-1
+def do_backup(repo_info, conf):
+    repo = repo_info['repo']
+    passphrase = repo_info.get('passphrase')
+    prefix = conf['prefix']
+    keep = conf['keep']
+
+    os.chdir(conf['root'])
+
+    timestamp = datetime.now().astimezone().strftime('%FT%T%z')
+    borg_cmd(
+        'create',
+        '--progress',
+        '--stats',
+        f'{repo}::{prefix}{timestamp}',
+        '.',
+        passphrase=passphrase
+    )
+
+    borg_cmd(
+        'prune',
+        repo,
+        '--prefix',
+        prefix,
+        '--stats',
+        f'--keep-within={keep["within"]}',
+        f'--keep-daily={keep["daily"]}',
+        f'--keep-weekly={keep["weekly"]}',
+        f'--keep-monthly={keep["monthly"]}',
+        f'--keep-yearly={keep["yearly"]}',
+        passphrase=passphrase
+    )
+
+
+def get_ssid():
+    out = subprocess.check_output([AIRPORT_PATH, '-I'])
+    for line in out.decode('utf8').split('\n'):
+        m = re.match(r'\s+SSID: (.*)', line)
+        if m:
+            ssid = m.group(1)
+            if ssid == '':
+                return None
+            return ssid
+    return None
+
+
+def borg_cmd(*cmd, passphrase=None):
+    cmd = ('borg',) + cmd
+    if passphrase is not None:
+        read_fd, write_fd = os.pipe()
+        env = dict(os.environ)
+        env['BORG_PASSPHRASE_FD'] = str(read_fd)
+        # POSIX requires pipe buffer to be at least 512 bytes, so it's fine to do a
+        # blocking write here before there is anyone reading
+        os.write(write_fd, passphrase.encode('utf8'))
+        os.close(write_fd)  # EOF
+        subprocess.check_call(cmd, pass_fds=(sys.stdout.fileno(), sys.stderr.fileno(), read_fd), env=env)
+        os.close(read_fd)
+    else:
+        subprocess.check_call(cmd, pass_fds=(sys.stdout.fileno(), sys.stderr.fileno()))
+
+
+def main():
+    if len(sys.argv) != 2:
+        print(f'usage: {sys.argv[0]} config_file', file=sys.stderr)
+        exit(1)
+    with open(sys.argv[1]) as f:
+        conf = json.load(f)
+    ssid = get_ssid()
+    if ssid is None:
+        print(f'Not connected to a WiFi network.')
+    if ssid not in conf['repos']:
+        print(f'No backup configuration for SSID "{ssid}".')
+    repo_info = conf['repos'][ssid]
+    del conf['repos']
+    do_backup(repo_info, conf)
+
+
+if __name__ == '__main__':
+    main()

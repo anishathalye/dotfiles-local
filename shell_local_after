@@ -16,17 +16,6 @@ alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 alias open-emacs='open -a /Applications/Emacs.app'
 alias e='open-emacs'
 
-# Sync and Backup
-DOCUMENT_ROOT="$HOME/Documents/Anish"
-# Backup
-BORGPREFIX="mbp-"
-BORGSHIRE='shire:borg'
-alias backup-shire="do-borg-backup $DOCUMENT_ROOT $BORGSHIRE $BORGPREFIX $HOME/.borg.shire"
-BORGSERVER='server:/media/raid2/borg/anish'
-alias backup-server="do-borg-backup $DOCUMENT_ROOT $BORGSERVER $BORGPREFIX"
-BORGSERVER_REMOTE='server-remote:/media/raid2/borg/anish'
-alias backup-server-remote="do-borg-backup $DOCUMENT_ROOT $BORGSERVER_REMOTE $BORGPREFIX"
-
 # Make a 4GB (2048 * 4096M) RAM Disk
 ramdisk() {
     local size

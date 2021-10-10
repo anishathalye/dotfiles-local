@@ -1,0 +1,20 @@
+{
+    "root": "/Users/anish/Documents/Anish",
+    "prefix": "mbp-",
+    "keep": {
+        "within": "7d",
+        "daily": "30",
+        "weekly": "24",
+        "monthly": "12",
+        "yearly": "-1"
+    },
+    "repos": {
+        "SERENITY": {
+            "repo": "server:/media/raid2/borg/anish"
+        },
+        "MIT SECURE": {
+            "repo": "shire:borg",
+            "passphrase": "password"
+        }
+    }
+}
