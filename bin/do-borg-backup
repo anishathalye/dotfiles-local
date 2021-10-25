@@ -83,6 +83,7 @@ def main():
         print(f'Not connected to a WiFi network.')
     if ssid not in conf['repos']:
         print(f'No backup configuration for SSID "{ssid}".')
+        exit(1)
     repo_info = conf['repos'][ssid]
     print(f'Backing up to {repo_info["repo"]}')
     del conf['repos']
