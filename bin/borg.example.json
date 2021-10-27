@@ -2,10 +2,10 @@
     "root": "/Users/anish/Documents/Anish",
     "prefix": "mbp-",
     "keep": {
-        "within": "7d",
-        "daily": "30",
-        "weekly": "24",
-        "monthly": "12",
+        "within": "30d",
+        "daily": "90",
+        "weekly": "52",
+        "monthly": "48",
         "yearly": "-1"
     },
     "repos": {
