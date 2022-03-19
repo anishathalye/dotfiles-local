@@ -24,7 +24,7 @@ Host csail
 
 Host csail-jump
     User aathalye
-    HostName jump.csail.mit.edu
+    HostName login.csail.mit.edu
 
 Host ben
     User anish
