@@ -73,12 +73,15 @@ def borg_cmd(*cmd, passphrase=None):
 
 
 def main():
-    if len(sys.argv) != 2:
-        print(f'usage: {sys.argv[0]} config_file', file=sys.stderr)
+    if len(sys.argv) not in [2, 3]:
+        print(f'usage: {sys.argv[0]} config_file [override_ssid]', file=sys.stderr)
         exit(1)
     with open(sys.argv[1]) as f:
         conf = json.load(f)
-    ssid = get_ssid()
+    if len(sys.argv) == 3:
+        ssid = sys.argv[2]
+    else:
+        ssid = get_ssid()
     if ssid is None:
         print(f'Not connected to a WiFi network.')
     if ssid not in conf['repos']:
