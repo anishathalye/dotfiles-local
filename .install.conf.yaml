@@ -3,7 +3,7 @@
       create: true
       relink: true
 
-- clean: ['~', '~/.config']
+- clean: ['~', '~/.config', '~/.ssh']
 
 - link:
     ~/.bash_login:
