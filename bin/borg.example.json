@@ -1,6 +1,7 @@
 {
     "root": "/Users/anish/Documents/Anish",
     "prefix": "mbp-",
+    "prefix-glob": "mbp-*",
     "keep": {
         "within": "30d",
         "daily": "90",

@@ -15,6 +15,7 @@ def do_backup(repo_info, conf):
     repo = repo_info['repo']
     passphrase = repo_info.get('passphrase')
     prefix = conf['prefix']
+    prefix_glob = conf['prefix-glob']
     keep = conf['keep']
 
     os.chdir(conf['root'])
@@ -32,8 +33,8 @@ def do_backup(repo_info, conf):
     borg_cmd(
         'prune',
         repo,
-        '--prefix',
-        prefix,
+        '--glob-archives',
+        prefix_glob,
         '--stats',
         f'--keep-within={keep["within"]}',
         f'--keep-daily={keep["daily"]}',
