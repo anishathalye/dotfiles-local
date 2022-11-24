@@ -1,4 +1,5 @@
 path_prepend "$HOME/bin"
+path_prepend "$HOME/Documents/Anish/src/scripts"
 
 # Homebrew and Related Tools
 path_prepend '/usr/local/sbin'
