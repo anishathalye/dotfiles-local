@@ -3,9 +3,13 @@
       create: true
       relink: true
 
-- clean: ['~', '~/.config']
+- clean: ['~', '~/.config', '~/.ssh']
 
 - link:
+    ~/.config/terminator:
+      create: true
+      force: true
+      path: config/terminator/
     ~/.dotfiles_local: ''
     ~/.gitconfig_local:
     ~/.hgrc_local:

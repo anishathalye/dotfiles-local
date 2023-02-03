@@ -1,31 +1,13 @@
+# includes must go at the top
+# host-specific customization
+Include ~/.ssh/config_local
+# extra stuff not in version control
+Include ~/.ssh/config_extra
+
 Host *
     ServerAliveInterval 120
 
-# dorm
-
-Host isengard
-    User anish
-    HostName isengard.anish.io
-
-Host shire
-    User anish
-    HostName shire.anish.io
-
-Host gondor
-    User anish
-    HostName gondor.anish.io
-
-Host mordor
-    User anish
-    HostName mordor.anish.io
-
-# csail / pdos
-
-Host raspi
-    User pi
-    HostName raspi.aathalye.csail.mit.edu
-    Port 222
-    LocalForward 5900 localhost:5900
+# mit / csail / pdos
 
 Host g
     User git
@@ -34,51 +16,46 @@ Host g
 Host csail
     User aathalye
     HostName login.csail.mit.edu
+    PreferredAuthentications password,keyboard-interactive
+
+Host csail-jump
+    User aathalye
+    HostName jump.csail.mit.edu
 
 Host ben
     User anish
     HostName ben.csail.mit.edu
-    ProxyJump csail
-
-Host nil
-    User aathalye
-    HostName nil.csail.mit.edu
-
-Host vm-screen
-    User arch
-    HostName vm-screen.pdos.csail.mit.edu
-    ProxyJump csail
+    ProxyJump csail-jump
 
 Host vm-web
     User arch
     HostName vm-web.pdos.csail.mit.edu
-    ProxyJump csail
+    ProxyJump csail-jump
 
 Host zero
     User anish
     HostName zero.aathalye.csail.mit.edu
-    ProxyJump csail
-
-Host one
-    User anish
-    HostName one.aathalye.csail.mit.edu
-    ProxyJump csail
+    ProxyJump csail-jump
 
 Host two
     User anish
     HostName two.aathalye.csail.mit.edu
     Port 10022
 
-# mit
-
 Host athena
     User aathalye
     HostName athena.dialup.mit.edu
     PreferredAuthentications password,keyboard-interactive
 
-Host xvm
+# dorm
+
+Host gondor
     User anish
-    HostName x.anish.io
+    HostName gondor.anish.io
+
+Host shire
+    User anish
+    HostName shire.anish.io
 
 # home
 
@@ -91,14 +68,18 @@ Host server-remote
     HostName home.anish.io
     Port 10022
 
+Host isengard
+    User anish
+    HostName 192.168.0.250
+
 Host bongo
     User anish
     HostName 192.168.0.134
 
 Host bongo-remote
     User anish
-    HostName home.anish.io
-    Port 30022
+    HostName 192.168.0.134
+    ProxyJump server-remote
 
 Host ts100
     User founder
@@ -111,7 +92,6 @@ Host router
 Host router-wireless
     User root
     HostName 192.168.0.30
-    KexAlgorithms +diffie-hellman-group1-sha1
 
 # other
 
