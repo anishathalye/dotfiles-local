@@ -57,6 +57,10 @@ path_prepend "$GOPATH/bin"
 export PYSPARK_DRIVER_PYTHON="jupyter"
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 
+# OpenStack
+
+export OS_CLOUD='default'
+
 # GPG Key
 
 GPGKEY="0x72EE4824FA6EFF1FE750A015C3F6E4F5086B3B32"
