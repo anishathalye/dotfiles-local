@@ -38,3 +38,8 @@ hs.hotkey.bind({'shift', 'cmd'}, 'g', hs.grid.show)
 
 -- auto layout
 hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'l', function() autoLayout() end)
+
+-- size for recording
+hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'r', function()
+  hs.window.focusedWindow():setSize({w = 640, h = 360})
+end)
