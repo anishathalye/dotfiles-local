@@ -32,7 +32,7 @@ master
 |  |
 |  +- gpu
 |  |
-|  +- zero
+|  +- zero [inactive]
 |  |
 |  +- linux-main
 |
