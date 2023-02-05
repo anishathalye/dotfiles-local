@@ -13,7 +13,7 @@ borg-summary-for() {
 
 borg-summary() {
     sudo -v
-    borg-summary-for anish /media/raid2/borg/anish
+    borg-summary-for anish /media/raid/borg/anish
     echo
     borg-summary-for ashay /media/raid2/borg/ashay
     echo
