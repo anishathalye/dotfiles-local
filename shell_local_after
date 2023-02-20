@@ -44,6 +44,8 @@ path_prepend '/usr/local/opt/ruby/bin'
 
 export JUPYTER_PATH="$HOME/.local/share/jupyter"
 
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+
 # OPAM configuration
 test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
