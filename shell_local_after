@@ -49,6 +49,20 @@ export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 # OPAM configuration
 test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
+# Everest / FStar
+EVEREST_DIR="$HOME/Documents/Anish/src/notary/everest"
+path_prepend "$EVEREST_DIR/FStar/bin"
+path_prepend "$EVEREST_DIR/karamel"
+path_prepend "/usr/local/opt/gnu-getopt/bin"
+path_prepend "$EVEREST_DIR/z3-4.8.5-x64-osx-10.14.2/bin"
+export FSTAR_HOME="$EVEREST_DIR/FStar"
+export OPENSSL_HOME="$EVEREST_DIR/MLCrypto/openssl"
+export KRML_HOME="$EVEREST_DIR/karamel"
+export VALE_HOME="$EVEREST_DIR/vale"
+export HACL_HOME="$EVEREST_DIR/hacl-star"
+export MLCRYPTO_HOME="$EVEREST_DIR/MLCrypto"
+export DYLD_LIBRARY_PATH="$EVEREST_DIR/MLCrypto/openssl:$DYLD_LIBRARY_PATH"
+
 # Go
 
 export GOPATH="$HOME/go"
