@@ -32,7 +32,7 @@ master
 |  |
 |  +- gpu
 |  |
-|  +- zero
+|  +- zero [inactive]
 |  |
 |  +- linux-main
 |
@@ -54,7 +54,7 @@ old [inactive]
 License
 -------
 
-Copyright (c) 2014-2021 Anish Athalye. Released under the MIT License. See
+Copyright (c) Anish Athalye. Released under the MIT License. See
 [LICENSE.md][license] for details.
 
 [dotbot]: https://github.com/anishathalye/dotbot
