@@ -82,8 +82,8 @@ Host bongo
 
 Host bongo-remote
     User anish
-    HostName 192.168.0.134
-    ProxyJump server-remote
+    HostName home.anish.io
+    Port 30022
 
 Host ts100
     User founder
