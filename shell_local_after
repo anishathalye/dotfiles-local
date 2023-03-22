@@ -61,7 +61,6 @@ export KRML_HOME="$EVEREST_DIR/karamel"
 export VALE_HOME="$EVEREST_DIR/vale"
 export HACL_HOME="$EVEREST_DIR/hacl-star"
 export MLCRYPTO_HOME="$EVEREST_DIR/MLCrypto"
-export DYLD_LIBRARY_PATH="$EVEREST_DIR/MLCrypto/openssl:$DYLD_LIBRARY_PATH"
 
 # Go
 
