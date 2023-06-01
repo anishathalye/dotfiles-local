@@ -50,7 +50,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # Everest / FStar
-EVEREST_DIR="$HOME/Documents/Anish/src/notary/everest"
+export EVEREST_DIR="$HOME/Documents/Anish/src/notary/everest"
 path_prepend "$EVEREST_DIR/FStar/bin"
 path_prepend "$EVEREST_DIR/karamel"
 path_prepend "/usr/local/opt/gnu-getopt/bin"
