@@ -31,6 +31,20 @@ hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'left', function()
     win:moveToScreen(next, true)
   end
 end)
+hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'up', function()
+  local win = hs.window.focusedWindow()
+  local next = win:screen():toNorth()
+  if next then
+    win:moveToScreen(next, true)
+  end
+end)
+hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, 'down', function()
+  local win = hs.window.focusedWindow()
+  local next = win:screen():toSouth()
+  if next then
+    win:moveToScreen(next, true)
+  end
+end)
 
 -- grid gui
 hs.grid.setMargins({w = 0, h = 0})
