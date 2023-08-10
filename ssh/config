@@ -91,6 +91,8 @@ Host ts100
     HostName 192.168.0.125
 
 Host router
+    HostKeyAlgorithms ssh-rsa
+    PubkeyAcceptedKeyTypes ssh-rsa
     User root
     HostName 192.168.0.29
 
