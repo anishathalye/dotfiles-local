@@ -1,5 +1,8 @@
 {
-    "root": "/Users/anish/Documents/Anish",
+    "paths": [
+        "/Users/anish/Documents/Anish",
+        "/Users/anish/Library/Group Containers/JLMPQHK86H.com.culturedcode.ThingsMac"
+    ],
     "prefix": "mbp-",
     "prefix-glob": "mbp-*",
     "keep": {
@@ -11,9 +14,13 @@
     },
     "repos": {
         "SERENITY": {
-            "repo": "server:/media/raid2/borg/anish"
+            "repo": "server:/media/raid/borg/anish"
         },
         "MIT SECURE": {
+            "repo": "shire:borg",
+            "passphrase": "password"
+        },
+        "CSAILPrivate": {
             "repo": "shire:borg",
             "passphrase": "password"
         }

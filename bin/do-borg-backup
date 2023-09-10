@@ -18,17 +18,15 @@ def do_backup(repo_info, conf):
     prefix_glob = conf['prefix-glob']
     keep = conf['keep']
 
-    os.chdir(conf['root'])
-
     timestamp = datetime.now().astimezone().strftime('%FT%T%z')
-    borg_cmd(
+    create_cmd = [
         'create',
         '--progress',
         '--stats',
         f'{repo}::{prefix}{timestamp}',
         '.',
-        passphrase=passphrase
-    )
+    ] + conf['paths']
+    borg_cmd(*create_cmd, passphrase=passphrase)
 
     borg_cmd(
         'prune',
