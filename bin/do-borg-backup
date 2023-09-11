@@ -24,7 +24,6 @@ def do_backup(repo_info, conf):
         '--progress',
         '--stats',
         f'{repo}::{prefix}{timestamp}',
-        '.',
     ] + conf['paths']
     borg_cmd(*create_cmd, passphrase=passphrase)
 
