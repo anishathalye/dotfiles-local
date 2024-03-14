@@ -40,11 +40,10 @@ pj() {
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_AUTO_UPDATE_SECS=86400
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-path_prepend '/usr/local/opt/ruby/bin'
 
 export JUPYTER_PATH="$HOME/.local/share/jupyter"
 
-export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+export PKG_CONFIG_PATH="$BREW_PREFIX/opt/libffi/lib/pkgconfig"
 
 # OPAM configuration
 test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
@@ -53,7 +52,6 @@ test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh > /dev/null 2
 export EVEREST_DIR="$HOME/Documents/Anish/src/notary/everest"
 path_prepend "$EVEREST_DIR/FStar/bin"
 path_prepend "$EVEREST_DIR/karamel"
-path_prepend "/usr/local/opt/gnu-getopt/bin"
 path_prepend "$EVEREST_DIR/z3-4.8.5-x64-osx-10.14.2/bin"
 export FSTAR_HOME="$EVEREST_DIR/FStar"
 export OPENSSL_HOME="$EVEREST_DIR/MLCrypto/openssl"
