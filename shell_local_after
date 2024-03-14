@@ -40,10 +40,11 @@ pj() {
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_AUTO_UPDATE_SECS=86400
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+export PKG_CONFIG_PATH="$BREW_PREFIX/opt/libffi/lib/pkgconfig"
+export LIBRARY_PATH="$BREW_PREFIX/lib"
 
 export JUPYTER_PATH="$HOME/.local/share/jupyter"
 
-export PKG_CONFIG_PATH="$BREW_PREFIX/opt/libffi/lib/pkgconfig"
 
 # OPAM configuration
 test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
