@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-source ~/.dotfiles/shell/functions.sh
-
-path_remove "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-riscv64-unknown-elf-gdb --data-directory=/usr/local/share/gdb $@
