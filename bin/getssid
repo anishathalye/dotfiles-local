@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+/usr/bin/osascript <<EOF
+    use framework "CoreWLan"
+    use scripting additions
+
+    property ca : current application
+
+    return ((ca's CWWiFiClient's sharedWiFiClient) 's interface()'s ssid()) as text
+EOF

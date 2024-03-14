@@ -8,9 +8,6 @@ import subprocess
 import sys
 
 
-AIRPORT_PATH = '/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
-
-
 def do_backup(repo_info, conf):
     repo = repo_info['repo']
     passphrase = repo_info.get('passphrase')
@@ -43,15 +40,11 @@ def do_backup(repo_info, conf):
 
 
 def get_ssid():
-    out = subprocess.check_output([AIRPORT_PATH, '-I'])
-    for line in out.decode('utf8').split('\n'):
-        m = re.match(r'\s+SSID: (.*)', line)
-        if m:
-            ssid = m.group(1)
-            if ssid == '':
-                return None
-            return ssid
-    return None
+    getssid_path = os.path.join(os.path.dirname(__file__), 'getssid')
+    out = subprocess.check_output([getssid_path]).decode('utf8').strip()
+    if out == 'missing value':
+        return None
+    return out
 
 
 def borg_cmd(*cmd, passphrase=None):
@@ -82,6 +75,7 @@ def main():
         ssid = get_ssid()
     if ssid is None:
         print(f'Not connected to a WiFi network.')
+        exit(1)
     if ssid not in conf['repos']:
         print(f'No backup configuration for SSID "{ssid}".')
         exit(1)
