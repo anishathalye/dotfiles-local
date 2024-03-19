@@ -1,7 +1,8 @@
 {
     "paths": [
         "/Users/anish/Documents/Anish",
-        "/Users/anish/Library/Group Containers/JLMPQHK86H.com.culturedcode.ThingsMac"
+        "/Users/anish/Library/Group Containers/JLMPQHK86H.com.culturedcode.ThingsMac",
+        "/Users/anish/.zsh_history"
     ],
     "prefix": "mbp-",
     "prefix-glob": "mbp-*",
