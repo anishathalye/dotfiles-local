@@ -10,6 +10,7 @@ path_prepend "$BREW_PREFIX/opt/gnu-sed/libexec/gnubin"
 path_prepend "$BREW_PREFIX/opt/findutils/libexec/gnubin"
 path_prepend "$BREW_PREFIX/opt/gnu-tar/libexec/gnubin"
 path_prepend "$BREW_PREFIX/opt/grep/libexec/gnubin"
+path_prepend "$BREW_PREFIX/opt/gnu-time/libexec/gnubin"
 path_prepend "$BREW_PREFIX/opt/gnu-getopt/bin"
 
 # Rust / Cargo
