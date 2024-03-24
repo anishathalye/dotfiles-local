@@ -3,6 +3,8 @@
       create: true
       relink: true
 
+- create: ['~/.ssh']
+
 - clean: ['~', '~/.config', '~/.ssh']
 
 - link:

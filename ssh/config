@@ -13,6 +13,10 @@ Host g
     User git
     HostName g.csail.mit.edu
 
+Host nil
+    User aathalye
+    HostName nil.csail.mit.edu
+
 Host csail
     User aathalye
     HostName login.csail.mit.edu
@@ -20,11 +24,16 @@ Host csail
 
 Host csail-jump
     User aathalye
-    HostName jump.csail.mit.edu
+    HostName login.csail.mit.edu
 
 Host ben
     User anish
     HostName ben.csail.mit.edu
+    ProxyJump csail-jump
+
+Host sr03
+    User anish
+    HostName sr03.csail.mit.edu
     ProxyJump csail-jump
 
 Host vm-web
@@ -52,6 +61,7 @@ Host athena
 Host gondor
     User anish
     HostName gondor.anish.io
+    Port 443
 
 Host shire
     User anish
@@ -78,14 +88,16 @@ Host bongo
 
 Host bongo-remote
     User anish
-    HostName 192.168.0.134
-    ProxyJump server-remote
+    HostName home.anish.io
+    Port 30022
 
 Host ts100
     User founder
     HostName 192.168.0.125
 
 Host router
+    HostKeyAlgorithms ssh-rsa
+    PubkeyAcceptedKeyTypes ssh-rsa
     User root
     HostName 192.168.0.29
 
