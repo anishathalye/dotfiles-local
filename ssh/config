@@ -31,6 +31,11 @@ Host ben
     HostName ben.csail.mit.edu
     ProxyJump csail-jump
 
+Host sr03
+    User anish
+    HostName sr03.csail.mit.edu
+    ProxyJump csail-jump
+
 Host vm-web
     User arch
     HostName vm-web.pdos.csail.mit.edu
