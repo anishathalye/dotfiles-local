@@ -69,11 +69,11 @@ Host shire
 
 # home
 
-Host server
+Host server-local
     User anish
     HostName 192.168.0.105
 
-Host server-remote
+Host server
     User anish
     HostName home.anish.io
     Port 10022
