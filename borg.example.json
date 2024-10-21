@@ -17,12 +17,12 @@
         "SERENITY": {
             "repo": "server:/media/raid/borg/anish"
         },
-        "MIT SECURE": {
-            "repo": "shire:borg",
+        "Cleanlab HQ": {
+            "repo": "borgbase repo url",
             "passphrase": "password"
         },
-        "CSAILPrivate": {
-            "repo": "shire:borg",
+        "tomatobasil": {
+            "repo": "borgbase repo url",
             "passphrase": "password"
         }
     }
