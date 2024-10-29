@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-/usr/bin/osascript <<EOF
-    use framework "CoreWLan"
-    use scripting additions
+# see https://stackoverflow.com/a/79004479
 
-    property ca : current application
-
-    return ((ca's CWWiFiClient's sharedWiFiClient) 's interface()'s ssid()) as text
-EOF
+/usr/sbin/system_profiler SPAirPortDataType | awk '/Current Network/ {getline;$1=$1;print $0 | "tr -d ':'";exit}'
