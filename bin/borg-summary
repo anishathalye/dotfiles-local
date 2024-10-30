@@ -8,6 +8,7 @@ borg-summary-for() {
     echo "=== $user @ $repo ==="
     echo
     sudo su $user -c "borg info $repo"
+    sudo su $user -c "borg info --last 1 $repo"
     sudo su $user -c "borg list --last 5 $repo"
 }
 
