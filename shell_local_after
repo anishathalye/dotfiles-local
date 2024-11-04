@@ -15,6 +15,7 @@ alias gpgst='gpg2 -k --list-options show-uid-validity'
 alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 alias open-emacs='open -a /Applications/Emacs.app'
 alias e='open-emacs'
+alias emacs='/opt/homebrew/Cellar/emacs-plus@28/28.2/Emacs.app/Contents/MacOS/Emacs -nw'
 
 # Make a 4GB (2048 * 4096M) RAM Disk
 ramdisk() {
