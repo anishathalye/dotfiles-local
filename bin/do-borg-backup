@@ -3,6 +3,7 @@
 from datetime import datetime
 import json
 import os
+import random
 import re
 import subprocess
 import sys
@@ -74,13 +75,18 @@ def main():
     else:
         ssid = get_ssid()
     if ssid is None:
-        print(f'Not connected to a WiFi network.')
+        print(f'Not connected to a WiFi network.', file=sys.stderr)
         exit(1)
-    if ssid not in conf['repos']:
-        print(f'No backup configuration for SSID "{ssid}".')
+
+    eligible_repos = [r for r in conf['repos'] if ssid in r['ssids']]
+    if not eligible_repos:
+        print(f'No backup configuration for SSID "{ssid}".', file=sys.stderr)
         exit(1)
-    repo_info = conf['repos'][ssid]
-    print(f'Backing up to {repo_info["repo"]}')
+    print(f'Eligible repos: {", ".join(r["name"] for r in eligible_repos)}', file=sys.stderr)
+    repo_info = random.choice(eligible_repos)
+    print(f'Backing up to {repo_info["name"]} ({repo_info["repo"]})', file=sys.stderr)
+
+    sys.stderr.flush()
     del conf['repos']
     do_backup(repo_info, conf)
 
