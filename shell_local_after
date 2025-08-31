@@ -45,6 +45,7 @@ export PKG_CONFIG_PATH="$BREW_PREFIX/opt/libffi/lib/pkgconfig"
 export LIBRARY_PATH="$BREW_PREFIX/lib"
 
 export JUPYTER_PATH="$HOME/.local/share/jupyter"
+export JUPYTER_PLATFORM_DIRS=1
 
 
 # OPAM configuration
