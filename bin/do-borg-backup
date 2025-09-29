@@ -16,14 +16,22 @@ def do_backup(repo_info, conf):
     prefix = conf['prefix']
     prefix_glob = conf['prefix-glob']
     keep = conf['keep']
+    exclude = conf.get('exclude', [])
 
+    exclude_opts = []
+    for pattern in exclude:
+        exclude_opts.extend(['--exclude', pattern])
     timestamp = datetime.now().astimezone().strftime('%FT%T%z')
+
     create_cmd = [
         'create',
+        '--exclude-caches'
+    ] + exclude_opts + [
         '--progress',
         '--stats',
         f'{repo}::{prefix}{timestamp}',
     ] + conf['paths']
+
     borg_cmd(*create_cmd, passphrase=passphrase)
 
     borg_cmd(
