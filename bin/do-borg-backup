@@ -16,8 +16,10 @@ def do_backup(repo_info, conf):
     prefix = conf['prefix']
     prefix_glob = conf['prefix-glob']
     keep = conf['keep']
+    exclude_caches = conf.get('exclude-caches', False)
     exclude = conf.get('exclude', [])
 
+    exclude_caches_opt = ['--exclude-caches'] if exclude_caches else []
     exclude_opts = []
     for pattern in exclude:
         exclude_opts.extend(['--exclude', pattern])
@@ -25,8 +27,7 @@ def do_backup(repo_info, conf):
 
     create_cmd = [
         'create',
-        '--exclude-caches'
-    ] + exclude_opts + [
+    ] + exclude_caches_opt + exclude_opts + [
         '--progress',
         '--stats',
         f'{repo}::{prefix}{timestamp}',
