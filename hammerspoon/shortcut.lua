@@ -1,6 +1,6 @@
 FEEDBACK_DEBOUNCE_SECONDS = 2
 
--- Track when we last played feedback to debounce the audio check
+-- track when we last played feedback to debounce the audio check
 local lastFeedbackTime = 0
 
 function systemKey(key, withFeedbackSound)
@@ -12,12 +12,12 @@ function systemKey(key, withFeedbackSound)
     local currentTime = hs.timer.secondsSinceEpoch()
     local timeSinceLastFeedback = currentTime - lastFeedbackTime
 
-    -- If we recently played feedback, ignore the inUse check (debounce)
+    -- if we recently played feedback, ignore the inUse check (debounce)
     local shouldCheckAudio = timeSinceLastFeedback > FEEDBACK_DEBOUNCE_SECONDS
     local audioIsPlaying = shouldCheckAudio and device and device:inUse()
 
     if not audioIsPlaying then
-      -- Play the system volume feedback sound
+      -- play the system volume feedback sound
       hs.sound.getByFile("/System/Library/LoginPlugins/BezelServices.loginPlugin/Contents/Resources/volume.aiff"):play()
       lastFeedbackTime = currentTime
     end
@@ -26,6 +26,9 @@ end
 
 -- lock screen by starting screensaver
 hs.hotkey.bind({'shift', 'cmd'}, 'l', function() hs.caffeinate.startScreensaver() end)
+
+-- mission control, be able to invoke it with just the left hand
+hs.hotkey.bind({'shift', 'cmd'}, 'e', function() hs.application.launchOrFocus("Mission Control") end)
 
 -- simulate media keys for external keyboard
 hs.hotkey.bind({'shift', 'cmd'}, 'pad5', function() systemKey('PLAY') end)
