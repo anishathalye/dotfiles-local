@@ -1,10 +1,26 @@
+FEEDBACK_DEBOUNCE_SECONDS = 2
+
+-- Track when we last played feedback to debounce the audio check
+local lastFeedbackTime = 0
+
 function systemKey(key, withFeedbackSound)
   hs.eventtap.event.newSystemKeyEvent(key, true):post()
   hs.eventtap.event.newSystemKeyEvent(key, false):post()
 
   if withFeedbackSound then
-    -- Play the system volume feedback sound
-    hs.sound.getByFile("/System/Library/LoginPlugins/BezelServices.loginPlugin/Contents/Resources/volume.aiff"):play()
+    local device = hs.audiodevice.defaultOutputDevice()
+    local currentTime = hs.timer.secondsSinceEpoch()
+    local timeSinceLastFeedback = currentTime - lastFeedbackTime
+
+    -- If we recently played feedback, ignore the inUse check (debounce)
+    local shouldCheckAudio = timeSinceLastFeedback > FEEDBACK_DEBOUNCE_SECONDS
+    local audioIsPlaying = shouldCheckAudio and device and device:inUse()
+
+    if not audioIsPlaying then
+      -- Play the system volume feedback sound
+      hs.sound.getByFile("/System/Library/LoginPlugins/BezelServices.loginPlugin/Contents/Resources/volume.aiff"):play()
+      lastFeedbackTime = currentTime
+    end
   end
 end
 
