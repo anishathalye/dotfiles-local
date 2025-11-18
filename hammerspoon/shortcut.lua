@@ -16,7 +16,11 @@ function systemKey(key, withFeedbackSound)
     local shouldCheckAudio = timeSinceLastFeedback > FEEDBACK_DEBOUNCE_SECONDS
     local audioIsPlaying = shouldCheckAudio and device and device:inUse()
 
-    if not audioIsPlaying then
+    -- don't play the sound for built-in speakers
+    local deviceName = device and device:name() or ""
+    local isBuiltInSpeakers = deviceName:match("^Mac")
+
+    if not audioIsPlaying and not isBuiltInSpeakers then
       -- play the system volume feedback sound
       hs.sound.getByFile("/System/Library/LoginPlugins/BezelServices.loginPlugin/Contents/Resources/volume.aiff"):play()
       lastFeedbackTime = currentTime
