@@ -1,4 +1,4 @@
-# Dotfiles (local) [![Build Status](https://github.com/anishathalye/dotfiles-local/workflows/CI/badge.svg)](https://github.com/anishathalye/dotfiles-local/actions?query=workflow%3ACI)
+# Dotfiles (local) [![Build Status](https://github.com/anishathalye/dotfiles-local/actions/workflows/ci.yml/badge.svg)](https://github.com/anishathalye/dotfiles-local/actions/workflows/ci.yml)
 
 After cloning this repo, run `install` to automatically set up the development
 environment. Note that the install script is idempotent - running it multiple
@@ -32,7 +32,7 @@ master
 |  |
 |  +- gpu
 |  |
-|  +- zero
+|  +- zero [inactive]
 |  |
 |  +- linux-main
 |
@@ -54,7 +54,7 @@ old [inactive]
 License
 -------
 
-Copyright (c) 2014-2021 Anish Athalye. Released under the MIT License. See
+Copyright (c) Anish Athalye. Released under the MIT License. See
 [LICENSE.md][license] for details.
 
 [dotbot]: https://github.com/anishathalye/dotbot
