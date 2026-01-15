@@ -87,10 +87,6 @@ menu = {
   {
     title = "-" -- separator
   },
-  {
-    title = "Auto Layout",
-    fn = autoLayout
-  },
 }
 
 reloadMenu()
