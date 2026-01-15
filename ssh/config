@@ -13,10 +13,6 @@ Host g
     User git
     HostName g.csail.mit.edu
 
-Host nil
-    User aathalye
-    HostName nil.csail.mit.edu
-
 Host csail
     User aathalye
     HostName login.csail.mit.edu
@@ -25,16 +21,6 @@ Host csail
 Host csail-jump
     User aathalye
     HostName login.csail.mit.edu
-
-Host ben
-    User anish
-    HostName ben.csail.mit.edu
-    ProxyJump csail-jump
-
-Host sr03
-    User anish
-    HostName sr03.csail.mit.edu
-    ProxyJump csail-jump
 
 Host vm-web
     User arch
@@ -62,19 +48,6 @@ Host server-remote
     User anish
     HostName home.anish.io
     Port 10022
-
-Host isengard
-    User anish
-    HostName 192.168.0.250
-
-Host bongo
-    User anish
-    HostName 192.168.0.134
-
-Host bongo-remote
-    User anish
-    HostName home.anish.io
-    Port 30022
 
 Host ts100
     User founder
