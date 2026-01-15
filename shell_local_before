@@ -1,5 +1,4 @@
 path_prepend "$HOME/bin"
-path_prepend "$HOME/Documents/Anish/src/scripts"
 
 # Homebrew and Related Tools
 eval $(/opt/homebrew/bin/brew shellenv)

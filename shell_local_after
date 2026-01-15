@@ -54,18 +54,6 @@ export JUPYTER_PLATFORM_DIRS=1
 # OPAM configuration
 test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-# Everest / FStar
-export EVEREST_DIR="$HOME/Documents/Anish/src/notary/everest"
-path_prepend "$EVEREST_DIR/FStar/bin"
-path_prepend "$EVEREST_DIR/karamel"
-path_prepend "$EVEREST_DIR/z3-4.8.5-x64-osx-10.14.2/bin"
-export FSTAR_HOME="$EVEREST_DIR/FStar"
-export OPENSSL_HOME="$EVEREST_DIR/MLCrypto/openssl"
-export KRML_HOME="$EVEREST_DIR/karamel"
-export VALE_HOME="$EVEREST_DIR/vale"
-export HACL_HOME="$EVEREST_DIR/hacl-star"
-export MLCRYPTO_HOME="$EVEREST_DIR/MLCrypto"
-
 # Go
 
 export GOPATH="$HOME/go"
@@ -79,7 +67,3 @@ export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 # OpenStack
 
 export OS_CLOUD='default'
-
-# GPG Key
-
-GPGKEY="0x72EE4824FA6EFF1FE750A015C3F6E4F5086B3B32"

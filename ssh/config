@@ -7,62 +7,6 @@ Include ~/.ssh/config_extra
 Host *
     ServerAliveInterval 120
 
-# mit / csail / pdos
-
-Host g
-    User git
-    HostName g.csail.mit.edu
-
-Host csail
-    User aathalye
-    HostName login.csail.mit.edu
-    PreferredAuthentications password,keyboard-interactive
-
-Host csail-jump
-    User aathalye
-    HostName login.csail.mit.edu
-
-Host vm-web
-    User arch
-    HostName vm-web.pdos.csail.mit.edu
-    ProxyJump csail-jump
-
-Host athena
-    User aathalye
-    HostName athena.dialup.mit.edu
-    PreferredAuthentications password,keyboard-interactive
-
-# cloud
-
-Host zero
-    User anish
-    HostName zero.anish.io
-
-# home
-
-Host server
-    User anish
-    HostName 192.168.0.105
-
-Host server-remote
-    User anish
-    HostName home.anish.io
-    Port 10022
-
-Host ts100
-    User founder
-    HostName 192.168.0.125
-
-Host router
-    HostKeyAlgorithms ssh-rsa
-    PubkeyAcceptedKeyTypes ssh-rsa
-    User root
-    HostName 192.168.0.29
-
-Host router-wireless
-    User root
-    HostName 192.168.0.30
-
 # other
 
 Host github

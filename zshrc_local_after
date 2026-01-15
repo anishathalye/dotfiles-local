@@ -1,4 +1,0 @@
-# Named directories
-hash -d src="$HOME/Documents/Anish/src"
-hash -d labsix="$HOME/Documents/Anish/src/labsix"
-hash -d pdos="$HOME/Documents/Anish/src/pdos"
