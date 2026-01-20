@@ -67,3 +67,7 @@ export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 # OpenStack
 
 export OS_CLOUD='default'
+
+# gcloud
+path_append "/opt/homebrew/share/google-cloud-sdk/bin"
+if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi
