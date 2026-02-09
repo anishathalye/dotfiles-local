@@ -1,0 +1,2 @@
+# Named directories
+hash -d src="$HOME/Documents/src"
