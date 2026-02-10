@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-# see https://stackoverflow.com/a/79004479
+# see https://github.com/fastfetch-cli/fastfetch/issues/1874
 
-/usr/sbin/system_profiler SPAirPortDataType | awk '/Current Network/ {getline;$1=$1;print $0 | "tr -d ':'";exit}'
+en="$(networksetup -listallhardwareports | awk '/Wi-Fi|AirPort/{getline; print $NF}')"; ipconfig getsummary "$en" | grep -Fxq "  Active : FALSE" || networksetup -listpreferredwirelessnetworks "$en" | sed -n '2s/^\t//p'
