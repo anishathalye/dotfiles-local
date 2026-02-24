@@ -14,3 +14,6 @@
 [diff "scpt"]
 	textconv = osadecompile
 	binary=true
+
+[init]
+    defaultBranch = main
