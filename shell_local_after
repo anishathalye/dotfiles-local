@@ -72,3 +72,8 @@ export OS_CLOUD='default'
 
 path_append "/opt/homebrew/share/google-cloud-sdk/bin"
 if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc'; fi
+
+# AC2
+
+export UV_INDEX_AC2_USERNAME=__token__
+export UV_INDEX_AC2_PASSWORD="$(python3 -c 'import json, os; print(json.load(open(os.path.expanduser("~/.ac2/config")))["api_key"])')"
