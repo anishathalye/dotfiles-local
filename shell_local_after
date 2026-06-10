@@ -77,3 +77,7 @@ if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/op
 
 export UV_INDEX_AC2_USERNAME=__token__
 export UV_INDEX_AC2_PASSWORD="$(python3 -c 'import json, os; print(json.load(open(os.path.expanduser("~/.ac2/config")))["api_key"])')"
+
+# VP
+
+export KUBECONFIG=~/.kube/voltage-park-config
