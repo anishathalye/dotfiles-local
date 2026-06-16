@@ -81,3 +81,6 @@ export UV_INDEX_AC2_PASSWORD="$(python3 -c 'import json, os; print(json.load(ope
 # VP
 
 export KUBECONFIG=~/.kube/voltage-park-config
+
+# Claude Code
+export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
