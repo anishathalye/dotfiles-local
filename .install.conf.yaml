@@ -11,6 +11,7 @@
 
 - link:
     ~/.bashrc_local_after:
+    ~/.config/nono/profiles: nono/profiles
     ~/.dotfiles_local: ''
     ~/.gitconfig_local:
     ~/.gnupg/gpg-agent.conf: gpg-agent.conf

@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "copilot-cli",
+    "my-base"
+  ],
+  "meta": {
+    "name": "my-copilot",
+  }
+}

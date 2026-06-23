@@ -20,6 +20,9 @@ code() {
     open -a "/Applications/Visual Studio Code.app" "${1:-.}"
 }
 
+# Sandboxed agents
+alias sandbox-copilot='nono run --profile my-copilot --allow-cwd -- copilot --allow-all'
+
 # Make a 4GB (2048 * 4096M) RAM Disk
 ramdisk() {
     local size

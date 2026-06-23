@@ -1,0 +1,18 @@
+{
+  "groups": {
+    "include": [
+      "go_runtime",
+      "go_runtime_macos"
+    ]
+  },
+  "workdir": {
+    "access": "readwrite"
+  },
+  "filesystem": {
+    "read": [
+      "~/.dotfiles",
+      "~/.dotfiles_local",
+      "~/.gitconfig_local"
+    ]
+  }
+}
