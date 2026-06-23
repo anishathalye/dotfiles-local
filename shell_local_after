@@ -22,6 +22,7 @@ code() {
 
 # Sandboxed agents
 alias sandbox-copilot='nono run --profile my-copilot --allow-cwd -- copilot --allow-all'
+alias sandbox-opencode='nono run --profile my-opencode --allow-cwd -- opencode'
 
 # Make a 4GB (2048 * 4096M) RAM Disk
 ramdisk() {

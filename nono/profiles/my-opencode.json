@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "opencode",
+    "my-base"
+  ],
+  "meta": {
+    "name": "opencode",
+  }
+}
