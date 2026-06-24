@@ -1,0 +1,18 @@
+{
+  "groups": {
+    "include": [
+      "python_runtime"
+    ],
+  },
+  "filesystem": {
+    "read": [
+      "~/Library/Application Support/hatch"
+    ],
+    "allow": [
+      "~/.cache/uv"
+    ],
+    "write": [
+      "~/Library/Application Support/hatch/env"
+    ]
+  }
+}

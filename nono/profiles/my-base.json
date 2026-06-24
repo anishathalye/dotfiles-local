@@ -1,4 +1,7 @@
 {
+  "extends": [
+    "my-python"
+  ],
   "groups": {
     "include": [
       "go_runtime",
