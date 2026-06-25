@@ -1,0 +1,12 @@
+{
+  "groups": {
+    "include": [
+      "node_runtime"
+    ],
+  },
+  "filesystem": {
+    "allow": [
+      "~/.npm/"
+    ]
+  }
+}
