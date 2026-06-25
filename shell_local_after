@@ -21,10 +21,37 @@ code() {
 }
 
 # Sandboxed agents
-alias sandbox-copilot='nono run --profile my-copilot --allow-cwd -- copilot --allow-all'
-alias copilot='echo "use \`sandbox-copilot\` instead, or \`command copilot\` for un-sandboxed copilot" >&2; false'
-alias sandbox-opencode='nono run --profile my-opencode --allow-cwd -- opencode'
-alias opencode='echo "use \`sandbox-opencode\` instead, or \`command opencode\` for un-sandboxed opencode" >&2; false'
+nono-sandbox() {
+    local profile=$1
+    shift
+    local default_cmd=() nono_args=() cmd_args=()
+    local seg=default
+    for arg in "$@"; do
+        if [[ "$arg" == "--" ]]; then
+            [[ $seg == default ]] && seg=nono || seg=cmd
+        elif [[ $seg == default ]]; then
+            default_cmd+=("$arg")
+        elif [[ $seg == nono ]]; then
+            nono_args+=("$arg")
+        else
+            cmd_args+=("$arg")
+        fi
+    done
+    nono run --profile "$profile" --allow-cwd "${nono_args[@]}" -- "${default_cmd[@]}" "${cmd_args[@]}"
+}
+
+sandbox-copilot() {
+    nono-sandbox my-copilot copilot --allow-all -- "$@"
+}
+sandbox-opencode() {
+    nono-sandbox my-opencode opencode -- "$@"
+}
+
+sandbox-guard() {
+    echo "use \`sandbox-$1\` instead, or \`command $1\` for un-sandboxed $1" >&2; false
+}
+copilot() { sandbox-guard copilot; }
+opencode() { sandbox-guard opencode; }
 
 # Make a 4GB (2048 * 4096M) RAM Disk
 ramdisk() {
