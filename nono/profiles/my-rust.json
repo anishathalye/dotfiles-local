@@ -1,0 +1,12 @@
+{
+  "groups": {
+    "include": [
+      "rust_runtime"
+    ],
+  },
+  "filesystem": {
+    "allow": [
+      "~/.cargo"
+    ]
+  }
+}
