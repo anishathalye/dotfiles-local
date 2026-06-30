@@ -22,7 +22,9 @@ master
 |
 +- mac
 |  |
-|  + handshake
+|  +- cursor
+|  |
+|  +- handshake [inactive]
 |  |
 |  +- openai [inactive]
 |
