@@ -6,3 +6,15 @@ Host *
     UseKeychain yes
     AddKeysToAgent yes
     IPQoS=throughput
+
+Host anyflop-neb-b300-uk-1
+    HostName anyflop-neb-b300-uk-1
+    ForwardAgent yes
+
+Host anyflop-cw-b300-mich-1
+    HostName anyflop-cw-b300-mich-1
+    ForwardAgent yes
+
+Host anyflop-vp-b200-sea-1
+    HostName anyflop-vp-b200-sea-1
+    ForwardAgent yes
