@@ -116,3 +116,7 @@ export OS_CLOUD='default'
 # GPG Key
 
 GPGKEY="0x72EE4824FA6EFF1FE750A015C3F6E4F5086B3B32"
+
+# Mise
+
+[ -f "$HOME/Documents/Anish/src/everysphere/monologue/dev/shell-init" ] && eval "$("$HOME/Documents/Anish/src/everysphere/monologue/dev/shell-init" zsh)"
