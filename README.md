@@ -22,21 +22,25 @@ master
 |
 +- mac
 |  |
-|  + handshake
+|  +- cursor
+|  |
+|  +- handshake [inactive]
 |  |
 |  +- openai [inactive]
 |
 +- openai-cirrascale [inactive]
 |
-+- linux [formerly linux-server]
++- linux (formerly linux-server)
 |  |
 |  +- a-srvr
 |  |
-|  +- gpu
+|  +- cursor-linux
+|  |
+|  +- gpu [inactive]
 |  |
 |  +- zero [inactive]
 |  |
-|  +- linux-main
+|  +- linux-main [inactive]
 |
 +- athena
 |
