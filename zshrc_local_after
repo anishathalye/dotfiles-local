@@ -4,4 +4,4 @@ hash -d labsix="$HOME/Documents/Anish/src/labsix"
 hash -d pdos="$HOME/Documents/Anish/src/pdos"
 
 # Anysphere setup
-source "/Users/anish/Documents/Anish/src/everysphere/scripts/setup/rcfiles/zshrc"
+source "$HOME/Documents/Anish/src/everysphere/scripts/setup/rcfiles/zshrc"

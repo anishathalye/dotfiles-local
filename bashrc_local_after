@@ -2,5 +2,5 @@
 [[ -r "$BREW_PREFIX/etc/profile.d/bash_completion.sh" ]] && . "$BREW_PREFIX/etc/profile.d/bash_completion.sh"
 
 # Anysphere setup
-source "/Users/anish/Documents/Anish/src/everysphere/scripts/setup/rcfiles/bash_profile"
+source "$HOME/Documents/Anish/src/everysphere/scripts/setup/rcfiles/bash_profile"
 path_prepend "$HOME/.local/share/pnpm"
