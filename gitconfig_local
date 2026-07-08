@@ -4,3 +4,12 @@
 
 [github]
 	user = anishathalye
+
+[url "org-96667180@github.com:anysphere/"]
+	insteadOf = git@github.com:anysphere/
+
+[maintenance]
+	repo = ~/repos/everysphere
+
+[core]
+	hooksPath = ~/.config/git/hooks

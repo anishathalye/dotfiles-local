@@ -1,0 +1,3 @@
+# Anysphere setup
+source "$HOME/repos/everysphere/scripts/setup/rcfiles/bashrc"
+path_prepend "$HOME/.local/share/pnpm"

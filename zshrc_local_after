@@ -1,0 +1,2 @@
+# Anysphere setup
+source "$HOME/repos/everysphere/scripts/setup/rcfiles/zshrc"
