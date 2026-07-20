@@ -124,3 +124,11 @@ export VAULT_ADDR=https://vault.anysphere.co:8200
 # Pip
 
 unset PIP_REQUIRE_VIRTUALENV
+
+# xAI
+
+export XAI_USER='aathalye'
+export XAI_ROOT="$HOME/Documents/Anish/src/xai"
+path_prepend "$XAI_ROOT/bin"
+alias x='explorer'
+path_prepend "/opt/homebrew/share/google-cloud-sdk/bin"
