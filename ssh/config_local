@@ -1,7 +1,3 @@
-# BEGIN xai-devbox-config include (managed by explorer)
-Include /Users/aathalye/.ssh/xai-devbox-config
-# END xai-devbox-config include (managed by explorer)
-
 # START FORMAL-MANAGED BLOCK
 # Do not hand-edit this section.
 Include ~/.formal/ssh_config
