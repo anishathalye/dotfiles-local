@@ -15,6 +15,9 @@ defaults write com.apple.dock show-recents -bool false
 # set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 50
 
+# disable showing desktop when clicking wallpaper
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+
 # disable keyboard press and hold popup
 defaults write -g ApplePressAndHoldEnabled -bool false
 

@@ -16,9 +16,6 @@ alias gpgsgn='gpg2 --ask-cert-level --edit-key'
 alias open-emacs='open -a /Applications/Emacs.app'
 alias e='open-emacs'
 alias emacs='/opt/homebrew/Cellar/emacs-plus@28/28.2/Emacs.app/Contents/MacOS/Emacs -nw'
-code() {
-    open -a "/Applications/Visual Studio Code.app" "${1:-.}"
-}
 
 # Sandboxed agents
 nono-sandbox() {
