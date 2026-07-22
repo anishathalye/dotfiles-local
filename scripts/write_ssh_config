@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if [ -L ~/.ssh/config ]; then
+    rm ~/.ssh/config
+fi
+
+mkdir -p ~/.ssh
+
+cat <<EOF > ~/.ssh/config
+# BEGIN xai-devbox-config include (managed by explorer)
+Include /Users/aathalye/.ssh/xai-devbox-config
+# END xai-devbox-config include (managed by explorer)
+
+Include ~/.ssh/config_main
+EOF
+
+chmod 600 ~/.ssh/config
