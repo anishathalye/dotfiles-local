@@ -28,4 +28,5 @@
 - shell:
   - git submodule sync --recursive
   - git update-submodules # after linking ~/.gitconfig
-  - ./macos
+  - ./scripts/macos
+  - ./scripts/git-maintenance-start-repoless
