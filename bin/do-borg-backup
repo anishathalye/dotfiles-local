@@ -5,80 +5,89 @@ import argparse
 import json
 import os
 import random
-import re
 import subprocess
 import sys
 
 
 def do_backup(repo_info, conf):
-    repo = repo_info['repo']
-    passphrase = repo_info.get('passphrase')
-    prefix = conf['prefix']
-    prefix_glob = conf['prefix-glob']
-    keep = conf['keep']
-    exclude_caches = conf.get('exclude-caches', False)
-    exclude = conf.get('exclude', [])
+    repo = repo_info["repo"]
+    passphrase = repo_info.get("passphrase")
+    prefix = conf["prefix"]
+    prefix_glob = conf["prefix-glob"]
+    keep = conf["keep"]
+    exclude_caches = conf.get("exclude-caches", False)
+    exclude = conf.get("exclude", [])
 
-    exclude_caches_opt = ['--exclude-caches'] if exclude_caches else []
+    exclude_caches_opt = ["--exclude-caches"] if exclude_caches else []
     exclude_opts = []
     for pattern in exclude:
-        exclude_opts.extend(['--exclude', pattern])
-    timestamp = datetime.now().astimezone().strftime('%FT%T%z')
+        exclude_opts.extend(["--exclude", pattern])
+    timestamp = datetime.now().astimezone().strftime("%FT%T%z")
 
-    create_cmd = [
-        'create',
-    ] + exclude_caches_opt + exclude_opts + [
-        '--progress',
-        '--stats',
-        f'{repo}::{prefix}{timestamp}',
-    ] + conf['paths']
+    create_cmd = (
+        [
+            "create",
+        ]
+        + exclude_caches_opt
+        + exclude_opts
+        + [
+            "--progress",
+            "--stats",
+            f"{repo}::{prefix}{timestamp}",
+        ]
+        + conf["paths"]
+    )
 
     borg_cmd(*create_cmd, passphrase=passphrase)
 
     borg_cmd(
-        'prune',
+        "prune",
         repo,
-        '--glob-archives',
+        "--glob-archives",
         prefix_glob,
-        '--stats',
-        f'--keep-within={keep["within"]}',
-        f'--keep-daily={keep["daily"]}',
-        f'--keep-weekly={keep["weekly"]}',
-        f'--keep-monthly={keep["monthly"]}',
-        f'--keep-yearly={keep["yearly"]}',
-        passphrase=passphrase
+        "--stats",
+        f"--keep-within={keep['within']}",
+        f"--keep-daily={keep['daily']}",
+        f"--keep-weekly={keep['weekly']}",
+        f"--keep-monthly={keep['monthly']}",
+        f"--keep-yearly={keep['yearly']}",
+        passphrase=passphrase,
     )
 
 
 def get_ssid():
-    getssid_path = os.path.join(os.path.dirname(__file__), 'getssid')
-    out = subprocess.check_output([getssid_path]).decode('utf8').strip()
-    if out == 'missing value':
+    getssid_path = os.path.join(os.path.dirname(__file__), "getssid")
+    out = subprocess.check_output([getssid_path]).decode("utf8").strip()
+    if out == "missing value":
         return None
     return out
 
 
 def borg_cmd(*cmd, passphrase=None):
-    cmd = ('borg',) + cmd
+    cmd = ("borg",) + cmd
     if passphrase is not None:
         read_fd, write_fd = os.pipe()
         env = dict(os.environ)
-        env['BORG_PASSPHRASE_FD'] = str(read_fd)
+        env["BORG_PASSPHRASE_FD"] = str(read_fd)
         # POSIX requires pipe buffer to be at least 512 bytes, so it's fine to do a
         # blocking write here before there is anyone reading
-        os.write(write_fd, passphrase.encode('utf8'))
+        os.write(write_fd, passphrase.encode("utf8"))
         os.close(write_fd)  # EOF
-        subprocess.check_call(cmd, pass_fds=(sys.stdout.fileno(), sys.stderr.fileno(), read_fd), env=env)
+        subprocess.check_call(
+            cmd, pass_fds=(sys.stdout.fileno(), sys.stderr.fileno(), read_fd), env=env
+        )
         os.close(read_fd)
     else:
         subprocess.check_call(cmd, pass_fds=(sys.stdout.fileno(), sys.stderr.fileno()))
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Perform Borg backup based on configuration')
-    parser.add_argument('config_file', help='Path to the configuration file')
-    parser.add_argument('--ssid', help='Override the current SSID')
-    parser.add_argument('--repo', help='Select a specific repo by name')
+    parser = argparse.ArgumentParser(
+        description="Perform Borg backup based on configuration"
+    )
+    parser.add_argument("config_file", help="Path to the configuration file")
+    parser.add_argument("--ssid", help="Override the current SSID")
+    parser.add_argument("--repo", help="Select a specific repo by name")
     args = parser.parse_args()
 
     with open(args.config_file) as f:
@@ -86,7 +95,7 @@ def main():
 
     if args.repo:
         # If repo is specified, find it by name
-        eligible_repos = [r for r in conf['repos'] if r['name'] == args.repo]
+        eligible_repos = [r for r in conf["repos"] if r["name"] == args.repo]
         if not eligible_repos:
             print(f'No repo found with name "{args.repo}"', file=sys.stderr)
             exit(1)
@@ -95,22 +104,25 @@ def main():
         # Otherwise use SSID-based selection
         ssid = args.ssid if args.ssid is not None else get_ssid()
         if ssid is None:
-            print(f'Not connected to a WiFi network', file=sys.stderr)
+            print("Not connected to a WiFi network", file=sys.stderr)
             exit(1)
 
-        eligible_repos = [r for r in conf['repos'] if ssid in r['ssids']]
+        eligible_repos = [r for r in conf["repos"] if ssid in r["ssids"]]
         if not eligible_repos:
             print(f'No backup configuration for SSID "{ssid}"', file=sys.stderr)
             exit(1)
-        print(f'Eligible repos: {", ".join(r["name"] for r in eligible_repos)}', file=sys.stderr)
+        print(
+            f"Eligible repos: {', '.join(r['name'] for r in eligible_repos)}",
+            file=sys.stderr,
+        )
         repo_info = random.choice(eligible_repos)
 
-    print(f'Backing up to {repo_info["name"]} ({repo_info["repo"]})', file=sys.stderr)
+    print(f"Backing up to {repo_info['name']} ({repo_info['repo']})", file=sys.stderr)
 
     sys.stderr.flush()
-    del conf['repos']
+    del conf["repos"]
     do_backup(repo_info, conf)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
