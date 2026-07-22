@@ -12,6 +12,12 @@
 	textconv = osadecompile
 	binary=true
 
+[core]
+    fsmonitor = true
+
+[feature]
+    manyFiles = true
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
