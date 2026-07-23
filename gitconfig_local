@@ -13,10 +13,10 @@
 	binary = true
 
 [core]
-    fsmonitor = true
+	fsmonitor = true
 
 [feature]
-    manyFiles = true
+	manyFiles = true
 
 [maintenance]
 	repo = ~/Documents/Anish/src/anytitan
