@@ -5,5 +5,8 @@
 [github]
 	user = anishathalye
 
+[feature]
+	manyFiles = true
+
 [maintenance]
 	repo = /root/xai
