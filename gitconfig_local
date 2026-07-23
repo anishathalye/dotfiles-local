@@ -22,3 +22,10 @@
 	repo = ~/Documents/Anish/src/anytitan
 	repo = ~/Documents/Anish/src/everysphere
 	repo = ~/Documents/Anish/src/xai
+
+[includeIf "gitdir:~/Documents/Anish/src/anytitan/"]
+	path = ~/.gitconfig_maintenance
+[includeIf "gitdir:~/Documents/Anish/src/everysphere/"]
+	path = ~/.gitconfig_maintenance
+[includeIf "gitdir:~/Documents/Anish/src/xai/"]
+	path = ~/.gitconfig_maintenance

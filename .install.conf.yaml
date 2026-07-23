@@ -14,6 +14,7 @@
     ~/.config/nono/profiles: nono/profiles
     ~/.dotfiles_local: ''
     ~/.gitconfig_local:
+    ~/.gitconfig_maintenance:
     ~/.gnupg/gpg-agent.conf: gpg-agent.conf
     ~/.hammerspoon:
     ~/.hgrc_local:
