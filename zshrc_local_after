@@ -1,0 +1,5 @@
+# prompt: hide user and show job name
+RPR_SHOW_USER=false
+function RPR_EXTRA() {
+    echo " %{$fg[violet]%}%B[%b%{$fg[$(hash_to_color "$XAI_JOB_NAME")]%}$XAI_JOB_NAME%{$fg[violet]%}%B]%b%{$reset_color%}"
+}
