@@ -10,3 +10,6 @@
 
 [maintenance]
 	repo = /root/xai
+
+[includeIf "gitdir:~/xai/"]
+	path = ~/.gitconfig_maintenance
