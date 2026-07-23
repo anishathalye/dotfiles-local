@@ -9,3 +9,10 @@ ldfu() {
         cd ~/.dotfiles_local && git pull --ff-only && ./install
     )
 }
+
+# xAI
+
+export XAI_USER='aathalye'
+export XAI_ROOT="$HOME/xai"
+path_prepend "$XAI_ROOT/bin"
+alias x='explorer'
