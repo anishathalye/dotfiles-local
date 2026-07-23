@@ -30,7 +30,7 @@ master
 |
 +- openai-cirrascale [inactive]
 |
-+- linux (formerly linux-server)
++- linux
 |  |
 |  +- a-srvr
 |  |
@@ -41,14 +41,14 @@ master
 |  +- zero [inactive]
 |  |
 |  +- linux-main [inactive]
+|  |
+|  +- google-android [inactive]
+|
++- xai-linux
 |
 +- athena
 |
 +- csail [inactive]
-|
-+- linux-desktop [inactive]
-|  |
-|  +- google-android [inactive]
 |
 +- telemetry [inactive]
 |

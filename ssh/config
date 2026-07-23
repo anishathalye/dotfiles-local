@@ -22,11 +22,6 @@ Host csail-jump
     User aathalye
     HostName login.csail.mit.edu
 
-Host vm-web
-    User arch
-    HostName vm-web.pdos.csail.mit.edu
-    ProxyJump csail-jump
-
 Host athena
     User aathalye
     HostName athena.dialup.mit.edu
