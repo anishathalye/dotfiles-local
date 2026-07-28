@@ -1,5 +1,6 @@
-# Prompt: hide user and show job name with box expiry
+# Prompt: hide user/host and show job name with box expiry
 
+RPR_SHOW_HOST=false
 RPR_SHOW_USER=false
 
 # Cache absolute job end time so we don't query the cluster on every prompt
