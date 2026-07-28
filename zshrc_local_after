@@ -1,5 +1,74 @@
-# prompt: hide user and show job name
+# Prompt: hide user and show job name with box expiry
+
 RPR_SHOW_USER=false
+
+# Cache absolute job end time so we don't query the cluster on every prompt
+_XAI_JOB_END_TIME_CACHE_TTL=300
+
+function _xai_job_end_time() {
+    local experiment="${XAI_EXPERIMENT:-}"
+    [[ -n "$experiment" ]] || return 1
+
+    local cache_dir="${XDG_CACHE_HOME:-$HOME/.cache}/xai"
+    local cache_file="${cache_dir}/${experiment}.job-end-time"
+    local end_time=""
+
+    if [[ -f "$cache_file" ]]; then
+        local age=$(( $(date +%s) - $(stat -c %Y "$cache_file") ))
+        if (( age < _XAI_JOB_END_TIME_CACHE_TTL )); then
+            end_time="$(<"$cache_file")"
+        fi
+    fi
+
+    if [[ -z "$end_time" ]]; then
+        end_time="$("${XAI_ROOT:-$HOME/xai}/bin/kubectl2" get experiment "$experiment" \
+            -o jsonpath='{.metadata.annotations.x\.ai/job-end-time}{"\n"}' 2>/dev/null)"
+        [[ -n "$end_time" ]] || return 1
+        mkdir -p "$cache_dir"
+        print -r -- "$end_time" >|"$cache_file"
+    fi
+
+    print -r -- "$end_time"
+}
+
+# Highest unit days, lowest unit minutes
+function _xai_format_remaining() {
+    local end_time="$1"
+    local end_epoch now_epoch remaining
+    end_epoch=$(date -d "$end_time" +%s 2>/dev/null) || return 1
+    now_epoch=$(date +%s)
+    remaining=$(( end_epoch - now_epoch ))
+    (( remaining < 0 )) && remaining=0
+
+    local days=$(( remaining / 86400 ))
+    local hours=$(( remaining / 3600 ))
+    local minutes=$(( remaining / 60 ))
+
+    if (( days >= 1 )); then
+        print -r -- "${days}d"
+    elif (( hours >= 1 )); then
+        print -r -- "${hours}h"
+    else
+        print -r -- "${minutes}m"
+    fi
+}
+
 function RPR_EXTRA() {
-    echo " %{$fg[violet]%}%B[%b%{$fg[$(hash_to_color "$XAI_JOB_NAME")]%}$XAI_JOB_NAME%{$fg[violet]%}%B]%b%{$reset_color%}"
+    local job_color="$(hash_to_color "$XAI_JOB_NAME")"
+    local label="$XAI_JOB_NAME"
+    local end_time remaining expiry_color
+
+    if end_time="$(_xai_job_end_time)" && remaining="$(_xai_format_remaining "$end_time")"; then
+        # Match experiment color when >=1d; neon when remaining is under a day
+        if [[ "$remaining" == *d ]]; then
+            expiry_color="$job_color"
+        else
+            expiry_color="neon"
+        fi
+        label="%{$fg[$job_color]%}$XAI_JOB_NAME %{$fg[$expiry_color]%}${remaining}"
+    else
+        label="%{$fg[$job_color]%}$XAI_JOB_NAME %{$fg[neon]%}??"
+    fi
+
+    echo " %{$fg[violet]%}%B[%b${label}%{$fg[violet]%}%B]%b%{$reset_color%}"
 }
