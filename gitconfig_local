@@ -12,9 +12,6 @@
 	textconv = osadecompile
 	binary = true
 
-[core]
-	fsmonitor = true
-
 [feature]
 	manyFiles = true
 
