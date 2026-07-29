@@ -22,7 +22,7 @@ function _xai_job_end_time() {
     fi
 
     if [[ -z "$end_time" ]]; then
-        end_time="$("${XAI_ROOT:-$HOME/xai}/bin/kubectl2" get experiment "$experiment" \
+        end_time="$("${XAI_ROOT:-$HOME/xai}/bin/kubectl2" get experiments.x.ai "$experiment" \
             -o jsonpath='{.metadata.annotations.x\.ai/job-end-time}{"\n"}' 2>/dev/null)"
         [[ -n "$end_time" ]] || return 1
         mkdir -p "$cache_dir"
