@@ -31,4 +31,4 @@
   - git update-submodules # after linking ~/.gitconfig
   - ./scripts/macos
   - ./scripts/git-maintenance-start-repoless
-  - ./scripts/write_ssh_config
+  - ./scripts/write-ssh-config
