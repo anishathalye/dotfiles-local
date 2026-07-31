@@ -17,44 +17,50 @@ separate branches in this repo.
 Branch Hierarchy
 ----------------
 
-```
-master
-|
-+- mac
-|  |
-|  +- cursor
-|  |
-|  +- handshake [inactive]
-|  |
-|  +- openai [inactive]
-|
-+- openai-cirrascale [inactive]
-|
-+- linux
-|  |
-|  +- a-srvr
-|  |
-|  +- cursor-linux
-|  |
-|  +- gpu [inactive]
-|  |
-|  +- zero [inactive]
-|  |
-|  +- linux-main [inactive]
-|  |
-|  +- google-android [inactive]
-|
-+- xai-linux
-|
-+- athena
-|
-+- csail [inactive]
-|
-+- telemetry [inactive]
-|
-+- dropbox [inactive]
+```mermaid
+graph LR
+    master([master]):::active
+    mac([mac]):::active
+    cursor([cursor]):::active
+    handshake([handshake]):::inactive
+    openai([openai]):::inactive
+    linux([linux]):::active
+    a_srvr([a-srvr]):::active
+    cursor_linux([cursor-linux]):::active
+    gpu([gpu]):::inactive
+    zero([zero]):::inactive
+    linux_main([linux-main]):::inactive
+    google_android([google-android]):::inactive
+    xai_linux([xai-linux]):::active
+    athena([athena]):::active
+    openai_cirrascale([openai-cirrascale]):::inactive
+    csail([csail]):::inactive
+    telemetry([telemetry]):::inactive
+    dropbox([dropbox]):::inactive
+    old([old]):::inactive
 
-old [inactive]
+    master --> mac
+    master --> linux
+    master --> xai_linux
+    master --> athena
+    master --> openai_cirrascale
+    master --> csail
+    master --> telemetry
+    master --> dropbox
+
+    mac --> cursor
+    mac --> handshake
+    mac --> openai
+
+    linux --> a_srvr
+    linux --> cursor_linux
+    linux --> gpu
+    linux --> zero
+    linux --> linux_main
+    linux --> google_android
+
+    classDef active fill:#cfe2f3,stroke:#3d6fa5,color:#1a1a1a;
+    classDef inactive fill:#e8e8e8,stroke:#999999,color:#777777;
 ```
 
 License
