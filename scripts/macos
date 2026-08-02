@@ -3,8 +3,8 @@
 # close system preferences to keep it from overriding stuff
 osascript -e 'tell application "System Preferences" to quit'
 
-# automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
+# always show the Dock
+defaults write com.apple.dock autohide -bool false
 
 # translucent dock icons for hidden apps
 defaults write com.apple.dock showhidden -bool true
