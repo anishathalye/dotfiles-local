@@ -21,6 +21,7 @@ Branch Hierarchy
 graph LR
     master([master]):::active
     mac([mac]):::active
+    mac_mini([mac-mini]):::active
     cursor([cursor]):::active
     handshake([handshake]):::inactive
     openai([openai]):::inactive
@@ -48,6 +49,7 @@ graph LR
     master --> telemetry
     master --> dropbox
 
+    mac --> mac_mini
     mac --> cursor
     mac --> handshake
     mac --> openai
