@@ -11,6 +11,15 @@ cat <<EOF > ~/.ssh/config
 Include /Users/aathalye/.ssh/xai-devbox-config
 # END xai-devbox-config include (managed by explorer)
 
+# START FORMAL-MANAGED BLOCK
+# Do not hand-edit this section.
+Include ~/.formal/ssh_config
+# END FORMAL-MANAGED BLOCK
+
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+Include ~/.orbstack/ssh/config
+
 Include ~/.ssh/config_main
 EOF
 
