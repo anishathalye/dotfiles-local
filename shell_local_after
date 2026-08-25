@@ -19,3 +19,9 @@ export XAI_USER='aathalye'
 export XAI_ROOT="$HOME/xai"
 path_prepend "$XAI_ROOT/bin"
 alias x='explorer'
+alias agent='cursor-agent'
+# https://forum.cursor.com/t/regression-agent-worker-start-no-longer-works-per-repo-and-the-documented-data-dir-escape-hatch-is-also-broken/167568
+cursor-agent() {
+    mkdir -p ~/.cursor-agent
+    CURSOR_DATA_DIR="$(mktemp -d -p ~/.cursor-agent)" command cursor-agent "$@"
+}
