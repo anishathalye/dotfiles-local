@@ -3,30 +3,18 @@
 import subprocess
 import tempfile
 import os
-import sys
 
 
 def main():
-    gitconfig_path = os.path.expanduser("~/.gitconfig")
-    with open(gitconfig_path, "r") as f:
-        old_gitconfig = f.read()
     with tempfile.TemporaryDirectory() as tmpdir, open(os.devnull, "w") as devnull:
-        subprocess.check_call(["git", "init"], cwd=tmpdir, stdout=devnull)
-        try:
-            subprocess.check_call(
-                ["git", "maintenance", "start"], cwd=tmpdir, stdout=devnull
-            )
-        finally:
-            subprocess.check_call(
-                ["git", "maintenance", "unregister", "--force"],
-                cwd=tmpdir,
-                stdout=devnull,
-            )
-    with open(gitconfig_path, "r") as f:
-        new_gitconfig = f.read()
-    if new_gitconfig != old_gitconfig:
-        print("~/.gitconfig has changed", file=sys.stderr)
-        sys.exit(1)
+        repo = os.path.join(tmpdir, "repo")
+        env = {**os.environ, "GIT_CONFIG_GLOBAL": os.path.join(tmpdir, "gitconfig")}
+        subprocess.check_call(
+            ["git", "init", repo, "-b", "main"], stdout=devnull, env=env
+        )
+        subprocess.check_call(
+            ["git", "maintenance", "start"], cwd=repo, stdout=devnull, env=env
+        )
 
 
 if __name__ == "__main__":
