@@ -24,6 +24,7 @@
     ~/.shell_local_before:
     ~/.ssh/config_main: ssh/config
     ~/.ssh/config_local: ssh/config_local
+    ~/.zshrc_local_before:
     ~/.zshrc_local_after:
 
 - shell:

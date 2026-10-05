@@ -129,3 +129,4 @@ export XAI_ROOT="$HOME/Documents/Anish/src/xai"
 path_prepend "$XAI_ROOT/bin"
 alias x='explorer'
 path_prepend "/opt/homebrew/share/google-cloud-sdk/bin"
+path_prepend "$HOME/.grok/bin"
