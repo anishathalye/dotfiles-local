@@ -15,6 +15,13 @@
 [feature]
 	manyFiles = true
 
+[credential "https://origin.cursor.com/git"]
+	helper =
+	helper = ! origin credential-helper
+[credential "https://origin.cursor.com"]
+	helper =
+	helper = ! origin credential-helper
+
 [maintenance]
 	repo = ~/Documents/Anish/src/anytitan
 	repo = ~/Documents/Anish/src/everysphere
