@@ -58,7 +58,7 @@ def do_backup(repo_info, conf):
 def get_ssid():
     getssid_path = os.path.join(os.path.dirname(__file__), "getssid")
     out = subprocess.check_output([getssid_path]).decode("utf8").strip()
-    if out == "missing value":
+    if not out or out == "missing value":
         return None
     return out
 
@@ -105,7 +105,6 @@ def main():
         ssid = args.ssid if args.ssid is not None else get_ssid()
         if ssid is None:
             print("Not connected to a WiFi network", file=sys.stderr)
-            exit(1)
 
         eligible_repos = [r for r in conf["repos"] if ssid in r["ssids"]]
         if not eligible_repos:
