@@ -18,7 +18,8 @@
     "read": [
       "~/.dotfiles",
       "~/.dotfiles_local",
-      "~/.gitconfig_local"
+      "~/.gitconfig_local",
+      "/usr/local/texlive"
     ]
   }
 }
